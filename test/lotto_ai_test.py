@@ -142,8 +142,8 @@ class LottoAITest(LottoMain):
             
             # 2) 뽑힌 조합이 기존 수십 개의 필터를 모두 안전하게 만족하는지 더블 체크
             is_safe = True
-            subfilters: list[LottoFilter] = self.get_sub_filters()
-            for lotto_filter in subfilters:
+            not_option_ilters: list[LottoFilter] = self.get_not_option_filters()
+            for lotto_filter in not_option_ilters:
                 if not lotto_filter.filter(sampled):
                     if self.debug:
                         self.mydic.add_dic(lotto_filter.__class__.__name__)

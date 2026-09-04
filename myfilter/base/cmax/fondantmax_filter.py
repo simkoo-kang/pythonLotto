@@ -9,8 +9,8 @@ class FondantMaxFilter(AMaxFilter):
 
     max_count: int = 13
 
-    def __init__(self, max_val: int = 6, index: int = 0, debug: bool=False):
-        super().__init__(max_val=max_val, debug=debug)
+    def __init__(self, max_val: int = 6, index: int = 0, optional: bool=True, debug: bool=False):
+        super().__init__(max_val=max_val, optional=optional, debug=debug)
 
         match index:
             case 0:

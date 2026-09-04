@@ -9,8 +9,8 @@ class PrimeRangeFilter(ARangeFilter):
 
     primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
 
-    def __init__(self, min_val: int, max_val: int, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int, max_val: int, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

@@ -6,8 +6,8 @@ import util.lotto_util as lotto_util
 
 # 3.10. 추가 필터 예시: 징검다리 패턴 존재 여부
 class SteppingStoneBooleanFilter(ABooleanFilter):
-    def __init__(self, bool_val: bool = False, debug: bool=False):
-        super().__init__(bool_val=bool_val, debug=debug)
+    def __init__(self, bool_val: bool = False, optional: bool=True, debug: bool=False):
+        super().__init__(bool_val=bool_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str: return "Stepping Stone Pattern Filter"

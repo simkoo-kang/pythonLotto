@@ -6,8 +6,8 @@ from myfilter.lotto_filter import ARangeFilter
 
 # 이웃수 패턴
 class NeighborRangeFilter(ARangeFilter):
-    def __init__(self, match_list: List[int], min_val: int = 0, max_val: int = 1, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, match_list: List[int], min_val: int = 0, max_val: int = 1, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.match_list = lotto_util.get_neigbors(match_list)
 
     @property

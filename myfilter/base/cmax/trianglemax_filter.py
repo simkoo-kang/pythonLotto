@@ -16,8 +16,8 @@ class TriangleMaxFilter(AMaxFilter):
         [ 7, 13, 14, 19, 20, 21, 25, 26, 27, 28, 31, 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
     ]
 
-    def __init__(self, max_val: int, index: int, debug: bool=False):
-        super().__init__(max_val=max_val, debug=debug)
+    def __init__(self, max_val: int, index: int, optional: bool=True, debug: bool=False):
+        super().__init__(max_val=max_val, optional=optional, debug=debug)
         self.triangle_group = self.groups[index]
 
     @property

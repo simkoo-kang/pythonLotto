@@ -8,8 +8,8 @@ class SumEndingRangeFilter(ARangeFilter):
     """
     일의 자리 숫자의 총합을 기준으로 필터링하는 구체적인 필터 클래스입니다.
     """
-    def __init__(self, min_val: int = 20, max_val: int = 35, debug: bool=False):
-        super().__init__(min_val, max_val, debug=debug)
+    def __init__(self, min_val: int = 20, max_val: int = 35, optional: bool=True, debug: bool=False):
+        super().__init__(min_val, max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

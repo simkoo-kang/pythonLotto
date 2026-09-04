@@ -6,8 +6,8 @@ import util.lotto_util as lotto_util
 
 # 3.5. 추가 필터 예시: 연속된 쌍 개수 ([1,2], [3,4] 등) 범위
 class ConsecutivePairsMaxFilter(AMaxFilter):
-    def __init__(self, max_val: int = 1, debug: bool=False):
-        super().__init__(max_val=max_val, debug=debug)
+    def __init__(self, max_val: int = 1, optional: bool=True, debug: bool=False):
+        super().__init__(max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str: return "Consecutive Pairs Max Filter"

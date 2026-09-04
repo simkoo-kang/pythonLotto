@@ -5,8 +5,8 @@ from myfilter.lotto_filter import AMaxFilter
 
 # 3.11. 추가 필터 예시: 첫번째 숫자 최대 값 범위
 class FirstNumberMaxFilter(AMaxFilter):
-    def __init__(self, max_val: int = 15, debug: bool=False):
-        super().__init__(max_val=max_val, debug=debug)
+    def __init__(self, max_val: int = 15, optional=True, debug: bool=False):
+        super().__init__(max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str: return "First Number Filter"

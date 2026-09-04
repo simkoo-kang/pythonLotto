@@ -5,13 +5,13 @@ from myfilter.lotto_filter import AMinFilter
 
 # 3.12. 추가 필터 예시: 마지막 숫자 최대 값 범위
 class LastNumberMinFilter(AMinFilter):
-    def __init__(self, min_val: int = 31, debug: bool=False):
+    def __init__(self, min_val: int = 31, optional=True, debug: bool=False):
         """
         로또 번호 중 가장 큰 마지막(6번째) 숫자가 특정 범위(min_val ~ max_val) 안인지 검사합니다.
         - 기본값: 마지막 번호가 최소 31 이상인 경우만 통과 시킵니다.
         """
         # 부모 클래스의 생성자에 '마지막 번호'인 min_val를 전달
-        super().__init__(min_val=min_val, debug=debug)
+        super().__init__(min_val=min_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

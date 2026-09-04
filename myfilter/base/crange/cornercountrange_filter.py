@@ -9,8 +9,8 @@ class CornerCountRangeFilter(ARangeFilter):
 
     corners = [ 1, 2, 6, 7, 8, 9, 13, 14, 29, 30, 34, 35, 36, 37, 41, 42, 43, 44, 45 ]
 
-    def __init__(self, min_val: int = 0, max_val: int = 1, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int = 0, max_val: int = 1, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str: return "Corner Count Range Filter"

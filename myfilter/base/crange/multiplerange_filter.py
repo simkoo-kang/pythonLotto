@@ -10,8 +10,8 @@ class MultipleRangeFilter(ARangeFilter):
     multi3 = [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45 ]
     multi5 = [ 5, 10, 15, 20, 25, 30, 35, 40, 45 ]
 
-    def __init__(self, min_val: int, max_val: int, index: int, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int, max_val: int, index: int, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.multi = self.multi3 if index == 3 else self.multi5
 
     @property

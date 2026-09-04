@@ -6,7 +6,7 @@ import util.lotto_util as lotto_util
 
 # 3.8. 추가 필터 예시: 세로 라인 분포도
 class VLineRangeFilter(ARangeFilter):
-    def __init__(self,  min_val: int, max_val: int, max_lines: int, debug: bool=False):
+    def __init__(self,  min_val: int, max_val: int, max_lines: int, optional: bool=True, debug: bool=False):
         """
         로또 용지의 가로/세로 라인 분포도를 검사합니다.
         
@@ -15,7 +15,7 @@ class VLineRangeFilter(ARangeFilter):
         :param max_val: 공이 들어있는 최대 라인 수 (0이 아닌 라인 수의 상한선)
         """
         # 부모 클래스의 min_val, max_val에는 '0이 아닌 라인 수' 범위를 기본 지정
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.max_lines = max_lines
 
     @property

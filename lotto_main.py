@@ -119,46 +119,46 @@ class LottoMain:
         # min filter ----------------------------------------------------------
 
         # 지난 10회 출현 수
-        self.filter_manager.add_filter(Last10MinFilter(last10=last10, min_val=4, debug=self.debug))
+        self.filter_manager.add_filter(Last10MinFilter(last10=last10, min_val=4, optional=False, debug=self.debug))
         # 예시: AC 값이 7~10 사이인 필터와 합계가 100~175 사이인 필터 등록
-        self.filter_manager.add_filter(ACMinFilter(min_val=6, debug=self.debug))
+        self.filter_manager.add_filter(ACMinFilter(min_val=6, optional=False, debug=self.debug))
         # 예시: 마지막 번호가 31보다 큰 조합만 허용
-        self.filter_manager.add_filter(LastNumberMinFilter(min_val=31, debug=self.debug))
+        self.filter_manager.add_filter(LastNumberMinFilter(min_val=31, optional=False, debug=self.debug))
 
         # max filter ----------------------------------------------------------
 
         # 예시: 첫 번째 번호가 15보다 작은 조합만 허용
-        self.filter_manager.add_filter(FirstNumberMaxFilter(max_val=15, debug=self.debug))
+        self.filter_manager.add_filter(FirstNumberMaxFilter(max_val=15, optional=False, debug=self.debug))
         # 예시: 연속된 숫자 쌍이 0~1개인 조합만 허용, 1,2,3 형식도 차단
-        self.filter_manager.add_filter(ConsecutivePairsMaxFilter(max_val=1, debug=self.debug))
+        self.filter_manager.add_filter(ConsecutivePairsMaxFilter(max_val=1, optional=False, debug=self.debug))
         # 번호대별 수량(개수)을 체크하여 특정 번호대에 숫자가 과도하게 몰리거나 전멸하는 조합을 차단
-        self.filter_manager.add_filter(NumberZoneCountMaxFilter(max_val=3, max_empty_zones=2, debug=self.debug))
+        self.filter_manager.add_filter(NumberZoneCountMaxFilter(max_val=3, max_empty_zones=2, optional=False, debug=self.debug))
 
         # boolean filter ----------------------------------------------------------
 
         # 예시: 지정된 간격으로 연속된 3개의 숫자 그룹이 존재하지 않는 조합만 허용, [1,3,5], [2,4,6] 형식 차단
-        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=2, debug=self.debug))
+        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=2, optional=False, debug=self.debug))
         # 예시: 지정된 간격으로 연속된 3개의 숫자 그룹이 존재하지 않는 조합만 허용, [6,12,18], [2,8,14] 대각선 형식 차단
-        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=6, debug=self.debug))
+        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=6, optional=False, debug=self.debug))
         # 예시: 지정된 간격으로 연속된 3개의 숫자 그룹이 존재하지 않는 조합만 허용, [1,9,17], [2,10,18] 대각선 형식 차단
-        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=8, debug=self.debug))
+        self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False, interval_size=8, optional=False, debug=self.debug))
         # 모든 간격에 대해 등간격 패턴이 존재하지 않는 조합만 허용
         # self.filter_manager.add_filter(EqualIntervalBooleanFilter(bool_val=False))
         # 예시: '1,2,4' 또는 '1,3,4' 처럼 3개 숫자가 징검다리 형태로 붙어있는 조합은 차단
-        self.filter_manager.add_filter(SteppingStoneBooleanFilter(bool_val=False, debug=self.debug))
+        self.filter_manager.add_filter(SteppingStoneBooleanFilter(bool_val=False, optional=False, debug=self.debug))
         
         # range filter ----------------------------------------------------------
 
         last5 = sorted(list(set([num for vo in self.numberVos[-5:] for num in vo.numbers])))
-        self.filter_manager.add_filter(MatchCountRangeFilter(match_list=last5, min_val=2, max_val=5, title="Last5", debug=self.debug))
+        self.filter_manager.add_filter(MatchCountRangeFilter(match_list=last5, min_val=2, max_val=5, title="Last5", optional=False, debug=self.debug))
 
-        self.filter_manager.add_filter(SumRangeFilter(min_val=100, max_val=175, debug=self.debug))
-        self.filter_manager.add_filter(EvenRangeFilter(min_val=2, max_val=4, debug=self.debug))
-        self.filter_manager.add_filter(HighRangeFilter(min_val=2, max_val=4, debug=self.debug))
+        self.filter_manager.add_filter(SumRangeFilter(min_val=100, max_val=175, optional=False, debug=self.debug))
+        self.filter_manager.add_filter(EvenRangeFilter(min_val=2, max_val=4, optional=False, debug=self.debug))
+        self.filter_manager.add_filter(HighRangeFilter(min_val=2, max_val=4, optional=False, debug=self.debug))
         # 예시: 가로 라인 분포도 필터 등록 (한 줄에 최대 3개까지만 허용, 공이 들어있는 라인 수가 3~5개 안인지 검사)
-        self.filter_manager.add_filter(HLineRangeFilter(min_val=3, max_val=5, max_lines=3, debug=self.debug))
+        self.filter_manager.add_filter(HLineRangeFilter(min_val=3, max_val=5, max_lines=3, optional=False, debug=self.debug))
         # 예시: 세로 라인 분포도 필터 등록 (한 줄에 최대 3개까지만 허용, 공이 들어있는 라인 수가 3~5개 안인지 검사)
-        self.filter_manager.add_filter(VLineRangeFilter(min_val=3, max_val=5, max_lines=3, debug=self.debug))
+        self.filter_manager.add_filter(VLineRangeFilter(min_val=3, max_val=5, max_lines=3, optional=False, debug=self.debug))
 
         # 끝수 중 '가장 많이 중복된 개수'가 지정한 범위(1~2개) 안인지 검사합니다.
         self.filter_manager.add_filter(SameEndingRangeFilter(min_val=1, max_val=2, debug=self.debug))
@@ -213,12 +213,11 @@ class LottoMain:
         # 2. groupB에 0개 이면 차단, 즉 groupA, groupC에 6개란 뜻
         self.filter_manager.add_filter(WinningRankGroupMaxFilter(numberVos=self.numberVos, max_val=4))
 
-    def get_sub_filters(self):
+    def get_not_option_filters(self):
         flts: list[LottoFilter] = []
         for filter in self.filter_manager._filters:
-            flts.append(filter)
-            if isinstance(filter, VLineRangeFilter):
-                return flts
+            if not filter.is_option:
+                flts.append(filter)
 
         return flts
 

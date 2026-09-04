@@ -5,9 +5,9 @@ from myfilter.lotto_filter import ARangeFilter
 
 # 3.2. 예시: 총합 범위를 거르는 필터 추가 시
 class SumRangeFilter(ARangeFilter):
-    def __init__(self, min_val: int = 100, max_val: int = 175, debug: bool=False):
+    def __init__(self, min_val: int = 100, max_val: int = 175, optional: bool=True, debug: bool=False):
         # 총합 결과값이 100 ~ 175 사이여야 함을 부모에게 전달
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str: return "Sum Range Filter"

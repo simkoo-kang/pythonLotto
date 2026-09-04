@@ -10,7 +10,11 @@ class LottoFilter(ABC):
 
     @property
     @abstractmethod
-    def get_debug(self) -> bool: pass
+    def is_debug(self) -> bool: pass
+
+    @property
+    @abstractmethod
+    def is_option(self) -> bool: pass
 
     @property
     @abstractmethod
@@ -37,10 +41,14 @@ class LottoFilter(ABC):
 
 
 class ALottoFilter(LottoFilter):
-    def __init__(self, debug: bool=False):
+    def __init__(self, optional: bool=True, debug: bool=False):
         self.debug = debug
+        self.optional = optional
 
-    def get_debug(self) -> bool:
+    def is_option(self) -> bool:
+        return self.optional
+
+    def is_debug(self) -> bool:
         return self.debug
 
     def has_attr(self, attr_name: str) -> bool:
@@ -64,8 +72,8 @@ class ALottoFilter(LottoFilter):
 
 # 2.1. 추상 클래스 (공통 값 설정 및 유틸리티 함수 구현)
 class ARangeFilter(ALottoFilter):
-    def __init__(self, min_val: int, max_val: int, debug: bool=False):
-        super().__init__(debug=debug)
+    def __init__(self, min_val: int, max_val: int, optional: bool=True, debug: bool=False):
+        super().__init__(optional=optional, debug=debug)
 
         self.min_val = min_val
         self.max_val = max_val
@@ -90,8 +98,8 @@ class ARangeFilter(ALottoFilter):
 
 # 2.2. 추상 클래스 (공통 값 설정 및 유틸리티 함수 구현)
 class ABooleanFilter(ALottoFilter):
-    def __init__(self, bool_val: bool, debug: bool=False):
-        super().__init__(debug=debug)
+    def __init__(self, bool_val: bool, optional: bool=True, debug: bool=False):
+        super().__init__(optional=optional, debug=debug)
 
         self.bool_val = bool_val
 
@@ -104,8 +112,8 @@ class ABooleanFilter(ALottoFilter):
 
 # 2.3. 추상 클래스 (공통 값 설정 및 유틸리티 함수 구현)
 class AMaxFilter(ALottoFilter):
-    def __init__(self, max_val: int, debug: bool=False):
-        super().__init__(debug=debug)
+    def __init__(self, max_val: int, optional: bool=True, debug: bool=False):
+        super().__init__(optional=optional, debug=debug)
 
         self.max_val = max_val
 
@@ -119,8 +127,8 @@ class AMaxFilter(ALottoFilter):
 
 # 2.4. 추상 클래스 (공통 값 설정 및 유틸리티 함수 구현)
 class AMinFilter(ALottoFilter):
-    def __init__(self, min_val: int, debug: bool=False):
-        super().__init__(debug=debug)
+    def __init__(self, min_val: int, optional: bool=True, debug: bool=False):
+        super().__init__(optional=optional, debug=debug)
 
         self.min_val = min_val
 

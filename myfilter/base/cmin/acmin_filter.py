@@ -6,9 +6,9 @@ import util.lotto_util as lotto_util
 
 # 3.1. 구체 클래스 (부모의 생성자를 호출하도록 super() 적용)
 class ACMinFilter(AMinFilter):
-    def __init__(self, min_val: int = 6, debug: bool=False):
+    def __init__(self, min_val: int = 6, optional: bool=True, debug: bool=False):
         # super()를 통해 부모 클래스의 생성자에 min, max 범위를 전달합니다.
-        super().__init__(min_val=min_val, debug=debug)
+        super().__init__(min_val=min_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

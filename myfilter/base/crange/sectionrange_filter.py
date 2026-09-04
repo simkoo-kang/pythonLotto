@@ -6,7 +6,7 @@ import util.lotto_util as lotto_util
 
 # 각 구간별 공 개수 계산 및 0이 아닌 구간 수 계산을 위한 공통 함수
 class SectionRangeFilter(ARangeFilter):
-    def __init__(self, min_val: int, max_val: int, max_counts: int, section: int, debug: bool=False):
+    def __init__(self, min_val: int, max_val: int, max_counts: int, section: int, optional: bool=True, debug: bool=False):
         """
         로또 번호를 구간별로 나누어 각 구간에 포함된 번호의 개수를 검사합니다.
         
@@ -15,7 +15,7 @@ class SectionRangeFilter(ARangeFilter):
         :param max_counts: 각 구간에 허용하는 최대 공의 개수
         :param section: 구간 수 (5 또는 9)
         """
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.max_counts = max_counts
         self.section = section
 

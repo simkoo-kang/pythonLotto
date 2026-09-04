@@ -6,8 +6,8 @@ from myfilter.lotto_filter import AMinFilter
 
 # 지난 10회 출현 수
 class Last10MinFilter(AMinFilter):
-    def __init__(self, last10: List[int], min_val: int = 4, debug: bool=False):
-        super().__init__(min_val=min_val, debug=debug)
+    def __init__(self, last10: List[int], min_val: int = 4, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, optional=optional, debug=debug)
         self.last10 = last10
 
     @property

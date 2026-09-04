@@ -10,8 +10,8 @@ class PairsDdangRangeFilter(ARangeFilter):
     pairs = [ 11, 22, 33, 44 ]
     ddang = [ 13, 18, 31, 38 ]
 
-    def __init__(self, min_val: int, max_val: int, index: int, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int, max_val: int, index: int, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.arr = [self.pairs, self.ddang][index]
 
     @property

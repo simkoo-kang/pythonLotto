@@ -5,7 +5,7 @@ from myfilter.lotto_filter import ARangeFilter
 
 
 class SameEndingRangeFilter(ARangeFilter):
-    def __init__(self, min_val: int = 1, max_val: int = 2, debug: bool=False):
+    def __init__(self, min_val: int = 1, max_val: int = 2, optional: bool=True, debug: bool=False):
         """
         로또 번호의 1의 자리 숫자(끝수) 중 '가장 많이 중복된 개수'가 
         지정한 범위(min_val ~ max_val) 안인지 검사합니다.
@@ -13,7 +13,7 @@ class SameEndingRangeFilter(ARangeFilter):
         - 기본값 (2 ~ 3): 2동끝수(2개 중복) 또는 3동끝수(3개 중복)가 포함된 조합만 통과
         """
         # 부모 클래스의 생성자에 '최대 끝수 중복 개수'의 유효 범위 전달
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

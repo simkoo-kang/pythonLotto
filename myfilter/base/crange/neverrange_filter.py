@@ -42,8 +42,8 @@ class NeverRangeFilter(ARangeFilter):
         [ 1, 7, 8, 14, 15, 16, 17, 18, 19, 20, 21, 28, 29, 31, 32, 33, 34, 35, 36, 42, 43 ]
     ]
 
-    def __init__(self, min_val: int, max_val: int, index: int, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int, max_val: int, index: int, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.index = index
 
     @property

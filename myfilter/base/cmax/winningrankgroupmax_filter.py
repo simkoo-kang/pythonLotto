@@ -14,8 +14,8 @@ from vo.number_vo import NumberVO
 2. groupB에 0개 이면 차단, 즉 groupA, groupC에 6개란 뜻
 """
 class WinningRankGroupMaxFilter(AMaxFilter):
-    def __init__(self, numberVos: list[NumberVO], max_val: int=4, debug: bool=False):
-        super().__init__(max_val=max_val, debug=debug)
+    def __init__(self, numberVos: list[NumberVO], max_val: int=4, optional: bool=True, debug: bool=False):
+        super().__init__(max_val=max_val, optional=optional, debug=debug)
 
         self.groupA: list[int] = []
         self.groupB: list[int] = []

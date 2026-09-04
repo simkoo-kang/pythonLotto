@@ -9,8 +9,8 @@ class CompositionRangeFilter(ARangeFilter):
 
     comps = [ 1, 4, 8, 10, 16, 20, 22, 25, 26, 28, 32, 34, 35, 38, 40, 44 ]
 
-    def __init__(self, min_val: int, max_val: int, debug: bool=False):
-        super().__init__(min_val=min_val, max_val=max_val, debug=debug)
+    def __init__(self, min_val: int, max_val: int, optional: bool=True, debug: bool=False):
+        super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property
     def name(self) -> str:

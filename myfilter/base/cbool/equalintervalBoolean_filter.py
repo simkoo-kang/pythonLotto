@@ -6,8 +6,8 @@ import util.lotto_util as lotto_util
 
 # 3.9. 추가 필터 예시: 등간격 패턴 존재 여부
 class EqualIntervalBooleanFilter(ABooleanFilter):
-    def __init__(self, bool_val: bool = False, interval_size: int = 0, debug: bool=False):
-        super().__init__(bool_val=bool_val, debug=debug)
+    def __init__(self, bool_val: bool = False, interval_size: int = 0, optional:bool=True, debug: bool=False):
+        super().__init__(bool_val=bool_val, optional=optional, debug=debug)
         self.interval_size = interval_size
 
     @property
