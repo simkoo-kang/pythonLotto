@@ -9,6 +9,18 @@ class FileUtil:
     DEFAULT_ENCODING = "utf-8"
 
     @staticmethod
+    def get_lotto_make_filtered_file(round: int) -> str:
+        return os.path.join(FileUtil.CONF_PATH, "make", f"{round}_filtered.txt")
+
+    @staticmethod
+    def get_lotto_make_all_file(round: int) -> str:
+        return os.path.join(FileUtil.CONF_PATH, "make", f"{round}_all.txt")
+
+    @staticmethod
+    def get_lotto_make_file(round: int) -> str:
+        return os.path.join(FileUtil.CONF_PATH, f"make\\{round}.txt")
+
+    @staticmethod
     def writeAll(file_path: str, string: str, mode: str = "a") -> bool:
         """
         [파일 쓰기 기능]

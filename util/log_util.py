@@ -25,10 +25,8 @@ class LogUtil:
             return logger
 
         # 공통 로그 포맷 지정 (시간 - 로거이름 - 레벨 - 메시지)
-        log_format = logging.Formatter(
-            '[%(asctime)s] [%(name)s] [%(levelname)s] -> %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
+        LOG_FORMAT = "[%(asctime)s] [%(name)s] [%(levelname)s] [%(filename)s:%(lineno)d] [%(funcName)s] - %(message)s"
+        log_format = logging.Formatter(LOG_FORMAT, datefmt='%Y-%m-%d %H:%M:%S')
 
         # 1. 콘솔 핸들러 설정
         console_handler = logging.StreamHandler()

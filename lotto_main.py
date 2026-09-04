@@ -45,7 +45,7 @@ from myfilter.base.crange.sumrange_filter import SumRangeFilter
 from myfilter.base.crange.vlinerange_filter import VLineRangeFilter
 
 from util.str_util import Str
-from util.lotto_util import generate_second_prize_combinations
+import util.lotto_util as lotto_util
 from vo.number_vo import NumberVO
 
 
@@ -97,7 +97,7 @@ class LottoMain:
                 self.numberVos.append(numbervo)
                 self.cache.append(numbervo.toString())
 
-                self.cache.extend(generate_second_prize_combinations(
+                self.cache.extend(lotto_util.generate_second_prize_combinations(
                     main_numbers=[row[f'번호{i+1}'] for i in range(6)],
                     bonus_number=row['BN']))
 
@@ -131,6 +131,8 @@ class LottoMain:
         self.filter_manager.add_filter(FirstNumberMaxFilter(max_val=15, debug=self.debug))
         # 예시: 연속된 숫자 쌍이 0~1개인 조합만 허용, 1,2,3 형식도 차단
         self.filter_manager.add_filter(ConsecutivePairsMaxFilter(max_val=1, debug=self.debug))
+        # 번호대별 수량(개수)을 체크하여 특정 번호대에 숫자가 과도하게 몰리거나 전멸하는 조합을 차단
+        self.filter_manager.add_filter(NumberZoneCountMaxFilter(max_val=3, max_empty_zones=2, debug=self.debug))
 
         # boolean filter ----------------------------------------------------------
 
@@ -147,6 +149,9 @@ class LottoMain:
         
         # range filter ----------------------------------------------------------
 
+        last5 = sorted(list(set([num for vo in self.numberVos[-5:] for num in vo.numbers])))
+        self.filter_manager.add_filter(MatchCountRangeFilter(match_list=last5, min_val=2, max_val=5, title="Last5", debug=self.debug))
+
         self.filter_manager.add_filter(SumRangeFilter(min_val=100, max_val=175, debug=self.debug))
         self.filter_manager.add_filter(EvenRangeFilter(min_val=2, max_val=4, debug=self.debug))
         self.filter_manager.add_filter(HighRangeFilter(min_val=2, max_val=4, debug=self.debug))
@@ -154,12 +159,11 @@ class LottoMain:
         self.filter_manager.add_filter(HLineRangeFilter(min_val=3, max_val=5, max_lines=3, debug=self.debug))
         # 예시: 세로 라인 분포도 필터 등록 (한 줄에 최대 3개까지만 허용, 공이 들어있는 라인 수가 3~5개 안인지 검사)
         self.filter_manager.add_filter(VLineRangeFilter(min_val=3, max_val=5, max_lines=3, debug=self.debug))
+
         # 끝수 중 '가장 많이 중복된 개수'가 지정한 범위(1~2개) 안인지 검사합니다.
         self.filter_manager.add_filter(SameEndingRangeFilter(min_val=1, max_val=2, debug=self.debug))
         # 끝수 합계가 지정한 범위(12~38) 안인지 검사합니다.
         self.filter_manager.add_filter(SumEndingRangeFilter(min_val=12, max_val=38, debug=self.debug))
-        # 번호대별 수량(개수)을 체크하여 특정 번호대에 숫자가 과도하게 몰리거나 전멸하는 조합을 차단
-        self.filter_manager.add_filter(NumberZoneCountMaxFilter(max_val=3, max_empty_zones=2, debug=self.debug))
         # 9구간 라인수 범위 및 최대값 설정
         self.filter_manager.add_filter(SectionRangeFilter(min_val=3, max_val=5, max_counts=3, section=5, debug=self.debug))
         # 5구간 라인수 범위 및 최대값 설정
@@ -209,10 +213,20 @@ class LottoMain:
         # 2. groupB에 0개 이면 차단, 즉 groupA, groupC에 6개란 뜻
         self.filter_manager.add_filter(WinningRankGroupMaxFilter(numberVos=self.numberVos, max_val=4))
 
+    def get_sub_filters(self):
+        flts: list[LottoFilter] = []
+        for filter in self.filter_manager._filters:
+            flts.append(filter)
+            if isinstance(filter, VLineRangeFilter):
+                return flts
+
+        return flts
 
     """
     demo_data = { 'num1': [], 'num2': [], 'num3': [], 'num4': [], 'num5': [], 'num6': [], }
     """
+    # 데이터프레임 빌드
+    # txt 파일을 읽어와서 NumberVO 객체를 생성하고, 각 번호를 demo_data 딕셔너리에 추가합니다.
     def get_number_list_data_frame(self):
         # [데이터프레임 빌드] 
         demo_data = {
@@ -243,7 +257,7 @@ class LottoMain:
 
     def get_numbers_from_last(self, rounds: int):
         nums = []
-        vos: list[NumberVO] = self.numberVos[-rounds]
+        vos: list[NumberVO] = self.numberVos[-rounds:]
         for vo in vos:
             nums += vo.numbers
         return sorted(list(set(nums)))
