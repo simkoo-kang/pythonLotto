@@ -10,9 +10,6 @@ from util.file_util import FileUtil
 from vo.number_vo import NumberVO
 
 
-logger = LogUtil.get_logger("LottoFileAnalyzer")
-
-
 class CheckWinning(LottoMain):
     def __init__(self):
         super().__init__()
@@ -21,6 +18,8 @@ class CheckWinning(LottoMain):
         self.round = numbervo.get_round()
         self.winning_numbers = set(numbervo.get_numbers())
         self.bonus_number = numbervo.get_bonus()
+        
+        self.logger = LogUtil.get_logger("LottoFileAnalyzer")
 
 
     def check_ticket(self, ticket: list[int]):
@@ -43,11 +42,11 @@ class CheckWinning(LottoMain):
         
         # 1. 조기 반환(Early Return) 패턴 적용: 파일이 아예 없으면 즉시 종료
         if not os.path.exists(file_path):
-            logger.error(f"파일을 찾을 수 없습니다: {os.path.abspath(file_path)}")
+            self.logger.error(f"파일을 찾을 수 없습니다: {os.path.abspath(file_path)}")
             return  # 함수를 즉시 종료하고 메인으로 돌아감
 
-        logger.debug("")
-        logger.debug(f"*** 분석 시작: {file_path}. =========================")
+        self.logger.debug("")
+        self.logger.debug(f"*** 분석 시작: {file_path}. =========================")
         # 2. 예외 처리(try-except) 구조로 안전하게 파일 열기
         try:
             collected_numbers = []
@@ -59,12 +58,12 @@ class CheckWinning(LottoMain):
                     
                     # 1. 상단 로또 조합 패턴 분석 (ex: 06-20-29-33-38-40)
                     if "-" in line and "\t" in line:
-                        nums_str, count = line.split("\t")
-                        ticket = [int(n) for n in nums_str.split("-")]
+                        strs = line.split("\t")
+                        ticket = [int(n) for n in strs[0].split("-")]
 
                         result = self.check_ticket(ticket)
                         if 0 < result['rank']:
-                            logger.debug(f"[조합] {nums_str} -> 일치: {result['matched_count']}개 (보너스: {result['has_bonus']}) | 결과: {result['rank']}등")
+                            self.logger.debug(f"[조합] {strs[0]} -> 일치: {result['matched_count']}개 (보너스: {result['has_bonus']}) | 결과: {result['rank']}등")
                     
                     # 2. 하단 번호=개수 패턴 분석 (ex: 01 = 1)
                     elif "=" in line:
@@ -78,18 +77,19 @@ class CheckWinning(LottoMain):
             final_matches = set(collected_numbers) & self.winning_numbers
             bonus_match = self.bonus_number in collected_numbers
             
-            logger.debug("== 하단 집계 번호 분석 결과 ==")
-            logger.debug(f"- 생성된 번호 리스트: {collected_numbers}")
-            logger.debug(f"- 당첨 번호 일치 ({len(final_matches)}개): {list(final_matches)}")
-            logger.debug(f"- 보너스 번호 일치 여부: {'일치(8)' if bonus_match else '불일치'}")
+            self.logger.debug("== 하단 집계 번호 분석 결과 ==")
+            self.logger.debug(f"- 생성된 번호 리스트: {collected_numbers}")
+            self.logger.debug(f"- 당첨 번호 일치 ({len(final_matches)}개): {list(final_matches)}")
+            self.logger.debug(f"- 보너스 번호 일치 여부: {'일치(8)' if bonus_match else '불일치'}")
 
         except FileNotFoundError:
             # 혹시 모를 동시성 삭제 이슈 방어
-            logger.error(f"파일 열기 실패: {file_path}가 경로에 없습니다.")
+            self.logger.error(f"파일 열기 실패: {file_path}가 경로에 없습니다.")
             
         except Exception as e:
             # 인코딩 에러 등 기타 알 수 없는 에러 방어
-            logger.error(f"파일 처리 중 예상치 못한 오류 발생: {e}")
+            self.logger.error(f"파일 처리 중 예상치 못한 오류 발생: {e}")
+            traceback.print_exc()
 
 
     # 로또 번호를 분석하여 당첨 여부를 체크하는 메서드 - make/round_all[filtered].txt 파일을 분석하여 당첨 여부를 체크합니다.
@@ -97,11 +97,11 @@ class CheckWinning(LottoMain):
         
         # 1. 조기 반환(Early Return) 패턴 적용: 파일이 아예 없으면 즉시 종료
         if not os.path.exists(file_path):
-            logger.error(f"파일을 찾을 수 없습니다: {os.path.abspath(file_path)}")
+            self.logger.error(f"파일을 찾을 수 없습니다: {os.path.abspath(file_path)}")
             return  # 함수를 즉시 종료하고 메인으로 돌아감
 
-        logger.debug("")
-        logger.debug(f"*** 분석 시작: {file_path}. =========================")
+        self.logger.debug("")
+        self.logger.debug(f"*** 분석 시작: {file_path}. =========================")
         # 2. 예외 처리(try-except) 구조로 안전하게 파일 열기
         try:
             wins = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
@@ -121,15 +121,16 @@ class CheckWinning(LottoMain):
                             wins[result['rank']] += 1
                     
             for rank, count in wins.items():
-                logger.debug(f"- {rank}등 당첨 개수: {count}개")
+                if 0<count:
+                    self.logger.debug(f"- {rank}등 당첨 개수: {count}개")
 
         except FileNotFoundError:
             # 혹시 모를 동시성 삭제 이슈 방어
-            logger.error(f"파일 열기 실패: {file_path}가 경로에 없습니다.")
+            self.logger.error(f"파일 열기 실패: {file_path}가 경로에 없습니다.")
             
         except Exception as e:
             # 인코딩 에러 등 기타 알 수 없는 에러 방어
-            logger.error(f"파일 처리 중 예상치 못한 오류 발생: {e}")
+            self.logger.error(f"파일 처리 중 예상치 못한 오류 발생: {e}")
 
 
 # ==================== 실행 및 검증 ====================
@@ -137,7 +138,7 @@ if __name__ == "__main__":
 
     checker = CheckWinning()
 
-    round = checker.round + 1
+    round = checker.round
 
     print(f"== {round}회 로또 당첨 대조 리포트 ==")
 

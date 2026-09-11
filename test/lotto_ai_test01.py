@@ -25,7 +25,6 @@ from util.str_util import Str
 from util.file_util import FileUtil
 from lotto_main import LottoMain
 from vo.number_vo import NumberVO
-from util.list_util import ListUtil
 
 # 1. 기존에 정의된 수많은 필터 함수 및 분석 함수들 (예시)
 
@@ -52,12 +51,9 @@ class LottoAITest(LottoMain):
 
         self.tickets = [] # 로또 추천 번호를 담을 리스트
 
-        self.last15_numbers = self.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-        
         if debug:
             self.mydic = MyDic()
         
-        self.logger = LogUtil.get_logger(Str.get_class_name(self))
     
     # --- [파이프라인 단계 1: 필터 결과 수치화 함수 정의] ---
     def calculate_filter_features_for_row(self, numbers):
@@ -84,6 +80,26 @@ class LottoAITest(LottoMain):
         """
         실제 로또 CSV 파일을 로드하여 딥러닝 주입용 2차원 행렬(Matrix)로 일괄 변환
         """
+        # 1. 로또 당첨 데이터 로드 (회차, 번호1, 번호2, ... 번호6 구조 가정)
+        # 예시를 위해 가짜 데이터프레임 생성 (실제 가동 시 주석 해제)
+        # df = pd.read_csv(csv_file_path)
+        
+        # # [테스트용 가짜 데이터프레임 빌드] 
+        # demo_data = {
+        #     'num1': [],
+        #     'num2': [],
+        #     'num3': [],
+        #     'num4': [],
+        #     'num5': [],
+        #     'num6': [],
+        # }
+        # for numbervo in self.numberVos:
+        #     nums = numbervo.numbers
+        #     for i in range(0,6):
+        #         cname = f"num{i+1}"
+        #         demo_data[cname].append(nums[i])
+        
+        # df = pd.DataFrame(demo_data)
         df = self.get_number_list_data_frame();
         
         # 2. 6개 당첨 번호 열만 묶어서 리스트 형태로 추출
@@ -111,9 +127,6 @@ class LottoAITest(LottoMain):
         final_tickets = []
         attempts = 0
 
-        # selected_numbers = self.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-        self.logger.debug(f"최근 15회차 번호만 추출: {len(self.last15_numbers)}개 - {self.last15_numbers}")
-        
         while attempts < tried:
             if not all and len(final_tickets) >= total_games:
                 break
@@ -124,9 +137,6 @@ class LottoAITest(LottoMain):
             sampled = np.random.choice(selected_numbers, size=6, replace=False, p=prob_list)
             sampled.sort()
             sampled = list(map(int, sampled))
-            
-            if ListUtil.contains(selected_numbers, sampled)<6:
-                continue
 
             self.tickets.append(sampled) # 생성한 모두 tickets에 추가
             
@@ -265,63 +275,69 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     logger.debug(f"--- 최종 로또 생성 실행 ({Str.number_format(tried)})번 ---")
     
-    # 1~45 전체 번호 유지
-    selected_numbers = list(range(1, 46))
-    # 크기와 확률 합(1)을 모두 맞춰서 추출
-    lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(predicted_probabilities, selected_numbers, games, tried, isAll)
+    # # 1~45 전체 번호 유지
+    # selected_numbers = list(range(1, 46))
+    # # 크기와 확률 합(1)을 모두 맞춰서 추출
+    # lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(predicted_probabilities, selected_numbers, games, tried, isAll)
 
-    # # 이하는 최근 15회차 번호만 추출하여 확률을 재조정하는 로직 *********************************************************
-    # # 최종 로또 생성 실행 ===
-    # selected_numbers = lotto_ai_test.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-    # logger.debug(f"최근 15회차 번호만 추출: {len(selected_numbers)}개 - {selected_numbers}")
+    # 이하는 최근 15회차 번호만 추출하여 확률을 재조정하는 로직 *********************************************************
+    # 최종 로또 생성 실행 ===
+    selected_numbers = lotto_ai_test.get_numbers_from_last(15) # 최근 15회차 번호만 추출
+    logger.debug(f"최근 15회차 번호만 추출: {len(selected_numbers)}개 - {selected_numbers}")
 
-    # # selected_numbers의 개수가 45개보다 적을 때 (예: 30개)
-    # # 번호(1~45)를 인덱스(0~44)로 변환하여 해당 확률만 추출
-    # filtered_prob = [predicted_probabilities[num - 1] for num in selected_numbers]
+    # selected_numbers의 개수가 45개보다 적을 때 (예: 30개)
+    # 번호(1~45)를 인덱스(0~44)로 변환하여 해당 확률만 추출
+    filtered_prob = [predicted_probabilities[num - 1] for num in selected_numbers]
 
-    # # 남은 확률의 합이 1이 되도록 재조정 (정규화)
-    # sum_prob = sum(filtered_prob)
-    # normalized_prob = [p / sum_prob for p in filtered_prob]
+    # 남은 확률의 합이 1이 되도록 재조정 (정규화)
+    sum_prob = sum(filtered_prob)
+    normalized_prob = [p / sum_prob for p in filtered_prob]
 
-    # # 합이 1이 되는지 확인
-    # logger.debug(f"정규화 후 확률 총합: {sum(normalized_prob)} (정규화 전: {sum(filtered_prob)})")
-    # prob_array = normalized_prob
-    # if not abs(sum(normalized_prob) - 1.0) ==0:
-    #     logger.warning("정규화 후 확률 총합이 1이 아닙니다.")
+    # 합이 1이 되는지 확인
+    logger.debug(f"정규화 후 확률 총합: {sum(normalized_prob)} (정규화 전: {sum(filtered_prob)})")
+    prob_array = normalized_prob
+    if not abs(sum(normalized_prob) - 1.0) ==0:
+        logger.warning("정규화 후 확률 총합이 1이 아닙니다.")
 
-    #     # 1차 보정
-    #     # 1. prob_list를 numpy 배열로 변환
-    #     prob_array = np.array(normalized_prob)
+        """
+        1차 보정
+        """
+        # 1. prob_list를 numpy 배열로 변환
+        prob_array = np.array(normalized_prob)
 
-    #     # 2. 총합이 정확히 1이 되도록 정규화 (Normalize)
-    #     prob_array = prob_array / prob_array.sum()
+        # 2. 총합이 정확히 1이 되도록 정규화 (Normalize)
+        prob_array = prob_array / prob_array.sum()
 
-    #     if not abs(sum(prob_array)-1.0)==0:
-    #         # 2차 보정
-    #         # 1. 고정밀도 float64 타입의 numpy 배열로 변환
-    #         prob_array = np.array(prob_array, dtype=np.float64)
+        if not abs(sum(prob_array)-1.0)==0:
+            """
+            2차 보정
+            """
+            # 1. 고정밀도 float64 타입의 numpy 배열로 변환
+            prob_array = np.array(prob_array, dtype=np.float64)
 
-    #         # 2. 정규화 진행
-    #         prob_array /= prob_array.sum()
+            # 2. 정규화 진행
+            prob_array /= prob_array.sum()
             
-    #         if not abs(sum(prob_array)-1.0)==0:
-    #             # 3차 보정 *******************
-    #             # 1. 고정밀도 실수형 배열로 변환 후 정규화
-    #             prob_array = np.array(prob_array, dtype=np.float64)
-    #             prob_array /= prob_array.sum()
+            if not abs(sum(prob_array)-1.0)==0:
+                """
+                3차 보정 *******************
+                """
+                # 1. 고정밀도 실수형 배열로 변환 후 정규화
+                prob_array = np.array(prob_array, dtype=np.float64)
+                prob_array /= prob_array.sum()
 
-    #             # 2. [핵심] 미세 오차(예: -0.0000000000000002)를 마지막 값에 더해 강제로 1.0 만들기
-    #             prob_array[-1] += 1.0 - prob_array.sum()
+                # 2. [핵심] 미세 오차(예: -0.0000000000000002)를 마지막 값에 더해 강제로 1.0 만들기
+                prob_array[-1] += 1.0 - prob_array.sum()
 
-    #             # 3. 확인용 출력 (이제 정확히 1.0이 나옵니다)
-    #             logger.debug(f"보정 후 총합: {prob_array.sum()}")
+                # 3. 확인용 출력 (이제 정확히 1.0이 나옵니다)
+                logger.debug(f"보정 후 총합: {prob_array.sum()}")
 
-    #             if not abs(sum(prob_array)-1.0)==0:
-    #                 logger.warning(f"정규화 후 확률 총합이 1[{sum(prob_array)}]이 아닙니다.")
-    #                 return
+                if not abs(sum(prob_array)-1.0)==0:
+                    logger.warning(f"정규화 후 확률 총합이 1[{sum(prob_array)}]이 아닙니다.")
+                    return
 
-    # lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(prob_array, selected_numbers, games, tried, isAll)
-    # # **********************************************************************************************************
+    lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(prob_array, selected_numbers, games, tried, isAll)
+    # **********************************************************************************************************
 
     tickets_len = len(lucky_tickets)
 
@@ -394,7 +410,7 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
             logger.debug("")
 
     volines.append(f"{lni}게임")
-    volines.append(f"{len(lotto_ai_test.last15_numbers)} {lotto_ai_test.last15_numbers}")
+    volines.append(f"{len(selected_numbers)} {selected_numbers}")
 
     applines = []
     sumc = 0
@@ -416,9 +432,6 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
         filename = FileUtil.get_lotto_make_file(round+1)
         FileUtil.write_lines(filename, volines, "w")
-        
-        filename = FileUtil.get_lotto_selected_file(round+1);
-        FileUtil.writeAll(filename, ListUtil.join(lotto_ai_test.last15_numbers, ","), "w")
 
         logger.debug(f"최종 로또 추천 번호 save to {filename} 조합 {lni}개 번호 {sumc}개")
 
