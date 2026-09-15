@@ -3,8 +3,8 @@ from typing import List
 
 import numpy as np
 
-from myfilter.lotto_filter import LottoFilter
-from vo.number_vo import NumberVO
+from lotto.myfilter.lotto_filter import LottoFilter
+from lotto.vo.number_vo import NumberVO
 
 
 # nums 의 이웃수 목록

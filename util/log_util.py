@@ -17,6 +17,7 @@ class LogUtil:
         설정된 핸들러(콘솔, 파일)가 포함된 로거 객체를 반환합니다.
         이미 핸들러가 존재하면 중복 등록을 방지합니다.
         """
+        logging.basicConfig(style='{')
         logger = logging.getLogger(name)
         logger.setLevel(level)
 

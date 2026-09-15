@@ -2,9 +2,9 @@ import os
 import time
 import random
 
-from myfilter.lotto_filter import LottoFilter
+from lotto.myfilter.lotto_filter import LottoFilter
 from util.log_util import LogUtil
-from util.mydic_util import MyDic
+from util.mydic_util import Dic
 
 # 💡 텐서플로우의 내부 안내 경고 메시지(C++ 로그)를 화면에서 차단합니다.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
@@ -23,8 +23,8 @@ from sklearn.preprocessing import StandardScaler
 
 from util.str_util import Str
 from util.file_util import FileUtil
-from lotto_main import LottoMain
-from vo.number_vo import NumberVO
+from lotto.lotto_main import LottoMain
+from lotto.vo.number_vo import NumberVO
 
 # 1. 기존에 정의된 수많은 필터 함수 및 분석 함수들 (예시)
 
@@ -52,7 +52,7 @@ class LottoAITest(LottoMain):
         self.tickets = [] # 로또 추천 번호를 담을 리스트
 
         if debug:
-            self.mydic = MyDic()
+            self.mydic = Dic()
         
     
     # --- [파이프라인 단계 1: 필터 결과 수치화 함수 정의] ---

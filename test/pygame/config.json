@@ -1,0 +1,85 @@
+{
+    "default": {
+        "WIDTH": 800,
+        "HEIGHT": 600
+    },
+    "dino": {
+        "SCREEN_WIDTH": 1200,
+        "SCREEN_HEIGHT": 800,
+        "background": "./game/images/ddong/background.jpg",
+        "mans": [
+            "./game/images/ddong/man_img1.png",
+            "./game/images/ddong/man_img2.png",
+            "./game/images/ddong/man_img3.png",
+            "./game/images/ddong/man_img4.png",
+            "./game/images/ddong/man_img5.png",
+            "./game/images/ddong/man_img6.png"
+        ],
+        "rock": [
+            "./game/images/ddong/watermelon1.png",
+            "./game/images/ddong/watermelon2.png",
+            "./game/images/ddong/watermelon3.png",
+            "./game/images/ddong/watermelon4.png",
+            "./game/images/ddong/watermelon5.png"
+        ]
+    },
+    "ball": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "radius_limits": {
+            "min": 15,
+            "max": 35
+        }
+    },
+    "space": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "bg_img": "./game/images/space/space.jpg",
+        "fighter_img": "./game/images/space/space_ship2.png",
+        "missile_img": "./game/images/space/missile.png",
+        "explosion_img": "./game/images/space/space_ship2.png"
+    },
+    "cards": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "card_imgs": [
+            "./game/images/jewel/jewel_red.png",
+            "./game/images/jewel/jewel_green.png",
+            "./game/images/jewel/jewel_blue.png",
+            "./game/images/jewel/jewel_yellow.png",
+            "./game/images/jewel/jewel_rainbow.png",
+            "./game/images/jewel/jewel_bomb.png",
+            "./game/images/jewel/jewel_missile_h.png",
+            "./game/images/jewel/jewel_missile_v.png"
+        ],
+        "card_back_img": "./game/images/jewel/jewel_back2.png"
+    },
+    "sniper": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "WORLD_W": 2000,
+        "WORLD_H": 1500,
+        "vip_x": 200,
+        "vip_y": 750,
+        "spawn_event_timemillis": 1500
+    },
+    "rhythm": {
+        "WIDTH": 800,
+        "HEIGHT": 600
+    },
+    "tower": {
+        "WIDTH": 800,
+        "HEIGHT": 600
+    },
+    "snake": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "GRID_SIZE": 20
+    },
+    "sokoban": {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "file_path": "./game/sokoban",
+        "file_name": "sokoban.json"
+    }
+}

@@ -1,1 +1,3 @@
 .venv\Scripts\activate
+
+윈탐색기 %APPDATA%\Code\User\workspaceStorage

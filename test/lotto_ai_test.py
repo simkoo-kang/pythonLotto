@@ -2,9 +2,9 @@ import os
 import time
 import random
 
-from myfilter.lotto_filter import LottoFilter
+from lotto.myfilter.lotto_filter import LottoFilter
 from util.log_util import LogUtil
-from util.mydic_util import MyDic
+from util.mydic_util import Dic
 
 # 💡 텐서플로우의 내부 안내 경고 메시지(C++ 로그)를 화면에서 차단합니다.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
@@ -23,8 +23,8 @@ from sklearn.preprocessing import StandardScaler
 
 from util.str_util import Str
 from util.file_util import FileUtil
-from lotto_main import LottoMain
-from vo.number_vo import NumberVO
+from lotto.lotto_main import LottoMain
+from lotto.vo.number_vo import NumberVO
 from util.list_util import ListUtil
 
 # 1. 기존에 정의된 수많은 필터 함수 및 분석 함수들 (예시)
@@ -55,7 +55,7 @@ class LottoAITest(LottoMain):
         self.last15_numbers = self.get_numbers_from_last(15) # 최근 15회차 번호만 추출
         
         if debug:
-            self.mydic = MyDic()
+            self.mydic = Dic()
         
         self.logger = LogUtil.get_logger(Str.get_class_name(self))
     

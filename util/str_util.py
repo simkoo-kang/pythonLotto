@@ -13,15 +13,29 @@ class Str:
 
 # ==================== 실행 및 검증 ====================
 if __name__ == "__main__":
-    # 요청하신 예시 데이터 입력
-    a = [1, 2, 3, 4, 5, 6]
-    b = [5,6,7,8,9,0]
-    c=a+b
-    d = sorted(list(set(c)))
-    print(c, d)
+    maxidx = 10
+    stop = False
+    if not stop:
+        for a in range(maxidx):
+            if a == 0:
+                continue
+            if stop:
+                break
+            for b in range(maxidx):
+                if b == 0:
+                    continue
+                if stop:
+                    break
+                for c in range(maxidx):
+                    if c == 0:
+                        continue
+                    plus = a + b + c
+                    mult = a * b * c
+                    if plus < mult:
+                        continue
+                    print(f"plus={plus}, mult={mult}")
+                    if plus == mult:
+                        print(f"(a,b,c) = ({a},{b},{c}) same")
+                        # stop = True
+                        # break
 
-    print(0,3,a[0:3])
-    print(1,3,a[1:3])
-    print(0,12,c[0:12])
-    print(0,12,c[:12])
-    print(len(c),c[0:12])

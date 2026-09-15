@@ -38291,3 +38291,678 @@ Applied lines: ['', '01 = 1', '07 = 1', '18 = 1', '20 = 1', '30 = 1', '32 = 1', 
 [2026-09-11 19:54:54] [JigsawPussle] [DEBUG] [jigsaw.py:404] [on_release] - 🎉 축하합니다! 퍼즐을 완성했습니다!
 [2026-09-11 20:20:21] [JigsawPussle] [DEBUG] [jigsaw.py:108] [update_title] - 직소 퍼즐 [puzzle.png] - 난이도: 3x3
 [2026-09-11 20:21:33] [JigsawPussle] [DEBUG] [jigsaw.py:165] [change_background_sound] - BGM 꺼짐
+[2026-09-12 15:32:13] [ClassMain] [DEBUG] [pygame12_balls.py:69] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': [{'min': 15}, {'max': 35}]})})
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:35] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:36] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:37] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:38] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:141] [new_ball] - 403, 300
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 15:56:39] [ClassMain] [DEBUG] [pygame12_balls.py:89] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:35] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 0개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 399, 288
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:36] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:37] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:38] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:101] [handle_ball_collisions] - balls = 1개 입니다.
+[2026-09-12 16:01:39] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 526, 334
+[2026-09-12 16:01:46] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 556, 325
+[2026-09-12 16:01:47] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 515, 358
+[2026-09-12 16:01:48] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 474, 398
+[2026-09-12 16:01:49] [ClassMain] [DEBUG] [pygame12_balls.py:153] [new_ball] - 386, 429
+[2026-09-13 14:34:42] [D:\Workspace\vscode\lotto\test\pygame\pygame13_space.py] [DEBUG] [pygame13_space.py:87] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': {'WIDTH': 800, 'HEIGHT': 600}})
+[2026-09-13 21:27:07] [D:\Workspace\vscode\lotto\test\pygame\pygame14_cardflipping.py] [DEBUG] [pygame14_cardflipping.py:19] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': {'WIDTH': 800, 'HEIGHT': 600}})
+[2026-09-13 21:27:48] [D:\Workspace\vscode\lotto\test\pygame\pygame14_cardflipping.py] [DEBUG] [pygame14_cardflipping.py:19] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': {'WIDTH': 800, 'HEIGHT': 600}})
+[2026-09-13 21:35:44] [D:\Workspace\vscode\lotto\test\pygame\pygame14_cardflipping.py] [DEBUG] [pygame14_cardflipping.py:19] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': {'WIDTH': 800, 'HEIGHT': 600}})
+[2026-09-13 21:38:16] [D:\Workspace\vscode\lotto\test\pygame\pygame14_cardflipping.py] [DEBUG] [pygame14_cardflipping.py:19] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': Munch({'WIDTH': 800, 'HEIGHT': 600}), 'cards': {'WIDTH': 800, 'HEIGHT': 600}})
+[2026-09-14 10:10:04] [D:\Workspace\vscode\lotto\test\pygame\pygame15_sniper.py] [DEBUG] [pygame15_sniper.py:20] [__init__] - Munch({'dino': Munch({'SCREEN_WIDTH': 1200, 'SCREEN_HEIGHT': 800, 'background': './game/images/ddong/background.jpg', 'mans': ['./game/images/ddong/man_img1.png', './game/images/ddong/man_img2.png', './game/images/ddong/man_img3.png', './game/images/ddong/man_img4.png', './game/images/ddong/man_img5.png', './game/images/ddong/man_img6.png'], 'rock': ['./game/images/ddong/watermelon1.png', './game/images/ddong/watermelon2.png', './game/images/ddong/watermelon3.png', './game/images/ddong/watermelon4.png', './game/images/ddong/watermelon5.png']}), 'ball': Munch({'WIDTH': 800, 'HEIGHT': 600, 'radius_limits': Munch({'min': 15, 'max': 35})}), 'space': Munch({'WIDTH': 800, 'HEIGHT': 600, 'bg_img': './game/images/space/space.jpg', 'fighter_img': './game/images/space/space_ship2.png', 'missile_img': './game/images/space/missile.png', 'explosion_img': './game/images/space/space_ship2.png'}), 'cards': Munch({'WIDTH': 800, 'HEIGHT': 600, 'card_imgs': ['./game/images/jewel/jewel_red.png', './game/images/jewel/jewel_green.png', './game/images/jewel/jewel_blue.png', './game/images/jewel/jewel_yellow.png', './game/images/jewel/jewel_rainbow.png', './game/images/jewel/jewel_bomb.png', './game/images/jewel/jewel_missile_h.png', './game/images/jewel/jewel_missile_v.png'], 'card_back_img': './game/images/jewel/jewel_back2.png'}), 'sniper': {'WIDTH': 800, 'HEIGHT': 600, 'WORLD_W': 2000, 'WORLD_H': 1500}})
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:48] [analyze_lotto_file] - 
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:49] [analyze_lotto_file] - *** 분석 시작: D:\Workspace\vscode\lotto\conf\make\1241.txt. =========================
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:80] [analyze_lotto_file] - == 하단 집계 번호 분석 결과 ==
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:81] [analyze_lotto_file] - - 생성된 번호 리스트: [1, 4, 5, 6, 10, 11, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 28, 32, 37, 38, 40, 41, 42, 45]
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:82] [analyze_lotto_file] - - 당첨 번호 일치 (3개): [16, 24, 23]
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:83] [analyze_lotto_file] - - 보너스 번호 일치 여부: 불일치
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:103] [analyze_lotto_all_file] - 
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:104] [analyze_lotto_all_file] - *** 분석 시작: D:\Workspace\vscode\lotto\conf\make\1241_filtered.txt. =========================
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:125] [analyze_lotto_all_file] - - 4등 당첨 개수: 13개
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:125] [analyze_lotto_all_file] - - 5등 당첨 개수: 375개
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:103] [analyze_lotto_all_file] - 
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:104] [analyze_lotto_all_file] - *** 분석 시작: D:\Workspace\vscode\lotto\conf\make\1241_all.txt. =========================
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:125] [analyze_lotto_all_file] - - 4등 당첨 개수: 13개
+[2026-09-14 16:54:47] [LottoFileAnalyzer] [DEBUG] [check_winning.py:125] [analyze_lotto_all_file] - - 5등 당첨 개수: 406개
+[2026-09-15 07:29:41] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:270] [<module>] - 성공 ==========================
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:272] [<module>] - 성공 ==========================
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:204] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:275] [<module>] - ✅ 클리어 가능한 맵입니다!
+🎯 최단 이동 경로: LDLULDLUURURRDLRDRDLL (총 21걸음)
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:287] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 2, 0, 0, 3, 2, 2, 1, 1]
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 0, 1, 0, 3, 3, 0, 2, 1]
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 0, 0, 3, 3, 0, 1, 0, 1]
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 1, 1, 2, 1, 4, 0, 0, 1]
+[2026-09-15 07:36:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:291] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:44:50] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:327] [<module>] - 성공 ==========================
+[2026-09-15 10:44:50] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:256] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 10:44:50] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:330] [<module>] - ✅ 클리어 가능한 맵입니다!
+🎯 최단 이동 경로: LDLULDLUURURRDLRDRDLL (총 21걸음)
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:342] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 2, 1, 0, 0, 2, 1, 1, 1]
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 4, 3, 0, 3, 0, 0, 0, 1]
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 0, 1, 0, 0, 2, 3, 0, 1]
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 2, 3, 0, 2, 0, 3, 0, 1]
+[2026-09-15 10:44:51] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:46:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:327] [<module>] - 성공 ==========================
+[2026-09-15 10:46:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:334] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:342] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 4, 1, 2, 0, 3, 0, 1]
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 0, 0, 0, 3, 2, 3, 0, 1]
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 1, 0, 0, 3, 0, 2, 1]
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 0, 0, 2, 3, 0, 2, 0, 1]
+[2026-09-15 10:46:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:346] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:50:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:328] [<module>] - 성공 ==========================
+[2026-09-15 10:50:38] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:335] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:343] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 0, 0, 0, 0, 4, 1, 1]
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 2, 3, 3, 0, 1, 2, 1, 1]
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 0, 0, 3, 0, 2, 3, 0, 1]
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 2, 3, 0, 2, 0, 0, 0, 1]
+[2026-09-15 10:50:40] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 11:09:23] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:328] [<module>] - 성공 ==========================
+[2026-09-15 11:09:23] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:335] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:343] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 0, 0, 0, 0, 0, 1, 2, 1]
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 2, 4, 3, 0, 0, 3, 3, 1]
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 1, 3, 2, 0, 2, 0, 1]
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 0, 2, 3, 0, 0, 1, 1, 1]
+[2026-09-15 11:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:347] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 11:13:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:330] [<module>] - 성공 ==========================
+[2026-09-15 11:13:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:337] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:262] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:345] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 1, 2, 2, 0, 3, 4, 1, 1]
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 0, 0, 2, 0, 0, 3, 2, 1]
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 0, 0, 3, 3, 3, 1, 0, 1]
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 1, 1, 0, 0, 0, 0, 2, 1]
+[2026-09-15 11:13:47] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:349] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:343] [<module>] - 성공 ==========================
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:350] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:275] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:358] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 0, 2, 3, 0, 3, 2, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 3, 2, 0, 0, 2, 0, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 3, 3, 0, 1, 0, 1, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 4, 0, 1, 1, 0, 2, 0, 1]
+[2026-09-15 12:02:37] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:343] [<module>] - 성공 ==========================
+[2026-09-15 16:09:30] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:350] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:275] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:358] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 3, 2, 0, 0, 0, 2, 1]
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 0, 3, 1, 3, 1, 0, 1]
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 0, 0, 3, 2, 4, 1, 1]
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 2, 2, 3, 0, 0, 0, 1, 1]
+[2026-09-15 16:09:32] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:09:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:343] [<module>] - 성공 ==========================
+[2026-09-15 16:09:46] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:350] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:275] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:358] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 0, 0, 2, 0, 0, 1, 1]
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 2, 3, 0, 1, 0, 1, 1]
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 3, 0, 3, 0, 0, 0, 1]
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 2, 3, 2, 3, 0, 2, 4, 1]
+[2026-09-15 16:09:48] [D:\Workspace\vscode\lotto\class_main.py] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:59:06] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:343] [<module>] - 성공 ==========================
+[2026-09-15 16:59:06] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:350] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:275] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:358] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 0, 3, 0, 0, 2, 1]
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 2, 3, 0, 2, 3, 1, 1]
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 0, 0, 1, 0, 3, 0, 0, 1]
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 4, 2, 0, 3, 0, 2, 0, 1]
+[2026-09-15 16:59:08] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:362] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 17:03:10] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:350] [<module>] - 성공 ==========================
+[2026-09-15 17:03:10] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:357] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 17:03:12] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:282] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 17:03:12] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:365] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 17:03:12] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [[1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 2, 3, 0, 0, 0, 0, 1], [1, 1, 0, 0, 1, 3, 0, 2, 1], [1, 0, 4, 0, 3, 0, 2, 3, 1], [1, 1, 2, 0, 3, 2, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1]]
+[2026-09-15 17:03:12] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - RRRDLLRRRRULLRUULDDUULLDDRR
+[2026-09-15 17:04:54] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:350] [<module>] - 성공 ==========================
+[2026-09-15 17:04:54] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:357] [<module>] - ❌ 이미 존재하는 조합입니다.
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:282] [solve_sokoban] - 🔍 9x6 맵 분석 및 검증을 시작합니다...
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:365] [<module>] - 
+🎉 클리어가 100% 보장되는 새로운 9x6 맵이 생성되었습니다:
+
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 0, 1, 1, 0, 0, 4, 2, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 0, 0, 0, 2, 3, 3, 0, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 3, 0, 1, 3, 0, 0, 0, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 2, 2, 3, 0, 0, 1, 2, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:369] [<module>] - [1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2026-09-15 17:04:56] [D:\Workspace\vscode\lotto] [DEBUG] [sokoban.py:371] [<module>] - DULLDLLLDURRRRDDLLRURRULURDRD

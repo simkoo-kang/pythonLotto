@@ -1,7 +1,7 @@
 # myfilter.py 파일 안에서 구체적인 클래스 이름들을 직접 꺼내옵니다.
-from myfilter.base.crange.matchcountrange_filter import MatchCountRangeFilter
+from lotto.myfilter.base.crange.matchcountrange_filter import MatchCountRangeFilter
 
-from lotto_main import LottoMain
+from lotto.lotto_main import LottoMain
 import util.lotto_util as lotto_util
 
 
