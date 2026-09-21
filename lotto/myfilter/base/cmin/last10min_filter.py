@@ -4,9 +4,16 @@ import util.lotto_util as lotto_util
 from lotto.myfilter.lotto_filter import AMinFilter
 
 
-# 지난 10회 출현 수
 class Last10MinFilter(AMinFilter):
     def __init__(self, last10: List[int], min_val: int = 4, optional: bool=True, debug: bool=False):
+        """_summary_
+        지난 10회 출현 수
+        Args:
+            last10 (List[int]): _description_
+            min_val (int, optional): _description_. Defaults to 4.
+            optional (bool, optional): _description_. Defaults to True.
+            debug (bool, optional): _description_. Defaults to False.
+        """
         super().__init__(min_val=min_val, optional=optional, debug=debug)
         self.last10 = last10
 

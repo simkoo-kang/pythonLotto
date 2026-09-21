@@ -4,11 +4,16 @@ from lotto.myfilter.lotto_filter import ARangeFilter
 import util.lotto_util as lotto_util
 
 
-# 쌍수, 광땡
 class PairsDdangRangeFilter(ARangeFilter):
-
-    pairs = [ 11, 22, 33, 44 ]
-    ddang = [ 13, 18, 31, 38 ]
+    """_summary_
+    # 쌍수, 광땡
+    Args:
+        ARangeFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
+    pairs = [ 11, 22, 33, 44 ]  # fmt: skip
+    ddang = [ 13, 18, 31, 38 ]  # fmt: skip
 
     def __init__(self, min_val: int, max_val: int, index: int, optional: bool=True, debug: bool=False):
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)

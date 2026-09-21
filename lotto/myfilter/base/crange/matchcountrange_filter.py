@@ -7,6 +7,16 @@ from lotto.myfilter.lotto_filter import ARangeFilter
 # 3.6. 추가 필터 예시: 특정 숫자 배열과의 일치 개수
 class MatchCountRangeFilter(ARangeFilter):
     def __init__(self, match_list: List[int], min_val: int = 0, max_val: int = 1, title: str = "Match Count Range Filter", optional: bool=True, debug: bool=False):
+        """_summary_
+        특정 숫자 배열과의 일치 개수
+        Args:
+            match_list (List[int]): _description_
+            min_val (int, optional): _description_. Defaults to 0.
+            max_val (int, optional): _description_. Defaults to 1.
+            title (str, optional): _description_. Defaults to "Match Count Range Filter".
+            optional (bool, optional): _description_. Defaults to True.
+            debug (bool, optional): _description_. Defaults to False.
+        """
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
         self.match_list = match_list
         self.title = title

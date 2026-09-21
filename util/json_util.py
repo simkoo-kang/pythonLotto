@@ -18,7 +18,7 @@ class MunchJson(ClassMain):
     ):
         if file_path == None:
             file_path = str(Path(__file__).parent)
-        super().__init__(filepath=file_path)
+        super().__init__(log_filedir=file_path)
 
         self.file_path = file_path
         self.filename = filename
@@ -112,7 +112,7 @@ class Json(ClassMain):
     ):
         if file_path == None:
             file_path = str(Path(__file__).parent)
-        super().__init__(filepath=file_path)
+        super().__init__(log_filedir=file_path)
 
         self.file_path = file_path
         self.filename = file_name

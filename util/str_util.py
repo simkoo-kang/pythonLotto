@@ -1,12 +1,17 @@
+import re
+
 
 class Str:
 
-    @staticmethod    
+    @staticmethod
+    def strip_not_digit(s: str) -> str:
+        return re.sub(r"\D", "", s)
+
+    @staticmethod
     def number_format(number: int) -> str:
         return f"{number:,}"
 
-
-    @staticmethod    
+    @staticmethod
     def get_class_name(clazz_object) -> str:
         return clazz_object.__class__.__name__
 
@@ -38,4 +43,3 @@ if __name__ == "__main__":
                         print(f"(a,b,c) = ({a},{b},{c}) same")
                         # stop = True
                         # break
-

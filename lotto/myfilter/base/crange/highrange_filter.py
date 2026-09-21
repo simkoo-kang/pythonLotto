@@ -3,9 +3,16 @@ from typing import List
 from lotto.myfilter.lotto_filter import ARangeFilter
 
 
-# 3.4. 추가 필터 예시: 높은 수 개수
 class HighRangeFilter(ARangeFilter):
     def __init__(self, min_val: int = 2, max_val: int = 4, optional: bool=True, debug: bool=False):
+        """_summary_
+         3.4. 추가 필터 예시: 높은 수 개수
+        Args:
+            min_val (int, optional): _description_. Defaults to 2.
+            max_val (int, optional): _description_. Defaults to 4.
+            optional (bool, optional): _description_. Defaults to True.
+            debug (bool, optional): _description_. Defaults to False.
+        """
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)
 
     @property

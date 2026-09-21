@@ -6,13 +6,18 @@ from pathlib import Path
 class FileUtil:
     # 💡 [정적 필드 (Static Field) 선언]
     # 클래스명 자체로 바로 접근할 수 있으며, 모든 인스턴스가 이 값을 공유합니다.
-    DEFAULT_PATH = r"D:\Workspace\vscode\lotto"
+    """default path D:\\Workspace\\vscode\\lotto """
+    DEFAULT_PATH = r"D:\\Workspace\\vscode\\lotto"
+    
+    """ conf folder"""
     CONF_PATH = os.path.join(DEFAULT_PATH, "conf")
+    
+    """default encoding utr-8 """
     DEFAULT_ENCODING = "utf-8"
 
     @staticmethod
     def get_absolute_class_path(cls_or_instance):
-        # 만약 인스턴스(객체)가 들어왔다면, 해당 인스턴스의 __class__를 가져옵니다.
+        """만약 인스턴스(객체)가 들어왔다면, 해당 인스턴스의 __class__를 가져옵니다."""
         cls = (
             cls_or_instance
             if isinstance(cls_or_instance, type)
@@ -20,66 +25,63 @@ class FileUtil:
         )
 
         return f"{cls.__module__}.{cls.__qualname__}"
-        # module = sys.modules[cls.__module__]
-
-        # # 직접 실행되어 __main__으로 나오는 경우, 파일 경로를 기반으로 패키지 경로를 유추
-        # if cls.__module__ == '__main__':
-        #     if hasattr(module, '__file__'):
-        #         # 예: 'D:/Workspace/vscode/lotto/config/test_config.py'
-        #         file_path = os.path.abspath(module.__file__)
-
-        #         # 프로젝트 루트 경로를 기준으로 상대적인 패키지 경로 생성
-        #         # (이 부분은 프로젝트 구조에 따라 상위 폴더를 떼어내는 가공이 필요합니다)
-        #         print(f"현재 실행 중인 실제 파일 위치: {file_path}")
-
-        # return f"{cls.__module__}.{cls.__qualname__}"
 
     @staticmethod
     def get_current_dir() -> str:
+        """ current working dir """
         return os.getcwd()
 
     @staticmethod
     def get_lotto_make_filtered_file(round: int) -> str:
+        """ D:\\Workspace\\vscode\\lotto\\conf\\make\\\\(round)_filtered.txt """
         return os.path.join(FileUtil.CONF_PATH, "make", f"{round}_filtered.txt")
 
     @staticmethod
     def get_lotto_make_all_file(round: int) -> str:
+        """ D:\\Workspace\\vscode\\lotto\\conf\\make\\\\(round)_all.txt """
         return os.path.join(FileUtil.CONF_PATH, "make", f"{round}_all.txt")
 
     @staticmethod
     def get_lotto_make_file(round: int) -> str:
+        """ D:\\Workspace\\vscode\\lotto\\conf\\make\\\\(round).txt """
         return os.path.join(FileUtil.CONF_PATH, "make", f"{round}.txt")
 
     @staticmethod
     def get_lotto_selected_file(round: int) -> str:
+        """ D:\\Workspace\\vscode\\lotto\\conf\\make\\\\(round)_selected.txt """
         return os.path.join(FileUtil.CONF_PATH, "make", f"{round}_selected.txt")
 
     @staticmethod
     def exists(file_path: str) -> bool:
+        """ os.path.exists(file_path) """
         return os.path.exists(file_path)
 
     @staticmethod
     def parent(file_path: str) -> str:
+        """ str(Path(file_path).parent) """
         return str(Path(file_path).parent)
 
     @staticmethod
     def filesize(file_path: str) -> int:
+        """ Path(file_path).stat().st_size """
         return Path(file_path).stat().st_size
 
     @staticmethod
     def ext(file_path: str, is_all: bool = True) -> str:
+        """ .py if is_all else py """
         if is_all:
             return Path(file_path).suffix  # .py
         return Path(file_path).suffix[1:]  # py
 
     @staticmethod
     def filename(file_path: str, is_all: bool = True) -> str:
+        """ json.py if is_all else json """
         if is_all:
             return Path(file_path).name  # json.py
         return Path(file_path).stem  # json
 
     @staticmethod
-    def writeAll(file_path: str, string: str, mode: str = "a") -> bool:
+    def writeln(file_path: str, string: str, mode: str = "a") -> bool:
         """
         [파일 쓰기 기능]
         String[] (문자열 리스트)를 받아 해당 경로에 한 줄씩 기록합니다.

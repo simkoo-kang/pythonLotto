@@ -3,7 +3,18 @@ from typing import List
 from lotto.myfilter.lotto_filter import LottoFilter
 from lotto.vo.number_vo import NumberVO
 
+
 class LottoFilterManager:
+    # 유일한 인스턴스를 저장할 클래스 변수
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            # 인스턴스가 생성된 적이 없다면 새로 생성
+            cls._instance = super().__new__(cls)  # , args, kwargs)
+
+        return cls._instance
+
     def __init__(self):
         """필터들을 등록하고 관리하는 관리자 클래스입니다."""
         self._filters: List[LottoFilter] = []
@@ -29,14 +40,13 @@ class LottoFilterManager:
         """
         if not self._filters:
             return True  # 등록된 필터가 없으면 무조건 패스
-            
+
         # 모든 필터의 filter() 결과가 True여야 최종 통과
         return all(lotto_filter.filter(numbers) for lotto_filter in self._filters)
 
     def filter_bulk_combinations(self, bulk_numbers: List[NumberVO]) -> List[NumberVO]:
         """
-        대량의 로또 번호 조합 리스트를 받아서 
+        대량의 로또 번호 조합 리스트를 받아서
         모든 필터 조건을 통과한 청정 조합들만 골라내어 반환합니다.
         """
         return [nums for nums in bulk_numbers if self.filter_combination(nums.numbers)]
-    

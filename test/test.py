@@ -49,3 +49,13 @@ print(f"폴더 경로: {folder_path}")  # D:\Workspace\vscode\lotto\game\sokoban
 print(f"파일 이름: {file_name}")  # sokoban
 print(f"확 장 자 : {file_ext}")  # .py
 print(f"전체 파일명: {full_name}")  # sokoban.py
+
+x, a1, b1 = 0, 1, 1
+while x < 30:
+    a, b = x**9, 3**x
+    print("x=", x, a, b, (b - b1) / (a - a1))
+    if a == b:
+        break
+    x += 1
+    a1 = a
+    b1 = b

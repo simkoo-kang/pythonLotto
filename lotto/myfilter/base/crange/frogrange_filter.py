@@ -4,8 +4,14 @@ import util.lotto_util as lotto_util
 from lotto.myfilter.lotto_filter import ARangeFilter
 
 
-# 개구리 패턴
 class FrogRangeFilter(ARangeFilter):
+    """_summary_
+    # 개구리 패턴  max_count: int = 4
+    Args:
+        ARangeFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
 
     max_count: int = 4
 
@@ -14,7 +20,7 @@ class FrogRangeFilter(ARangeFilter):
         [ 3, 4, 10, 11, 17, 18, 24, 25, 31, 32, 38, 39, 45 ],
         [ 4, 5, 11, 12, 18, 19, 25, 26, 32, 33, 39, 40 ],
         [ 6, 7, 13, 14, 20, 21, 27, 28, 34, 35, 41, 42 ]
-    ]
+    ] # fmt: skip
 
     def __init__(self, min_val: int, max_val: int, index: int, optional: bool=True, debug: bool=False):
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)

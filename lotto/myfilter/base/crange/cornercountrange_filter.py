@@ -4,10 +4,16 @@ import util.lotto_util as lotto_util
 from lotto.myfilter.lotto_filter import ARangeFilter
 
 
-# corners 숫자 배열과의 일치 개수
 class CornerCountRangeFilter(ARangeFilter):
+    """_summary_
+    # corners 숫자 배열과의 일치 개수
+    Args:
+        ARangeFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
 
-    corners = [ 1, 2, 6, 7, 8, 9, 13, 14, 29, 30, 34, 35, 36, 37, 41, 42, 43, 44, 45 ]
+    corners = [ 1, 2, 6, 7, 8, 9, 13, 14, 29, 30, 34, 35, 36, 37, 41, 42, 43, 44, 45 ] # fmt: skip
 
     def __init__(self, min_val: int = 0, max_val: int = 1, optional: bool=True, debug: bool=False):
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)

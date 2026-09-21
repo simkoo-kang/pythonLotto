@@ -4,8 +4,15 @@ import util.lotto_util as lotto_util
 from lotto.myfilter.lotto_filter import AMaxFilter, LottoFilter
 
 
-# 퐁당퐁당 패턴
 class FondantMaxFilter(AMaxFilter):
+    """_summary_
+    # 퐁당퐁당 패턴 
+    max_count: int = 13
+    Args:
+        AMaxFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
 
     max_count: int = 13
 

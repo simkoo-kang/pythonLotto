@@ -11,11 +11,17 @@ from lotto.myfilter.lotto_filter import AMaxFilter
 한 번호대에 숫자가 4개 이상 몰리거나, 번호대 3개 이상이 동시에 전멸(멸)하는 조합을 필터링하도록 설계했습니다.
 """
 class NumberZoneCountMaxFilter(AMaxFilter):
-    """
-    1번대, 10번대, 20번대, 30번대, 40번대의 수량을 체크하고,
-    0이면 '0', 아니면 '1'로 변환된 패턴 문자열을 분석하여 필터링합니다.
-    """
     def __init__(self, max_val: int=3, max_empty_zones: int=2, optional: bool=True, debug: bool=False):
+        """_summary_
+        1번대, 10번대, 20번대, 30번대, 40번대의 수량을 체크하고,
+        0이면 '0', 아니면 '1'로 변환된 패턴 문자열을 분석하여 필터링합니다.
+
+        Args:
+            max_val (int, optional): _description_. Defaults to 3.
+            max_empty_zones (int, optional): _description_. Defaults to 2.
+            optional (bool, optional): _description_. Defaults to True.
+            debug (bool, optional): _description_. Defaults to False.
+        """
         super().__init__(max_val=max_val, optional=optional, debug=debug)
         # 전멸(0개) 허용할 최대 번호대 개수 (기본값: 3개 이상 멸하면 탈락)
         self.max_empty_zones = max_empty_zones

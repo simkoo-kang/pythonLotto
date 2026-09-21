@@ -2,28 +2,29 @@
 파이게임 기본 구조
 """
 
+from pathlib import Path
 import sys
 
 import pygame
 from util.log_util import LogUtil
 from config.config_manager import ConfigManager
 from lotto.myfilter.base.crange.sectionrange_filter import SectionRangeFilter
+from class_main import ClassMain
 
 
-class GameMain:
-    def __init__(self, config, title: str = None):
-        log_filename = __file__
+class GameMain(ClassMain):
+    def __init__(self, config, title: str = None, is_init: bool = True):
+        super().__init__(str(Path(__file__).parent))
+
         self.config = config
-
         if title == None:
             title = "GameMain"
 
         self.title = title
 
-        self.logger = LogUtil.get_logger(log_filename)
-
-        pygame.init()  # 2. 파이게임 초기화
-        self.create_screen(config.WIDTH, config.HEIGHT)
+        if is_init:
+            pygame.init()  # 2. 파이게임 초기화
+            self.create_screen(config.WIDTH, config.HEIGHT)
 
     def create_screen(self, width, height):
         self.screen = pygame.display.set_mode(

@@ -4,10 +4,16 @@ from lotto.myfilter.lotto_filter import ARangeFilter
 import util.lotto_util as lotto_util
 
 
-# 솟수
 class PrimeRangeFilter(ARangeFilter):
+    """_summary_
+    # 솟수
+    Args:
+        ARangeFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
 
-    primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
+    primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ] # fmt: skip
 
     def __init__(self, min_val: int, max_val: int, optional: bool=True, debug: bool=False):
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)

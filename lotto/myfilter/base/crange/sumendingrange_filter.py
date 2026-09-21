@@ -3,12 +3,12 @@ from typing import List
 from lotto.myfilter.lotto_filter import ARangeFilter
 
 
-# 3. Concrete Class (끝수합 필터)
 class SumEndingRangeFilter(ARangeFilter):
-    """
-    일의 자리 숫자의 총합을 기준으로 필터링하는 구체적인 필터 클래스입니다.
-    """
     def __init__(self, min_val: int = 20, max_val: int = 35, optional: bool=True, debug: bool=False):
+        """
+        3. Concrete Class (끝수합 필터)
+        일의 자리 숫자의 총합을 기준으로 필터링하는 구체적인 필터 클래스입니다.
+        """
         super().__init__(min_val, max_val, optional=optional, debug=debug)
 
     @property

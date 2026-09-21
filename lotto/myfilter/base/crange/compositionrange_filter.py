@@ -4,10 +4,16 @@ from lotto.myfilter.lotto_filter import ARangeFilter
 import util.lotto_util as lotto_util
 
 
-# 합성수
 class CompositionRangeFilter(ARangeFilter):
+    """_summary_
+    # 합성수
+    Args:
+        ARangeFilter (_type_): _description_
+    Returns:
+        _type_: _description_
+    """
 
-    comps = [ 1, 4, 8, 10, 16, 20, 22, 25, 26, 28, 32, 34, 35, 38, 40, 44 ]
+    comps = [ 1, 4, 8, 10, 16, 20, 22, 25, 26, 28, 32, 34, 35, 38, 40, 44 ] # fmt: skip
 
     def __init__(self, min_val: int, max_val: int, optional: bool=True, debug: bool=False):
         super().__init__(min_val=min_val, max_val=max_val, optional=optional, debug=debug)

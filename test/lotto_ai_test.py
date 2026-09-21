@@ -7,11 +7,12 @@ from util.log_util import LogUtil
 from util.mydic_util import Dic
 
 # 💡 텐서플로우의 내부 안내 경고 메시지(C++ 로그)를 화면에서 차단합니다.
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 import tensorflow as tf
+
 # 💡 파이썬 자체적인 텐서플로우 경고창을 차단합니다.
-tf.get_logger().setLevel('ERROR') 
+tf.get_logger().setLevel("ERROR")
 
 # --- 이후 기존 import 및 AI 코드 진행 ---
 from typing import List
@@ -44,21 +45,23 @@ LSTM 변환 스케줄 연계:
  - 이렇게 최종 출력된 final_filter_matrix를 이전 답변 구조의 filter_features 자리에 그대로 대입하면,
    윈도우 슬라이딩을 거쳐 대규모 필터가 결합된 [X_filter] 입력 데이터셋이 완성됩니다.
 """
+
+
 class LottoAITest(LottoMain):
-    def __init__(self, debug: bool=False):
+    def __init__(self, debug: bool = False):
         super().__init__(debug=debug)
 
         self.numberVos: List[NumberVO] = self.numberVos
 
-        self.tickets = [] # 로또 추천 번호를 담을 리스트
+        self.tickets = []  # 로또 추천 번호를 담을 리스트
 
-        self.last15_numbers = self.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-        
+        self.last15_numbers = self.get_numbers_from_last(15)  # 최근 15회차 번호만 추출
+
         if debug:
             self.mydic = Dic()
-        
+
         self.logger = LogUtil.get_logger(Str.get_class_name(self))
-    
+
     # --- [파이프라인 단계 1: 필터 결과 수치화 함수 정의] ---
     def calculate_filter_features_for_row(self, numbers):
         """
@@ -76,7 +79,7 @@ class LottoAITest(LottoMain):
             except Exception as e:
                 # 혹시 매개변수가 필요한 필터일 경우 기본값 예외 처리
                 feature_scores.append(0.0)
-                
+
         return feature_scores
 
     # --- [파이프라인 단계 2: 전체 역사 데이터 행렬 변환 매니저] ---
@@ -84,10 +87,12 @@ class LottoAITest(LottoMain):
         """
         실제 로또 CSV 파일을 로드하여 딥러닝 주입용 2차원 행렬(Matrix)로 일괄 변환
         """
-        df = self.get_number_list_data_frame();
-        
+        df = self.get_number_list_data_frame()
+
         # 2. 6개 당첨 번호 열만 묶어서 리스트 형태로 추출
-        lotto_numbers_list = df[['num1', 'num2', 'num3', 'num4', 'num5', 'num6']].values.tolist()
+        lotto_numbers_list = df[
+            ["num1", "num2", "num3", "num4", "num5", "num6"]
+        ].values.tolist()
 
         # 3. 모든 회차를 순회하며 필터 2차원 배열 빌드
         matrix_list = []
@@ -95,41 +100,52 @@ class LottoAITest(LottoMain):
             # 각 행마다 수십 개 필터 점수 추출
             row_features = self.calculate_filter_features_for_row(numbers)
             matrix_list.append(row_features)
-            
+
         # 4. 최종 넘파이 2차원 행렬(Matrix)로 변환
         filter_matrix = np.array(matrix_list, dtype=np.float32)
-        
+
         # 💡 딥러닝 팁: 총합(140)과 홀짝수(3)처럼 수치 단위가 다르면 LSTM 학습이 잘 안 됩니다.
         # 모든 필터 점수 데이터의 단위를 평균 0, 표준편차 1 범위로 균일하게 정규화(Scaling)합니다.
         scaler = StandardScaler()
         normalized_filter_matrix = scaler.fit_transform(filter_matrix)
-        
+
         return lotto_numbers_list, normalized_filter_matrix
 
     # --- [4단계: AI 확률 기반 대량 샘플링 및 최종 로또 번호 추출] ---
-    def generate_lotto_tickets(self, prob_list, selected_numbers: list[int], total_games, tried: int, all: bool=False):
+    def generate_lotto_tickets(
+        self,
+        prob_list,
+        selected_numbers: list[int],
+        total_games,
+        tried: int,
+        all: bool = False,
+    ):
         final_tickets = []
         attempts = 0
 
         # selected_numbers = self.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-        self.logger.debug(f"최근 15회차 번호만 추출: {len(self.last15_numbers)}개 - {self.last15_numbers}")
-        
+        self.logger.debug(
+            f"최근 15회차 번호만 추출: {len(self.last15_numbers)}개 - {self.last15_numbers}"
+        )
+
         while attempts < tried:
             if not all and len(final_tickets) >= total_games:
                 break
 
             attempts += 1
-            
+
             # 1) AI 모델이 예측한 필터 융합 확률 가중치를 사용하여 6개 숫자 무작위 추출
-            sampled = np.random.choice(selected_numbers, size=6, replace=False, p=prob_list)
+            sampled = np.random.choice(
+                selected_numbers, size=6, replace=False, p=prob_list
+            )
             sampled.sort()
             sampled = list(map(int, sampled))
-            
-            if ListUtil.contains(selected_numbers, sampled)<6:
+
+            if ListUtil.contains(selected_numbers, sampled) < 6:
                 continue
 
-            self.tickets.append(sampled) # 생성한 모두 tickets에 추가
-            
+            self.tickets.append(sampled)  # 생성한 모두 tickets에 추가
+
             # 2) 뽑힌 조합이 기존 수십 개의 필터를 모두 안전하게 만족하는지 더블 체크
             is_safe = True
             not_option_ilters: list[LottoFilter] = self.get_not_option_filters()
@@ -139,10 +155,10 @@ class LottoAITest(LottoMain):
                         self.mydic.add_dic(lotto_filter.__class__.__name__)
                     is_safe = False
                     break
-                    
+
             if is_safe and sampled not in final_tickets:
                 final_tickets.append(sampled)
-                
+
         return final_tickets, attempts
 
 
@@ -168,8 +184,12 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
     logger.debug("📊 [필터 전처리 파이프라인 처리 결과]")
     logger.debug(f"총 처리된 회차 수: {Str.number_format(len(raw_numbers))} 회차")
     logger.debug(f"생성된 필터 행렬 형태 (Shape): {final_filter_matrix.shape}")
-    logger.debug(f"-> 각 회차마다 {final_filter_matrix.shape[1]}개의 필터 지표가 2차원 Matrix로 압축되었습니다.")
-    logger.debug("\n첫 번째 회차의 전처리된 필터 행렬 샘플:\n%s", final_filter_matrix[0])
+    logger.debug(
+        f"-> 각 회차마다 {final_filter_matrix.shape[1]}개의 필터 지표가 2차원 Matrix로 압축되었습니다."
+    )
+    logger.debug(
+        "\n첫 번째 회차의 전처리된 필터 행렬 샘플:\n%s", final_filter_matrix[0]
+    )
 
     end_time = time.perf_counter()
     echo_str = echo_time(start_time, end_time)
@@ -177,8 +197,8 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     # Hyperparameters 설정
     LOOKBACK_WINDOW = 5  # 과거 5개 회차의 흐름을 분석
-    NUM_CLASSES = 45     # 1 ~ 45번 번호
-    NUM_FILTERS = final_filter_matrix.shape[1] # 파이프라인이 계산해낸 총 필터 개수
+    NUM_CLASSES = 45  # 1 ~ 45번 번호
+    NUM_FILTERS = final_filter_matrix.shape[1]  # 파이프라인이 계산해낸 총 필터 개수
 
     logger.debug("--- [1단계: 딥러닝 학습용 시퀀스 데이터셋 구성] ---")
 
@@ -193,11 +213,11 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
         for w in range(LOOKBACK_WINDOW):
             for num in raw_numbers[i + w]:
                 encoded_window[w, num - 1] = 1
-                
+
         X_num.append(encoded_window)
         # 💡 핵심: 전처리 파이프라인으로 만든 2차원 필터 행렬을 똑같이 5개씩 쪼개어 주입합니다.
         X_filter.append(final_filter_matrix[i : i + LOOKBACK_WINDOW])
-        
+
         # 다음 회차의 정답 원-핫 벡터
         target_window = np.zeros(NUM_CLASSES)
         for num in raw_numbers[i + LOOKBACK_WINDOW]:
@@ -225,12 +245,12 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     # 두 신경망의 특징을 하나로 결합 (번호 시퀀스 정보 + 필터 밸런스 정보 융합)
     combined = Concatenate()([lstm_num, lstm_filter])
-    x = Dense(64, activation='relu')(combined)
+    x = Dense(64, activation="relu")(combined)
     x = Dropout(0.2)(x)
-    output = Dense(NUM_CLASSES, activation='sigmoid')(x) # 1~45번 각각의 확률 출력
+    output = Dense(NUM_CLASSES, activation="sigmoid")(x)  # 1~45번 각각의 확률 출력
 
     model = Model(inputs=[input_num, input_filter], outputs=output)
-    model.compile(optimizer='adam', loss='binary_crossentropy')
+    model.compile(optimizer="adam", loss="binary_crossentropy")
 
     # 모델 학습 진행
     model.fit([X_num, X_filter], Y_train, epochs=20, batch_size=4, verbose=0)
@@ -245,7 +265,7 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
     # 가장 최근 5개 회차의 원-핫 번호 데이터 가공
     latest_num_seq = np.zeros((LOOKBACK_WINDOW, NUM_CLASSES))
     for w in range(LOOKBACK_WINDOW):
-        for num in raw_numbers[-(LOOKBACK_WINDOW-w)]:
+        for num in raw_numbers[-(LOOKBACK_WINDOW - w)]:
             latest_num_seq[w, num - 1] = 1
 
     # 💡 가장 최근 5개 회차의 전처리된 필터 행렬 데이터 추출
@@ -257,18 +277,20 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     # 최종 AI 확률값 도출 (45차원 배열)
     predicted_probabilities = model.predict([latest_num_seq, latest_filter_seq])[0]
-    predicted_probabilities /= np.sum(predicted_probabilities) # 확률 총합 1로 정규화
+    predicted_probabilities /= np.sum(predicted_probabilities)  # 확률 총합 1로 정규화
 
     end_time = time.perf_counter()
     echo_str = echo_time(start_time, end_time)
     logger.debug(echo_str)
 
     logger.debug(f"--- 최종 로또 생성 실행 ({Str.number_format(tried)})번 ---")
-    
+
     # 1~45 전체 번호 유지
     selected_numbers = list(range(1, 46))
     # 크기와 확률 합(1)을 모두 맞춰서 추출
-    lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(predicted_probabilities, selected_numbers, games, tried, isAll)
+    lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(
+        predicted_probabilities, selected_numbers, games, tried, isAll
+    )
 
     # # 이하는 최근 15회차 번호만 추출하여 확률을 재조정하는 로직 *********************************************************
     # # 최종 로또 생성 실행 ===
@@ -303,7 +325,7 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     #         # 2. 정규화 진행
     #         prob_array /= prob_array.sum()
-            
+
     #         if not abs(sum(prob_array)-1.0)==0:
     #             # 3차 보정 *******************
     #             # 1. 고정밀도 실수형 배열로 변환 후 정규화
@@ -325,9 +347,13 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     tickets_len = len(lucky_tickets)
 
-    logger.debug(f"총 {Str.number_format(tot_search)}개의 로또 추천 번호가 추출되었습니다.")
-    logger.debug(f"(필터를 통과한 번호가 총 {Str.number_format(tickets_len)}개 추출되었습니다.)")
-    
+    logger.debug(
+        f"총 {Str.number_format(tot_search)}개의 로또 추천 번호가 추출되었습니다."
+    )
+    logger.debug(
+        f"(필터를 통과한 번호가 총 {Str.number_format(tickets_len)}개 추출되었습니다.)"
+    )
+
     if lotto_ai_test.debug:
         lotto_ai_test.mydic.sort(key=False, reverse=True)
         dicstr = lotto_ai_test.mydic.toString()
@@ -341,11 +367,10 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
     lastVo = lotto_ai_test.getLastVo()
     round = lastVo.round
 
-
-    filename = FileUtil.get_lotto_make_all_file(round+1)
+    filename = FileUtil.get_lotto_make_all_file(round + 1)
     lotto_ai_test.save_file(filename, lotto_ai_test.tickets)
 
-    filename = FileUtil.get_lotto_make_filtered_file(round+1)
+    filename = FileUtil.get_lotto_make_filtered_file(round + 1)
     lotto_ai_test.save_file(filename, lucky_tickets)
 
     logger.debug("🚀 [AI 필터 융합형 딥러닝 최종 로또 추천 번호]")
@@ -354,7 +379,9 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
     # 중복 없이 완벽히 서로 다른 5개의 요소를 리스트로 반환합니다.
     # selected_games = random.sample(lucky_tickets, min(games, len(lucky_tickets)))
 
-    selected_games = lucky_tickets[:min(games, len(lucky_tickets))]  # 상위 games개만 선택
+    selected_games = lucky_tickets[
+        : min(games, len(lucky_tickets))
+    ]  # 상위 games개만 선택
     if len(selected_games) < 1:
         logger.debug(f"⚠️ 주의: 필터를 통과한 로또 번호가 없습니다.)")
 
@@ -365,11 +392,11 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     selected_vos = []
 
-    ncounts = [0]*45
+    ncounts = [0] * 45
     for i, ticket in enumerate(selected_games, 1):
         selected_vos.append(NumberVO(0, ticket, 0))
         for n in ticket:
-            ncounts[n-1] += 1
+            ncounts[n - 1] += 1
 
     # selected_vos.sort()
     selected_vos.sort(key=lambda vo: vo.numbers)
@@ -387,40 +414,46 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     lni = 0
     for i, line in enumerate(volines, 1):
-        if 0<len(line):
+        if 0 < len(line):
             lni += 1
             logger.debug(f"{lni}게임:\t{line}")
         else:
             logger.debug("")
 
     volines.append(f"{lni}게임")
-    volines.append(f"{len(lotto_ai_test.last15_numbers)} {lotto_ai_test.last15_numbers}")
+    volines.append(
+        f"{len(lotto_ai_test.last15_numbers)} {lotto_ai_test.last15_numbers}"
+    )
 
     applines = []
     sumc = 0
-    if 0<len(selected_vos):
-        applines.append("");
-        volines.append("");
+    if 0 < len(selected_vos):
+        applines.append("")
+        volines.append("")
         for i, c in enumerate(ncounts, 1):
             if 0 < c:
                 applines.append(f"{i:02d} = {c}")
                 volines.append(f"{i:02d} = {c}")
                 sumc += 1
 
-        applines.append("");
-        volines.append("");
+        applines.append("")
+        volines.append("")
         applines.append(f"총 {sumc}개 번호가 선택되었습니다.")
         volines.append(f"총 {sumc}개 번호가 선택되었습니다.")
         applines.append("")
         volines.append("")
 
-        filename = FileUtil.get_lotto_make_file(round+1)
+        filename = FileUtil.get_lotto_make_file(round + 1)
         FileUtil.write_lines(filename, volines, "w")
-        
-        filename = FileUtil.get_lotto_selected_file(round+1);
-        FileUtil.writeAll(filename, ListUtil.join(lotto_ai_test.last15_numbers, ","), "w")
 
-        logger.debug(f"최종 로또 추천 번호 save to {filename} 조합 {lni}개 번호 {sumc}개")
+        filename = FileUtil.get_lotto_selected_file(round + 1)
+        FileUtil.writeln(
+            filename, ListUtil.join(lotto_ai_test.last15_numbers, ","), "w"
+        )
+
+        logger.debug(
+            f"최종 로또 추천 번호 save to {filename} 조합 {lni}개 번호 {sumc}개"
+        )
 
         logger.debug(f"Applied lines: {applines}")
     else:
@@ -436,8 +469,7 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 if __name__ == "__main__":
     games = 9
     tried = 10000 * 10
-    debug: bool=False
-    isAll: bool=True
+    debug: bool = False
+    isAll: bool = True
 
     main(games=games, tried=tried, debug=debug, isAll=isAll)
- 

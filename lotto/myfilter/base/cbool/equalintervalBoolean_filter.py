@@ -4,9 +4,16 @@ from lotto.myfilter.lotto_filter import ABooleanFilter
 import util.lotto_util as lotto_util
 
 
-# 3.9. 추가 필터 예시: 등간격 패턴 존재 여부
 class EqualIntervalBooleanFilter(ABooleanFilter):
     def __init__(self, bool_val: bool = False, interval_size: int = 0, optional:bool=True, debug: bool=False):
+        """_summary_
+        3.9. 추가 필터 예시: 등간격 패턴 존재 여부
+        Args:
+            bool_val (bool, optional): _description_. Defaults to False.
+            interval_size (int, optional): _description_. Defaults to 0.
+            optional (bool, optional): _description_. Defaults to True.
+            debug (bool, optional): _description_. Defaults to False.
+        """
         super().__init__(bool_val=bool_val, optional=optional, debug=debug)
         self.interval_size = interval_size
 
