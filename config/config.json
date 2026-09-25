@@ -1,9 +1,0 @@
-{
-    "default": {
-        "volume": 0.5,
-        "bgm_on": true
-    },
-    "user": {
-        "name": "Player1"
-    }
-}
