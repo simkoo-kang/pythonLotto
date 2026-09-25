@@ -1,0 +1,9 @@
+{
+    "deadlive": {
+        "GRID_SIZE": 50,
+        "MARGIN": 50,
+        "SIDEBAR": 200,
+        "file_path": "./game/badug",
+        "file_name": "deadlive.json"
+    }
+}

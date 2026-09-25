@@ -1,0 +1,14 @@
+.venv/
+__pycache__/ 
+build/
+dist/
+conf/
+logs/
+game/images/jigsaw
+game/pic/jigsaw/image
+
+*.mp4
+*.avi
+*.mkv
+*.wmv
+*.exe

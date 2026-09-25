@@ -1,0 +1,7 @@
+{
+    "width": 800,
+    "height": 600,
+    "image_file": "image/puzzle.png",
+    "effect_file": "sound/effect.wav",
+    "bg_file": "sound/background2.mp3"
+}

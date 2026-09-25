@@ -1,0 +1,18 @@
+pyinstaller --onefile --noconsole --add-data "background.png;." --add-data "player.png;." --add-data "enemy.png;." --add-data "gem.png;." --add-data "gem_sound.wav;." --add-data "gameover_sound.wav;." game.py
+
+pyinstaller --onefile --noconsole --paths=. --add-data "util;util" --add-data "./game/pic/images/puzzle.png;." --add-data "./game/ddong/effect.wav;." --add-data "./game/ddong/background2.mp3;." ./game/pic/jigsaw/jigsaw.py
+
+pyinstaller --onefile --noconsole --paths=. ./game/pic/jigsaw/jigsaw.py
+
+pyinstaller --onefile --noconsole --add-data "D:\Workspace\vscode\lotto\my_video.mp4;." D:\Workspace\vscode\lotto\main.py
+
+pyinstaller --onefile --noconsole --paths=. ./movie/movie.py
+
+
+git reset --soft HEAD~1
+git rm --cached test.mkv
+
+git rm -f -r --cached .
+
+git commit -m "대용량 영상 파일 완전히 제외 후 새로 커밋"
+git push origin main
