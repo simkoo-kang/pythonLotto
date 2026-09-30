@@ -96,7 +96,7 @@ class MenuFrame(tk.Frame):
         pass
 
 
-class TkinterFrame(tk.Tk):
+class TkinterMain(tk.Tk):
 
     def __init__(self, file_path):
         """_summary_
@@ -146,6 +146,7 @@ class TkinterFrame(tk.Tk):
     def on_key_press(self, event):
         """<KeyPress event send_event=True state=Mod1 keysym=k keycode=75 char='k' x=158 y=229>"""
         if event.keysym == "Escape" or event.keysym.lower() == "q":  # keycode=27 OR 81
+            self.logger.debug(f"종료: {event}")
             self.quit_close()
     
     def on_mouse_click(self, event):
@@ -162,5 +163,5 @@ class TkinterFrame(tk.Tk):
 
 # 프로그램 실행
 if __name__ == "__main__":
-    app = TkinterFrame()
+    app = TkinterMain()
     app.mainloop()

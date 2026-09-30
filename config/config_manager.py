@@ -8,12 +8,20 @@ from munch import munchify
 
 
 class ConfigManager:
-    def __init__(self, abs_path, is_abs: bool = True, file_name="config.json"):
-        if is_abs:
-            current_file_dir = os.path.dirname(os.path.abspath(abs_path))
+    def __init__(self, config_path, is_full: bool = True, file_name="config.json"):
+        """_summary_
+        설정 파일
+        Args:
+            config_path (str):
+            is_full (bool, True): d:/Workspace/vscode/lotto/movie/video_player.py
+                          False: d:/Workspace/vscode/lotto/movie
+            file_name (str, config.json)
+        """
+        if is_full:
+            current_file_dir = os.path.dirname(os.path.abspath(config_path))
             self.config_filename = os.path.join(current_file_dir, file_name)
         else:
-            self.config_filename = os.path.join(abs_path, file_name)
+            self.config_filename = os.path.join(config_path, file_name)
 
         # 파일이 존재하면 로드하고, 없으면 빈값으로 새로 생성
         if os.path.exists(self.config_filename):

@@ -5,12 +5,12 @@ a = Analysis(
     ['game/pic/jigsaw/jigsaw.py'],
     pathex=['.'],
     binaries=[],
-    datas=[],
+    datas=[('game/pic/jigsaw/icon.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=['venv', '.venv'],
     noarchive=False,
     optimize=0,
 )
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['game/pic/jigsaw/icon.ico'],
 )

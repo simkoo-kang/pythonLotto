@@ -3,5 +3,14 @@
     "height": 600,
     "image_file": "image/puzzle.png",
     "effect_file": "sound/effect.wav",
-    "bg_file": "sound/background2.mp3"
+    "bg_file": "sound/background2.mp3",
+    "movie_width": 800,
+    "movie_height": 640,
+    "default_movie": "movie/test.mkv",
+    "default_movie_dir": "D:\\M\\F",
+    "capture_dir": "capture",
+    "popup_playlist_dir": "popup",
+    "image_dir": "image",
+    "popup_width": 450,
+    "popup_height": 450
 }

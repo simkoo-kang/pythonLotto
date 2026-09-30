@@ -1,13 +1,23 @@
 import os
 import sys
 
-
 # ⚡ [1단계] 컴퓨터에 설치된 진짜 VLC 미디어 플레이어 엔진 경로 찾기 및 등록
 vlc_path = r"C:\Program Files\VideoLAN\VLC"
 if os.path.exists(vlc_path):
     os.add_dll_directory(vlc_path)
 
 import vlc
+
+
+# # 1. 현재 파일(video_player.py)의 상위 폴더인 'lotto' 경로를 계산합니다.
+# curr_dir = os.path.dirname(os.path.abspath(__file__))  # movie 폴더
+# parent_dir = os.path.dirname(curr_dir)                 # lotto 폴더
+
+# # 2. 파이썬 탐색 경로(sys.path)에 'lotto' 폴더를 등록합니다.
+# #    이렇게 하면 movie.playlist_popup을 'lotto/movie/...' 구조로 올바르게 찾아갑니다.
+# if parent_dir not in sys.path:
+#     sys.path.insert(0, parent_dir)
+
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import time
@@ -22,82 +32,150 @@ from util.log_util import LogUtil
 from util.str_util import Str
 
 from util.file_util import FileUtil  # 엔진 등록 후 정상 로드
-from game.pic.jigsaw.playlist_popup import PlaylistPopup
+from movie.playlist_popup import PlaylistPopup
+# # 기존 Line 35 전후의 코드를 아래와 같이 변경합니다.
+# try:
+#     # 1. 메인 프로그램(lotto 폴더 기준)에서 호출되거나 방법 1로 실행될 때 작동
+#     from movie.playlist_popup import PlaylistPopup
+# except ModuleNotFoundError:
+#     # 2. video_player.py를 직접 더블클릭하거나 단독 실행(movie 폴더 기준)할 때 작동
+#     from playlist_popup import PlaylistPopup
+
 from util.resource import ResUtil
 from util.tk_util import TkUtil
+from config.config_manager import ConfigManager
 
 
-# 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기
-if hasattr(sys, "_MEIPASS"):
-    curr_path = os.path.dirname(sys.executable)
-else:
-    curr_path = os.path.dirname(os.path.abspath(__file__))
+# # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기
+# if hasattr(sys, "_MEIPASS"):
+#     curr_path = os.path.dirname(sys.executable)
+# else:
+#     curr_path = os.path.dirname(os.path.abspath(__file__))
 
-# 2. 파이썬이 모듈을 검색하는 경로 리스트(sys.path) 맨 앞에 이 진짜 경로를 주입합니다.
-if curr_path not in sys.path:
-    sys.path.insert(0, curr_path)
-
-
-# def resource_path(relative_path):
-#     try:
-#         # 1. [.exe 빌드 후 실행 시] 임시 폴더 루트에서 아이콘을 찾습니다.
-#         base_path = sys._MEIPASS
-#         return os.path.join(base_path, relative_path)
-#     except Exception:
-#         # 2. [VS Code에서 그냥 실행 시] 실제 아이콘이 들어있는 하위 경로에서 찾습니다.
-#         # 원래 아이콘 위치인 game/pic/jigsaw/icon.ico 경로를 강제로 지정해 줍니다.
-#         return os.path.abspath("game/pic/jigsaw/icon.ico")
+# # 2. 파이썬이 모듈을 검색하는 경로 리스트(sys.path) 맨 앞에 이 진짜 경로를 주입합니다.
+# if curr_path not in sys.path:
+#     sys.path.insert(0, curr_path)
 
 
 # 🚀 [핵심] 독립된 새 창(Toplevel)으로 구동되는 동영상 플레이어 클래스
-class VideoPlayerWindow(tk.Toplevel):
+class VideoPlayer(tk.Tk):
 
-    def __init__(self, parent):
+    def __init__(self, config_file_path=None):
         # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.
-        super().__init__(parent)
+        super().__init__()
         
-        self.owner = parent
-        self.config_manager = self.owner.config_manager
-        
+        # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기
+        if hasattr(sys, "_MEIPASS"):
+            self.base_path = os.path.dirname(sys.executable)
+        else:
+            self.base_path = os.path.dirname(os.path.abspath(__file__))
+
+        # logger for debugging
         self.logger = LogUtil.get_logger(__file__)
+        self.logger.debug(f"현재 위치: {self.base_path} ===================")
         
-        self.relative_path = parent.relative_path
-        icon_path = ResUtil.resource_path(self.relative_path, "icon.ico")
+        self.relative_path = "movie"
+        
+        # config_manager and default value
+        self._init_config(config_file_path)
+        
+        # icon
+        icon_path = ResUtil.resource_path(self.relative_path, "player.ico")
         self.iconbitmap(icon_path)
-        
-        movie_width = self.config_manager.get_value("movie_width")
-        if movie_width == None:
-            self.config_manager.set_value("movie_width", 800)
-            self.config_manager.set_value("movie_height", 640)
-            self.config_manager.set_value("default_movie", "movie/test.mkv")
-            self.config_manager.set_value("default_movie_dir", r"D:\M\F")
-            self.config_manager.save()
-        if self.config_manager.get_value("capture_dir") == None:
-            self.config_manager.set_value("capture_dir", "capture")
-            self.config_manager.set_value("playlist_dir", "popup")
-            self.config_manager.save()
-        
-        self.movie_width = self.config_manager.get_value("movie_width")
-        self.movie_height = self.config_manager.get_value("movie_height")
-        self.capture_dir = f"{self.relative_path}/{self.config_manager.get_value("capture_dir")}"
-        self.playlist_dir = f"{self.relative_path}/{self.config_manager.get_value("playlist_dir")}"
-        self.default_movie = self.config_manager.get_value("default_movie")
-        self.default_movie_dir = f"{self.relative_path}/{self.config_manager.get_value("default_movie_dir")}"
-        
-        self.title("🎬 동영상 플레이어")
-        self.geometry(f"{self.movie_width}x{self.movie_height}")
         
         self.create_menu()
         
         fg, bg = "black", "#F0F0F0"
         
+        # init movie player
+        self._init_movie_player(fg, bg)
+        
+        # --- 하단 컨트롤 바 영역 ---
+        self._init_bottom_controlbar(fg, bg)
+
+        # 🚀 [단축키 전역 설정] 창 전체 영역 어디서든 무조건 낚아채어 작동하도록 세팅
+        self._init_binding()
+
+        # ⚡ [3단계] 동영상이 패킹되거나 놓여있을 실제 전체 절대 경로 획득
+        self.video_file_path = os.path.join(self.base_path, self.default_movie)
+
+        self.playlist = [] # 재생 목록 파일명만 저장
+        self.file_list = [] # 파일 전체 경로 저장
+        self.current_index = -1 # prev, next에서 사용하는 인덱스
+        
+        self.loop_file = False # 파일 반복 여부 설정
+        self.playlist_name = None # 재생 목록 파일명
+        self.popup = None # 재생 목록 편집용 팝업
+        
+        # 비디오 파일 연동 검증 및 자동 로딩
+        if os.path.exists(self.video_file_path):
+            self.file_list.append(self.video_file_path)
+            self.playlist.append(FileUtil.filename(self.video_file_path))
+            self.current_index = 0
+            self.start_video()
+        else:
+            self.time_label.config(text="영상 파일 없음", fg="red")
+            self.current_index = -1
+
+        # 윈도우 우측 상단 X 닫기 버튼 이벤트 인터셉트
+        self.protocol("WM_DELETE_WINDOW", self.on_window_close)
+
+        # 🚀 [해결 장치 2] 윈도우 제어 포커스 강제 독점 선언 (가장 중요)
+        # 창이 열리자마자 윈도우가 모든 키보드/마우스 입력권을 이 동영상 창으로 강제로 끌고 옵니다.
+        self.lift()
+        self.focus_force()
+        self.grab_set()
+    
+        # 실시간 탐색 바 동기화 타이머 시작
+        self.update_ui_loop()
+
+    def _init_config(self, config_file_path=None):
+        """_summary_
+        initialize config_manager
+        Args:
+            config_file_path (str, None): D:/Workspace/vscode/lotto/movie . Defaults to None.
+        """
+        self.logger.debug(f"config_file_path: {config_file_path}")
+        file_path = config_file_path if config_file_path else FileUtil.parent(__file__)
+        self.logger.debug(file_path)
+        self.config_manager = ConfigManager(file_path, False)
+        if self.config_manager.get_value("movies") == None:
+            self.config_manager.set_value("width", 800)
+            self.config_manager.set_value("height", 640)
+            self.config_manager.set_value("popup_width", 450)
+            self.config_manager.set_value("popup_height", 450)
+            self.config_manager.set_value("default_movie", "movies/test.mkv")
+            self.config_manager.set_value("default_movie_dir", "D:/Workspace/vscode/lotto/movie/movies")
+            self.config_manager.set_value("movies_dir", f"{self.base_path}/movies")
+            self.config_manager.set_value("capture_dir", f"{self.base_path}/capture")
+            self.config_manager.set_value("playlist_dir", f"{self.base_path}/playlist")
+            self.config_manager.save()
+        
+        self.width = self.config_manager.get_value("width")
+        self.height = self.config_manager.get_value("height")
+        self.popup_width = self.config_manager.get_value("popup_width")
+        self.popup_height = self.config_manager.get_value("popup_height")
+        
+        self.default_movie = self.config_manager.get_value("default_movie")
+        self.default_movie_dir = self.config_manager.get_value("default_movie_dir")
+        
+        self.movies_dir = self.config_manager.get_value("movies_dir")
+        self.capture_dir = self.config_manager.get_value("capture_dir")
+        self.playlist_dir = self.config_manager.get_value("playlist_dir")
+    
+    def _init_movie_player(self, fg, bg):
+        self.title("🎬 동영상 플레이어")
+        self.geometry(f"{self.width}x{self.height}")
+        
         # 동영상이 출력될 검은색 캔버스 프레임 생성
         self.video_frame = tk.Frame(self, bg=bg)
         self.video_frame.pack(expand=True, fill="both", padx=10, pady=10)
 
+        # 💡 중요: 캔버스 프레임이 실제 ID를 가질 수 있도록 창을 강제 업데이트합니다.
+        # self.update() 
+
         # 안정적인 소프트웨어 디코딩 세팅 및 VLC 인스턴스 생성
         vlc_options = ["--no-video-title-show", "--quiet"]
-        # vlc_options = []
         self.instance = vlc.Instance(vlc_options)
         if self.instance is None:
             self.instance = vlc.Instance()
@@ -107,39 +185,41 @@ class VideoPlayerWindow(tk.Toplevel):
         self.player.set_hwnd(self.video_frame.winfo_id())
         self.player.video_set_mouse_input(False)
         self.player.video_set_key_input(False)
-
-        # --- 하단 컨트롤 바 영역 ---
-        # control_frame = tk.Frame(self, bg="#222222")
-        control_frame = tk.Frame(self, bg=bg)
-        control_frame.pack(fill="x", side="bottom", pady=10)
+        
+        # 기본 사운드 음량 세팅 (50%)
+        self.player.audio_set_volume(50)
+    
+    def _init_bottom_controlbar(self, fg, bg):
+        self.control_frame = tk.Frame(self, bg=bg)
+        self.control_frame.pack(fill="x", side="bottom", pady=10)
 
         # 재생 / 일시정지 버튼
         self.play_btn = tk.Button(
-            control_frame, text="▶ 재생", width=10, command=self.toggle_video
+            self.control_frame, text="▶ 재생", width=10, command=self.toggle_video
         )
         self.play_btn.pack(side="left", padx=10)
 
         # 시간 표시 레이블
         self.time_label = tk.Label(
-            control_frame, text="00:00 / 00:00", fg=fg, bg=bg
+            self.control_frame, text="00:00 / 00:00", fg=fg, bg=bg
         )
         self.time_label.pack(side="left", padx=10)
 
         # 배율 표시 레이블
         self.scale_label = tk.Label(
-            control_frame, text="크기: 1.0x", fg=fg, bg=bg
+            self.control_frame, text="크기: 1.0x", fg=fg, bg=bg
         )
         self.scale_label.pack(side="right", padx=(0, 10))
 
         # 볼륨 표시 레이블
         self.volume_label = tk.Label(
-            control_frame, text="🔊 볼륨: 50%", fg=fg, bg=bg
+            self.control_frame, text="🔊 볼륨: 50%", fg=fg, bg=bg
         )
         self.volume_label.pack(side="right", padx=(10, 0))
 
         # 탐색 바 (Seek Bar)
         self.seek_bar = ttk.Scale(
-            control_frame, from_=0, to=1000, orient="horizontal"
+            self.control_frame, from_=0, to=1000, orient="horizontal"
         )
         self.seek_bar.pack(side="left", expand=True, fill="x", padx=10)
 
@@ -149,11 +229,8 @@ class VideoPlayerWindow(tk.Toplevel):
 
         self.slider_locked = False
         self.controls_visible = True
-
-        # 기본 사운드 음량 세팅 (50%)
-        self.player.audio_set_volume(50)
-
-        # 🚀 [단축키 전역 설정] 창 전체 영역 어디서든 무조건 낚아채어 작동하도록 세팅
+    
+    def _init_binding(self):
         self.bind("<space>", self.on_space_click)
         self.bind("<Left>", self.seek_backward)
         self.bind("<Right>", self.seek_forward)
@@ -188,43 +265,10 @@ class VideoPlayerWindow(tk.Toplevel):
         self.bind("3", lambda e: self.change_video_size(1.5))
 
         # 컨트롤바 마우스 휠 보조 바인딩 (이벤트 씹힘 방지)
-        control_frame.bind("<MouseWheel>", self.on_mouse_wheel)
+        self.control_frame.bind("<MouseWheel>", self.on_mouse_wheel)
         self.time_label.bind("<MouseWheel>", self.on_mouse_wheel)
         self.volume_label.bind("<MouseWheel>", self.on_mouse_wheel)
         self.seek_bar.bind("<MouseWheel>", self.on_mouse_wheel)
-
-        # ⚡ [3단계] 동영상이 패킹되거나 놓여있을 실제 전체 절대 경로 획득
-        self.video_file_path = os.path.join(curr_path, self.default_movie)
-
-        self.playlist = [] # 재생 목록 파일명만 저장
-        self.file_list = [] # 파일 전체 경로 저장
-        self.movie_index = -1
-        
-        # 비디오 파일 연동 검증 및 자동 로딩
-        if os.path.exists(self.video_file_path):
-            self.file_list.append(self.video_file_path)
-            self.playlist.append(FileUtil.filename(self.video_file_path))
-            self.start_video()
-            # media = self.instance.media_new(self.video_file_path)
-            # self.player.set_media(media)
-        else:
-            self.time_label.config(text="영상 파일 없음", fg="red")
-
-        # 윈도우 우측 상단 X 닫기 버튼 이벤트 인터셉트
-        self.protocol("WM_DELETE_WINDOW", self.on_window_close)
-
-        # 🚀 [해결 장치 2] 윈도우 제어 포커스 강제 독점 선언 (가장 중요)
-        # 창이 열리자마자 윈도우가 모든 키보드/마우스 입력권을 이 동영상 창으로 강제로 끌고 옵니다.
-        self.lift()
-        self.focus_force()
-        self.grab_set()
-    
-        self.loop_file = False
-        self.playlist_name = None
-        self.popup = None
-        
-        # 실시간 탐색 바 동기화 타이머 시작
-        self.update_ui_loop()
 
     def create_menu(self):
         menubar = tk.Menu(self)
@@ -327,12 +371,12 @@ class VideoPlayerWindow(tk.Toplevel):
                     self.file_list.append(name)
                     self.playlist.append(FileUtil.filename(name))
                 
-                self.movie_index = -1
-                self.next_video()
+                self.current_index = 0
+                self.first_video()
     
     def open_playlist_popup(self):
         # 1. 새로운 팝업 창 생성
-        PlaylistPopup(self.owner, self)
+        PlaylistPopup(self, self.popup_width, self.popup_height, self.playlist_dir)
     
     def open_and_read_video(self):
         """사용자가 직접 컴퓨터에서 영상 파일을 탐색하여 읽어오도록 만듭니다."""
@@ -361,7 +405,8 @@ class VideoPlayerWindow(tk.Toplevel):
             # 이미지 파일만 필터링하여 리스트에 저장
             self.file_list = FileUtil.files(self.movie_dir, movie_extensions)
             self.playlist = [FileUtil.filename(path) for path in self.file_list]
-            self.movie_index = -1
+            
+            self.current_index = self.file_list.index(file_path) # 무조건 하나는 있다. 선택했어니...
             
             self.start_video(file_path)
     
@@ -389,8 +434,8 @@ class VideoPlayerWindow(tk.Toplevel):
             # 이미지 파일만 필터링하여 리스트에 저장
             self.file_list = FileUtil.files(self.movie_dir, movie_extensions)
             self.playlist = [FileUtil.filename(path) for path in self.file_list]
-            self.movie_index = -1
-            self.next_video()
+            self.current_index = 0 # 처음부터
+            self.first_video()
     
     def start_video(self, filename: str=None):
         # 🚀 [해결 장치 2] 윈도우 제어 포커스 강제 독점 선언 (가장 중요)
@@ -399,6 +444,9 @@ class VideoPlayerWindow(tk.Toplevel):
         self.focus_force()
         self.grab_set()
         
+        # 기존 재생 중인 영상 정지
+        self.player.stop()
+        
         if filename is None:
             file_path = self.video_file_path
         else:
@@ -406,12 +454,11 @@ class VideoPlayerWindow(tk.Toplevel):
             self.video_file_path = file_path
             
         self.logger.debug(f"영상 재생 시작: {self.video_file_path}")
+        if self.video_file_path in self.file_list:
+            self.current_index = self.file_list.index(self.video_file_path)
         
         # self.title(FileUtil.filename(self.video_file_path))
         self.title(self.video_file_path)
-        
-        # 기존 재생 중인 영상 정지
-        self.player.stop()
 
         # 새 파일 경로로 미디어 객체 생성 후 로드
         new_media = self.instance.media_new(file_path)
@@ -425,25 +472,26 @@ class VideoPlayerWindow(tk.Toplevel):
         self.player.play()
         self.play_btn.config(text="⏸ 일시정지")
         self.update_ui_loop()
+
+    def first_video(self):
+        if not Str.is_blank_list(self.file_list):
+            self.start_video(self.file_list[self.current_index])
     
     def next_video(self):
         if self.file_list:
-            if 1 == len(self.file_list):
+            if 1 == len(self.file_list): # 지금 재생 중인 파일 반복
                 self.start_video()
             else:
-                self.movie_index = (self.movie_index + 1) % len(self.file_list)
-                self.start_video(self.file_list[self.movie_index])
+                index = (self.current_index + 1) % len(self.file_list)
+                self.start_video(self.file_list[index]) # start_video에서 current_index 재설정
     
     def prev_video(self):
         if self.file_list:
-            if 1 == len(self.file_list):
+            if 1 == len(self.file_list): # 지금 재생 중인 파일 반복
                 self.start_video()
             else:
-                if self.movie_index == -1:
-                    self.movie_index = 0
-                else:
-                    self.movie_index = (self.movie_index - 1) % len(self.file_list)
-                self.start_video(self.file_list[self.movie_index])
+                index = (self.current_index - 1) % len(self.file_list)
+                self.start_video(self.file_list[index]) # start_video에서 current_index 재설정
     
     def update_ui_loop(self):
         # 창이 닫혔는데 타이머가 도는 것을 방지하기 위해 존재 여부 체크
@@ -736,4 +784,5 @@ class VideoPlayerWindow(tk.Toplevel):
 
 
 if __name__ == "__main__":
-    pass
+    app = VideoPlayer()
+    app.mainloop()

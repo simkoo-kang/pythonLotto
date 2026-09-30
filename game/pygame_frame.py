@@ -19,7 +19,7 @@ class GameFrame:
         
         self.logger = LogUtil.get_logger(log_filename)
         
-        self.config_manager = ConfigManager(abs_path=log_filename)
+        self.config_manager = ConfigManager(config_path=log_filename)
         
         pygame.init()  # 2. 파이게임 초기화
 

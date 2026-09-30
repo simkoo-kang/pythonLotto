@@ -6,6 +6,18 @@ import sys
 class Str:
 
     @staticmethod
+    def is_blank(s: str=None) -> bool:
+        if s and not s.strip() == "":
+            return False
+        return True
+
+    @staticmethod
+    def is_blank_list(lst: list=None) -> bool:
+        if lst and 0 < len(lst):
+            return False
+        return True
+
+    @staticmethod
     def is_han(ch) -> bool:
         return (
             (0xAC00 <= ch <= 0xD7A3)
@@ -34,7 +46,6 @@ class Str:
     def get_class_name(clazz_object) -> str:
         return clazz_object.__class__.__name__
 
-    def get_
 
 # ==================== 실행 및 검증 ====================
 if __name__ == "__main__":
@@ -55,3 +66,8 @@ if __name__ == "__main__":
     folder_path = os.path.join(base_path, "image")
 
     print(f"고정된 이미지 폴더 경로: {folder_path}")
+    
+    print(Str.is_blank(" "))
+    print(Str.is_blank())
+    print(Str.is_blank(" abc "))
+    

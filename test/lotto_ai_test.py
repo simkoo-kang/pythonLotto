@@ -27,6 +27,7 @@ from util.file_util import FileUtil
 from lotto.lotto_main import LottoMain
 from lotto.vo.number_vo import NumberVO
 from util.list_util import ListUtil
+from util.date_util import CDate
 
 # 1. 기존에 정의된 수많은 필터 함수 및 분석 함수들 (예시)
 
@@ -49,7 +50,7 @@ LSTM 변환 스케줄 연계:
 
 class LottoAITest(LottoMain):
     def __init__(self, debug: bool = False):
-        super().__init__(debug=debug)
+        super().__init__(is_debug=debug)
 
         self.numberVos: List[NumberVO] = self.numberVos
 
@@ -287,63 +288,14 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     # 1~45 전체 번호 유지
     selected_numbers = list(range(1, 46))
+    
     # 크기와 확률 합(1)을 모두 맞춰서 추출
+    # random.sample(대상_리스트, 뽑을_개수)
+    # 중복 없이 완벽히 서로 다른 5개의 요소를 리스트로 반환합니다.
+    # selected_games = random.sample(lucky_tickets, min(games, len(lucky_tickets)))
     lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(
         predicted_probabilities, selected_numbers, games, tried, isAll
     )
-
-    # # 이하는 최근 15회차 번호만 추출하여 확률을 재조정하는 로직 *********************************************************
-    # # 최종 로또 생성 실행 ===
-    # selected_numbers = lotto_ai_test.get_numbers_from_last(15) # 최근 15회차 번호만 추출
-    # logger.debug(f"최근 15회차 번호만 추출: {len(selected_numbers)}개 - {selected_numbers}")
-
-    # # selected_numbers의 개수가 45개보다 적을 때 (예: 30개)
-    # # 번호(1~45)를 인덱스(0~44)로 변환하여 해당 확률만 추출
-    # filtered_prob = [predicted_probabilities[num - 1] for num in selected_numbers]
-
-    # # 남은 확률의 합이 1이 되도록 재조정 (정규화)
-    # sum_prob = sum(filtered_prob)
-    # normalized_prob = [p / sum_prob for p in filtered_prob]
-
-    # # 합이 1이 되는지 확인
-    # logger.debug(f"정규화 후 확률 총합: {sum(normalized_prob)} (정규화 전: {sum(filtered_prob)})")
-    # prob_array = normalized_prob
-    # if not abs(sum(normalized_prob) - 1.0) ==0:
-    #     logger.warning("정규화 후 확률 총합이 1이 아닙니다.")
-
-    #     # 1차 보정
-    #     # 1. prob_list를 numpy 배열로 변환
-    #     prob_array = np.array(normalized_prob)
-
-    #     # 2. 총합이 정확히 1이 되도록 정규화 (Normalize)
-    #     prob_array = prob_array / prob_array.sum()
-
-    #     if not abs(sum(prob_array)-1.0)==0:
-    #         # 2차 보정
-    #         # 1. 고정밀도 float64 타입의 numpy 배열로 변환
-    #         prob_array = np.array(prob_array, dtype=np.float64)
-
-    #         # 2. 정규화 진행
-    #         prob_array /= prob_array.sum()
-
-    #         if not abs(sum(prob_array)-1.0)==0:
-    #             # 3차 보정 *******************
-    #             # 1. 고정밀도 실수형 배열로 변환 후 정규화
-    #             prob_array = np.array(prob_array, dtype=np.float64)
-    #             prob_array /= prob_array.sum()
-
-    #             # 2. [핵심] 미세 오차(예: -0.0000000000000002)를 마지막 값에 더해 강제로 1.0 만들기
-    #             prob_array[-1] += 1.0 - prob_array.sum()
-
-    #             # 3. 확인용 출력 (이제 정확히 1.0이 나옵니다)
-    #             logger.debug(f"보정 후 총합: {prob_array.sum()}")
-
-    #             if not abs(sum(prob_array)-1.0)==0:
-    #                 logger.warning(f"정규화 후 확률 총합이 1[{sum(prob_array)}]이 아닙니다.")
-    #                 return
-
-    # lucky_tickets, tot_search = lotto_ai_test.generate_lotto_tickets(prob_array, selected_numbers, games, tried, isAll)
-    # # **********************************************************************************************************
 
     tickets_len = len(lucky_tickets)
 
@@ -353,8 +305,20 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
     logger.debug(
         f"(필터를 통과한 번호가 총 {Str.number_format(tickets_len)}개 추출되었습니다.)"
     )
+    # selected_games = lucky_tickets[
+    #     : min(games, len(lucky_tickets))
+    # ]  # 상위 games개만 선택
+    if tickets_len < games:
+        logger.debug(f"⚠️ 주의: 필터를 통과한 로또 번호가 적습니다.({tickets_len})")
 
-    if lotto_ai_test.debug:
+        end_time = time.perf_counter()
+        echo_str = echo_time(start_time, end_time)
+        logger.debug(echo_str)
+        return
+    
+    # # **********************************************************************************************************
+
+    if debug:
         lotto_ai_test.mydic.sort(key=False, reverse=True)
         dicstr = lotto_ai_test.mydic.toString()
         logger.debug(dicstr)
@@ -375,26 +339,22 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     logger.debug("🚀 [AI 필터 융합형 딥러닝 최종 로또 추천 번호]")
 
-    # random.sample(대상_리스트, 뽑을_개수)
-    # 중복 없이 완벽히 서로 다른 5개의 요소를 리스트로 반환합니다.
-    # selected_games = random.sample(lucky_tickets, min(games, len(lucky_tickets)))
-
-    selected_games = lucky_tickets[
-        : min(games, len(lucky_tickets))
-    ]  # 상위 games개만 선택
-    if len(selected_games) < 1:
-        logger.debug(f"⚠️ 주의: 필터를 통과한 로또 번호가 없습니다.)")
-
-        end_time = time.perf_counter()
-        echo_str = echo_time(start_time, end_time)
-        logger.debug(echo_str)
-        return
+    sets = []
+    selected_games = []
+    while len(selected_games) < min(games, tickets_len):
+        index = random.randint(0, tickets_len)
+        if index in sets:
+            continue
+        sets.append(index)
+        selected_games.append(lucky_tickets[index])
 
     selected_vos = []
 
+    today = CDate().to_string()
+    
     ncounts = [0] * 45
     for i, ticket in enumerate(selected_games, 1):
-        selected_vos.append(NumberVO(0, ticket, 0))
+        selected_vos.append(NumberVO(0, today, ticket, 0))
         for n in ticket:
             ncounts[n - 1] += 1
 

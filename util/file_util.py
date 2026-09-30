@@ -5,8 +5,11 @@ import sys
 
 
 class FileUtil:
-    # 💡 [정적 필드 (Static Field) 선언]
-    # 클래스명 자체로 바로 접근할 수 있으며, 모든 인스턴스가 이 값을 공유합니다.
+    """
+    💡 [정적 필드 (Static Field) 선언]
+    클래스명 자체로 바로 접근할 수 있으며, 모든 인스턴스가 이 값을 공유합니다.
+    """
+    
     """default path D:\\Workspace\\vscode\\lotto """
     DEFAULT_PATH = r"D:\\Workspace\\vscode\\lotto"
     
@@ -16,6 +19,39 @@ class FileUtil:
     """default encoding utr-8 """
     DEFAULT_ENCODING = "utf-8"
 
+    def files(root_dir, exts=None, is_sub=False):
+        """ 폴더 내 경로 포함한 파일 명을 리스트로 가져오기, 확장자 또는 하위 폴더 포함 """
+        if not is_sub:
+            return [
+                os.path.join(root_dir, f)
+                for f in os.listdir(root_dir)
+                if os.path.isfile(os.path.join(root_dir, f))
+                and (exts == None or f.lower().endswith(exts))
+            ]
+        
+        all_files = []
+        # 2. os.walk()를 이용해 하위 폴더까지 재귀적으로 자동 탐색 시작
+        # root: 현재 탐색 중인 폴더 경로
+        # dirs: 현재 폴더 안의 하위 폴더 목록
+        # files: 현재 폴더 안의 파일 목록
+        if exts is not None:
+            for root, dirs, files in os.walk(root_dir):
+                for file in files:
+                    # 파일명을 소문자로 변환 후 이미지 확장자로 끝나는지 검사
+                    if file.lower().endswith(exts):
+                        # 파일명만 저장하는 것이 아니라, 하위 폴더 위치까지 결합한 '전체 경로'를 저장해야 안전합니다.
+                        full_file_path = os.path.join(root, file)
+                        all_files.append(full_file_path)
+        
+        else:
+            for root, dirs, files in os.walk(root_dir):
+                for file in files:
+                    # 파일명만 저장하는 것이 아니라, 하위 폴더 위치까지 결합한 '전체 경로'를 저장해야 안전합니다.
+                    full_file_path = os.path.join(root, file)
+                    all_files.append(full_file_path)
+        
+        return all_files
+    
     @staticmethod
     def get_absolute_class_path(cls_or_instance):
         """만약 인스턴스(객체)가 들어왔다면, 해당 인스턴스의 __class__를 가져옵니다."""
@@ -82,7 +118,10 @@ class FileUtil:
 
     @staticmethod
     def filename(file_path: str, is_all: bool = True) -> str:
-        """ json.py if is_all else json """
+        """
+        json.py if is_all else json
+        os.path.basename(path)
+        """
         if is_all:
             return Path(file_path).name  # json.py
         return Path(file_path).stem  # json
@@ -178,3 +217,4 @@ if __name__ == "__main__":
     print(f"확 장 자 : {file_ext[1:]}")  # .py
     print(f"전체 파일명: {full_name}")  # sokoban.py
     print(f"사 이 즈 : {path.stat().st_size}")  # .py
+    

@@ -1,53 +1,6 @@
-# main.py
+# jigsaw.py
 import os
 import sys
-
-# # 현재 실행 경로와 util 폴더 경로를 시스템 패스에 추가
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(current_dir)
-# sys.path.append(os.path.join(current_dir, 'util'))
-
-# # --- [필수 수정] PyInstaller 임시 폴더 경로 추적 함수 ---
-# def resource_path(relative_path):
-#     """ 실행 파일 내부(임시폴더) 또는 개발 환경의 절대 경로를 반환합니다. """
-#     try:
-#         # PyInstaller에 의해 실행될 때 압축 해제된 임시 폴더 경로 추출
-#         base_path = sys._MEIPASS
-#     except Exception:
-#         # 일반 파이썬 코드로 실행 중일 때의 현재 폴더 경로
-#         base_path = os.path.abspath(".")
-
-#     return os.path.join(base_path, relative_path)
-
-# # --- [수정] PyInstaller exe 및 일반 환경 모두 지원하는 경로 주입 ---
-# try:
-#     base_path = sys._MEIPASS  # exe 파일로 실행될 때의 임시 폴더 경로
-# except Exception:
-#     base_path = os.path.abspath(".")  # 일반 py 코드로 실행될 때의 경로
-
-# # 시스템 패스에 최상위 폴더와 util 폴더를 강제 삽입 (맨 앞에 등록하여 최우선 검색)
-# if base_path not in sys.path:
-#     sys.path.insert(0, base_path)
-
-# util_path = os.path.join(base_path, 'util')
-# if util_path not in sys.path:
-#     sys.path.insert(0, util_path)
-
-import pygame
-
-
-import tkinter as tk
-from tkinter import filedialog
-from PIL import Image, ImageTk
-from pathlib import Path
-import random
-
-from game.pic.jigsaw.movie import VideoPlayerWindow
-from piece import PuzzlePiece
-from group_manager import GroupManager
-from game_engine import JigsawEngine
-from game.tkinter_frame import TkinterFrame
-
 
 # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기
 if hasattr(sys, "_MEIPASS"):
@@ -59,8 +12,43 @@ else:
 if curr_path not in sys.path:
     sys.path.insert(0, curr_path)
 
+import pygame
+import tkinter as tk
+from tkinter import filedialog
+from PIL import Image, ImageTk
+import random
 
-class JigsawPuzzleApp(TkinterFrame):
+from game.tkinter_main import TkinterMain
+from game.pic.jigsaw.movie import VideoPlayerWindow
+from piece import PuzzlePiece
+from group_manager import GroupManager
+from game_engine import JigsawEngine
+from util.file_util import FileUtil
+from util.resource import ResUtil
+
+
+# # [1단계] 이 함수를 코드 맨 위쪽에 그대로 복사해서 넣으세요.
+# def resource_path(relative_path):
+#     try:
+#         # 빌드 후 실행 시 .exe 내부 임시 폴더 경로를 가리킴
+#         base_path = sys._MEIPASS
+#     except Exception:
+#         # VS Code에서 그냥 실행할 때의 현재 폴더 경로를 가리킴
+#         base_path = os.path.abspath(".")
+#     return os.path.join(base_path, relative_path)
+
+# def resource_path(relative_path):
+#     try:
+#         # 1. [.exe 빌드 후 실행 시] 임시 폴더 루트에서 아이콘을 찾습니다.
+#         base_path = sys._MEIPASS
+#         return os.path.join(base_path, relative_path)
+#     except Exception:
+#         # 2. [VS Code에서 그냥 실행 시] 실제 아이콘이 들어있는 하위 경로에서 찾습니다.
+#         # 원래 아이콘 위치인 game/pic/jigsaw/icon.ico 경로를 강제로 지정해 줍니다.
+#         return os.path.abspath("game/pic/jigsaw/icon.ico")
+
+
+class JigsawPuzzleApp(TkinterMain):
     def __init__(self):
         # curr_path = FileUtil.get_current_dir(__file__)
         super().__init__(curr_path)
@@ -68,25 +56,15 @@ class JigsawPuzzleApp(TkinterFrame):
         pygame.init()
         pygame.mixer.init()
 
+        self.relative_path = "game/pic/jigsaw"
+        
+        # icon_path = os.path.join(curr_path, "icon.ico")
+        icon_path = ResUtil.resource_path(self.relative_path, "icon.ico")
+        self.iconbitmap(icon_path)
+
         # 기본 설정 (초기값 3x3)
         self.rows = 3
         self.cols = 3
-        
-        self.image_dir = os.path.join(curr_path, "image")
-        self.sound_dir = os.path.join(curr_path, "sound")
-        self.movie_dir = os.path.join(curr_path, "movie")
-        
-        # 대표적인 이미지 확장자 지정 (튜플 형태로 전달해야 endswith가 인식합니다)
-        image_extensions = (".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp")
-
-        # 이미지 파일만 필터링하여 리스트에 저장
-        self.file_list = [
-            f
-            for f in os.listdir(self.image_dir)
-            if os.path.isfile(os.path.join(self.image_dir, f))
-            and f.lower().endswith(image_extensions)
-        ]
-        self.image_index = 0
         
         need_save = False
         if self.config_manager.get_value("image_file") is None:
@@ -108,6 +86,17 @@ class JigsawPuzzleApp(TkinterFrame):
         self.effect_file = os.path.join(curr_path, self.config_manager.get_value("effect_file"))
         self.bg_sound_file = os.path.join(curr_path, self.config_manager.get_value("bg_file"))
         
+        self.image_dir = os.path.join(curr_path, "image")
+        self.sound_dir = os.path.join(curr_path, "sound")
+        self.movie_dir = os.path.join(curr_path, "movie")
+        
+        # 대표적인 이미지 확장자 지정 (튜플 형태로 전달해야 endswith가 인식합니다)
+        self.image_extensions = (".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp")
+
+        # 이미지 파일만 필터링하여 리스트에 저장
+        self.file_list = self.read_files()
+        self.image_index = -1
+        
         # 효과음 파일 불러오기
         self.effect_sound = pygame.mixer.Sound(self.effect_file)
         
@@ -126,6 +115,7 @@ class JigsawPuzzleApp(TkinterFrame):
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
         self.canvas.bind("<ButtonRelease-1>", self.on_release)
+        self.canvas.bind("<ButtonPress-3>", self.on_right_click)  # 우클릭
 
         # 4. 게임 상태 변수 초기화 및 첫 게임 시작
         self.selected_piece = None
@@ -133,6 +123,10 @@ class JigsawPuzzleApp(TkinterFrame):
         
         self.start_new_game()
 
+    def read_files(self):
+        # FileUtil.files(self.image_dir, self.image_extensions)
+        return [f for f in os.listdir(self.image_dir) if not f.startswith("img_")]
+    
     def on_key_press(self, event):
         if not(event.keysym == "Escape" or event.keysym.lower() == "q"):  # keycode=27 OR 81
             self.next_image()
@@ -140,6 +134,8 @@ class JigsawPuzzleApp(TkinterFrame):
             super().on_key_press(event)
 
     def quit_close(self):
+        self.logger.debug("종료!")
+        
         # 종료할 때 반드시 정지 및 해제
         pygame.mixer.music.stop()
         pygame.quit()  # pygame 전체 종료
@@ -162,6 +158,7 @@ class JigsawPuzzleApp(TkinterFrame):
         # 파일 메뉴 (이미지 불러오기)
         file_menu = tk.Menu(menubar, tearoff=0)
         file_menu.add_command(label="이미지 선택...", command=self.change_image)
+        file_menu.add_command(label="이미지 폴더 선택", command=self.change_folder)
         file_menu.add_command(label="다음...", command=self.next_image)
         file_menu.add_separator()
         file_menu.add_command(label="종료", command=self.quit_close)
@@ -202,9 +199,9 @@ class JigsawPuzzleApp(TkinterFrame):
         self.config(menu=menubar)
     
     def open_video_window(self):
-        self.change_background_sound(True)
-        
         """메뉴를 누르면 동영상 플레이어 새 창(Toplevel)을 띄우는 제어 함수"""
+        self.change_background_sound(True) # 배경 음악 off
+        
         # 중요: 기존에 켜진 새 창이 있다면 중복 실행 방지 처리 가능
         if hasattr(self, "video_win") and self.video_win.winfo_exists():
             self.video_win.lift()  # 이미 열려 있다면 창을 맨 앞으로 올림
@@ -215,7 +212,7 @@ class JigsawPuzzleApp(TkinterFrame):
     
     def next_image(self):
         self.image_index = (self.image_index + 1) % len(self.file_list)
-        self.image_file = os.path.join(self.image_dir, self.file_list[self.image_index])
+        self.image_file = self.file_list[self.image_index] # os.path.join(self.image_dir, self.file_list[self.image_index])
         self.start_new_game()
     
     def change_image(self):
@@ -224,11 +221,44 @@ class JigsawPuzzleApp(TkinterFrame):
         selected = filedialog.askopenfilename(title="퍼즐로 사용할 이미지 선택", filetypes=file_types)
         
         if selected:
-            self.image_file = selected
-            self.start_new_game()
+            self.logger.debug(f"이미지 변경: {selected}")
             
+            self.image_file = selected
+            self.image_dir = FileUtil.parent(selected)
+            
+            # 이미지 파일만 필터링하여 리스트에 저장
+            self.file_list = FileUtil.files(self.image_dir, self.image_extensions)
+            self.image_index = -1
+            self.start_new_game()
+    
+    def change_folder(self):
+        """ 폴더 선택 """
+        """ 기본 경로 설정 (예: 프로젝트 루트 또는 현재 폴더) """
+        if self.image_dir is not None:
+            # 🚀 askopenfilename 대신 askdirectory를 사용합니다!
+            folder_path = filedialog.askdirectory(
+                title="이미지 파일들이 들어있는 폴더를 선택하세요",
+                initialdir=self.image_dir,  # 🎯 마찬가지로 기본 경로 지정 가능
+            )
+        else:
+            # 🚀 askopenfilename 대신 askdirectory를 사용합니다!
+            folder_path = filedialog.askdirectory(
+                title="이미지 파일들이 들어있는 폴더를 선택하세요",
+            )
+
+        if folder_path:
+            self.logger.debug(f"폴더 선택: {folder_path}")
+            
+            self.image_dir = folder_path
+            # 이미지 파일만 필터링하여 리스트에 저장
+            self.file_list = FileUtil.files(self.movie_dir, self.image_extensions)
+            self.image_index = -1
+            self.next_image()
+    
     def change_difficulty(self, rows, cols):
         """난이도를 변경하고 게임을 재시작합니다."""
+        self.logger.debug(f"난이도가 변경 되었습니다.({rows}x{cols})")
+        
         self.rows = rows
         self.cols = cols
         self.start_new_game()
@@ -258,13 +288,17 @@ class JigsawPuzzleApp(TkinterFrame):
 
     def start_new_game(self):
         """화면과 엔진을 완전히 청소하고 새로운 퍼즐을 빌드합니다."""
+        self.logger.debug(f"start new game with {self.image_file}")
+        
         # 캔버스 엘리먼트 전원 박멸 (방치 아이템 제거)
         self.canvas.delete("all")
 
         self.update_title();
 
         # 이미지 로드 및 사이즈 재계산
-        self.load_image(self.image_file)
+        self.load_puzzle_image(self.image_file)
+        
+        self.complted_puzzle = False
         
         # 화면 중앙 정렬 및 캔버스 창 리사이징
         self.canvas_width = self.img_width + 100
@@ -287,7 +321,7 @@ class JigsawPuzzleApp(TkinterFrame):
         # 중요: 다이얼로그가 포커스를 뺏어갔을 수 있으므로 마우스 포커스 강제 복원
         self.canvas.focus_set()
 
-    def load_image(self, path):
+    def load_puzzle_image(self, path):
         if not os.path.exists(path):
             img = Image.new('RGB', (self.height, self.height), color='#3498db')
             from PIL import ImageDraw
@@ -295,7 +329,7 @@ class JigsawPuzzleApp(TkinterFrame):
             d.text((150, 210), "Jigsaw Puzzle", fill="#ffffff")
             img.save(path)
             self.image_file = path
-            
+        
         self.original_image = Image.open(self.image_file)
         
         # 알파 채널(RGBA)이 있을 경우 RGB로 강제 변환하여 크롭 오류 방지
@@ -358,7 +392,15 @@ class JigsawPuzzleApp(TkinterFrame):
         self.group_manager.initialize_groups(canvas_ids)
         self.reset_group()
 
+    def on_right_click(self, event):
+        if self.complted_puzzle:
+            self.next_image()
+
     def on_press(self, event):
+        if self.complted_puzzle:
+            self.next_image()
+            return
+        
         clicked_item = self.canvas.find_closest(event.x, event.y)
         if not clicked_item: return
         
@@ -491,6 +533,7 @@ class JigsawPuzzleApp(TkinterFrame):
             # messagebox.showinfo("성공!", f"🎉 축하합니다! 퍼즐을 완성했습니다!")
             msgbox.showinfo("성공!", f"🎉 축하합니다! 퍼즐을 완성했습니다!")
             self.logger.debug(f"🎉 축하합니다! 퍼즐을 완성했습니다!")
+            self.complted_puzzle = True
 
 
 if __name__ == "__main__":

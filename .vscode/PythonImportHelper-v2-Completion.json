@@ -163,6 +163,30 @@
         "documentation": {}
     },
     {
+        "label": "ConfigManager",
+        "importPath": "config.config_manager",
+        "description": "config.config_manager",
+        "isExtraImport": true,
+        "detail": "config.config_manager",
+        "documentation": {}
+    },
+    {
+        "label": "FileUtil",
+        "importPath": "util.file_util",
+        "description": "util.file_util",
+        "isExtraImport": true,
+        "detail": "util.file_util",
+        "documentation": {}
+    },
+    {
+        "label": "FileUtil",
+        "importPath": "util.file_util",
+        "description": "util.file_util",
+        "isExtraImport": true,
+        "detail": "util.file_util",
+        "documentation": {}
+    },
+    {
         "label": "FileUtil",
         "importPath": "util.file_util",
         "description": "util.file_util",
@@ -420,6 +444,38 @@
         "documentation": {}
     },
     {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "ttk",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -429,6 +485,70 @@
     },
     {
         "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
         "importPath": "tkinter",
         "description": "tkinter",
         "isExtraImport": true,
@@ -1678,6 +1798,62 @@
         "documentation": {}
     },
     {
+        "label": "Str",
+        "importPath": "util.str_util",
+        "description": "util.str_util",
+        "isExtraImport": true,
+        "detail": "util.str_util",
+        "documentation": {}
+    },
+    {
+        "label": "Str",
+        "importPath": "util.str_util",
+        "description": "util.str_util",
+        "isExtraImport": true,
+        "detail": "util.str_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
         "label": "LogUtil",
         "importPath": "util.log_util",
         "description": "util.log_util",
@@ -2287,131 +2463,35 @@
         "documentation": {}
     },
     {
-        "label": "GroupManager",
-        "importPath": "group_manager",
-        "description": "group_manager",
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
         "isExtraImport": true,
-        "detail": "group_manager",
+        "detail": "PIL",
         "documentation": {}
     },
     {
-        "label": "GroupManager",
-        "importPath": "group_manager",
-        "description": "group_manager",
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
         "isExtraImport": true,
-        "detail": "group_manager",
+        "detail": "PIL",
         "documentation": {}
     },
     {
-        "label": "GroupManager",
-        "importPath": "group_manager",
-        "description": "group_manager",
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
         "isExtraImport": true,
-        "detail": "group_manager",
+        "detail": "PIL",
         "documentation": {}
     },
     {
-        "label": "GroupManager",
-        "importPath": "group_manager",
-        "description": "group_manager",
+        "label": "TkinterMain",
+        "importPath": "game.tkinter_main",
+        "description": "game.tkinter_main",
         "isExtraImport": true,
-        "detail": "group_manager",
-        "documentation": {}
-    },
-    {
-        "label": "JigsawEngine",
-        "importPath": "game_engine",
-        "description": "game_engine",
-        "isExtraImport": true,
-        "detail": "game_engine",
-        "documentation": {}
-    },
-    {
-        "label": "JigsawEngine",
-        "importPath": "game_engine",
-        "description": "game_engine",
-        "isExtraImport": true,
-        "detail": "game_engine",
-        "documentation": {}
-    },
-    {
-        "label": "JigsawEngine",
-        "importPath": "game_engine",
-        "description": "game_engine",
-        "isExtraImport": true,
-        "detail": "game_engine",
-        "documentation": {}
-    },
-    {
-        "label": "JigsawEngine",
-        "importPath": "game_engine",
-        "description": "game_engine",
-        "isExtraImport": true,
-        "detail": "game_engine",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
+        "detail": "game.tkinter_main",
         "documentation": {}
     },
     {
@@ -2423,11 +2503,115 @@
         "documentation": {}
     },
     {
-        "label": "TkinterFrame",
-        "importPath": "game.tkinter_frame",
-        "description": "game.tkinter_frame",
+        "label": "GroupManager",
+        "importPath": "group_manager",
+        "description": "group_manager",
         "isExtraImport": true,
-        "detail": "game.tkinter_frame",
+        "detail": "group_manager",
+        "documentation": {}
+    },
+    {
+        "label": "GroupManager",
+        "importPath": "group_manager",
+        "description": "group_manager",
+        "isExtraImport": true,
+        "detail": "group_manager",
+        "documentation": {}
+    },
+    {
+        "label": "GroupManager",
+        "importPath": "group_manager",
+        "description": "group_manager",
+        "isExtraImport": true,
+        "detail": "group_manager",
+        "documentation": {}
+    },
+    {
+        "label": "GroupManager",
+        "importPath": "group_manager",
+        "description": "group_manager",
+        "isExtraImport": true,
+        "detail": "group_manager",
+        "documentation": {}
+    },
+    {
+        "label": "JigsawEngine",
+        "importPath": "game_engine",
+        "description": "game_engine",
+        "isExtraImport": true,
+        "detail": "game_engine",
+        "documentation": {}
+    },
+    {
+        "label": "JigsawEngine",
+        "importPath": "game_engine",
+        "description": "game_engine",
+        "isExtraImport": true,
+        "detail": "game_engine",
+        "documentation": {}
+    },
+    {
+        "label": "JigsawEngine",
+        "importPath": "game_engine",
+        "description": "game_engine",
+        "isExtraImport": true,
+        "detail": "game_engine",
+        "documentation": {}
+    },
+    {
+        "label": "JigsawEngine",
+        "importPath": "game_engine",
+        "description": "game_engine",
+        "isExtraImport": true,
+        "detail": "game_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
+        "label": "ResUtil",
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "isExtraImport": true,
+        "detail": "util.resource",
         "documentation": {}
     },
     {
@@ -2461,6 +2645,64 @@
         "importPath": "vlc",
         "description": "vlc",
         "detail": "vlc",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "PlaylistPopup",
+        "importPath": "game.pic.jigsaw.playlist_popup",
+        "description": "game.pic.jigsaw.playlist_popup",
+        "isExtraImport": true,
+        "detail": "game.pic.jigsaw.playlist_popup",
+        "documentation": {}
+    },
+    {
+        "label": "TkUtil",
+        "importPath": "util.tk_util",
+        "description": "util.tk_util",
+        "isExtraImport": true,
+        "detail": "util.tk_util",
+        "documentation": {}
+    },
+    {
+        "label": "TkUtil",
+        "importPath": "util.tk_util",
+        "description": "util.tk_util",
+        "isExtraImport": true,
+        "detail": "util.tk_util",
+        "documentation": {}
+    },
+    {
+        "label": "TkUtil",
+        "importPath": "util.tk_util",
+        "description": "util.tk_util",
+        "isExtraImport": true,
+        "detail": "util.tk_util",
+        "documentation": {}
+    },
+    {
+        "label": "TkUtil",
+        "importPath": "util.tk_util",
+        "description": "util.tk_util",
+        "isExtraImport": true,
+        "detail": "util.tk_util",
         "documentation": {}
     },
     {
@@ -2711,6 +2953,54 @@
         "description": "game.snake.ai",
         "isExtraImport": true,
         "detail": "game.snake.ai",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -3536,6 +3826,14 @@
         "documentation": {}
     },
     {
+        "label": "CDate",
+        "importPath": "util.date_util",
+        "description": "util.date_util",
+        "isExtraImport": true,
+        "detail": "util.date_util",
+        "documentation": {}
+    },
+    {
         "label": "ACRangeFilter",
         "importPath": "lotto_filter",
         "description": "lotto_filter",
@@ -3560,11 +3858,11 @@
         "documentation": {}
     },
     {
-        "label": "GameFrame",
-        "importPath": "game.pygame_frame",
-        "description": "game.pygame_frame",
+        "label": "PlaylistPopup",
+        "importPath": "movie.playlist_popup",
+        "description": "movie.playlist_popup",
         "isExtraImport": true,
-        "detail": "game.pygame_frame",
+        "detail": "movie.playlist_popup",
         "documentation": {}
     },
     {
@@ -3584,12 +3882,11 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
+        "label": "GameFrame",
+        "importPath": "game.pygame_frame",
+        "description": "game.pygame_frame",
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "detail": "game.pygame_frame",
         "documentation": {}
     },
     {
@@ -3730,6 +4027,31 @@
         "documentation": {}
     },
     {
+        "label": "mouse",
+        "importPath": "pynput",
+        "description": "pynput",
+        "isExtraImport": true,
+        "detail": "pynput",
+        "documentation": {}
+    },
+    {
+        "label": "mouse",
+        "importPath": "pynput",
+        "description": "pynput",
+        "isExtraImport": true,
+        "detail": "pynput",
+        "documentation": {}
+    },
+    {
+        "label": "pyautogui",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
         "label": "calendar",
         "kind": 6,
         "isExtraImport": true,
@@ -3760,15 +4082,6 @@
         "description": "__future__",
         "isExtraImport": true,
         "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "logging",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
         "documentation": {}
     },
     {
@@ -3850,7 +4163,7 @@
         "kind": 6,
         "importPath": "config.config_manager",
         "description": "config.config_manager",
-        "peekOfCode": "class ConfigManager:\n    def __init__(self, abs_path, is_abs: bool = True, file_name=\"config.json\"):\n        if is_abs:\n            current_file_dir = os.path.dirname(os.path.abspath(abs_path))\n            self.config_filename = os.path.join(current_file_dir, file_name)\n        else:\n            self.config_filename = os.path.join(abs_path, file_name)\n        # 파일이 존재하면 로드하고, 없으면 빈값으로 새로 생성\n        if os.path.exists(self.config_filename):\n            self.load()",
+        "peekOfCode": "class ConfigManager:\n    def __init__(self, config_path, is_full: bool = True, file_name=\"config.json\"):\n        \"\"\"_summary_\n        설정 파일\n        Args:\n            config_path (str):\n            is_full (bool, True): d:/Workspace/vscode/lotto/movie/video_player.py\n                          False: d:/Workspace/vscode/lotto/movie\n            file_name (str, config.json)\n        \"\"\"",
         "detail": "config.config_manager",
         "documentation": {}
     },
@@ -3859,25 +4172,7 @@
         "kind": 6,
         "importPath": "config.test_config",
         "description": "config.test_config",
-        "peekOfCode": "class ConfigTest:\n    def __init__(self):\n        file_util = FileUtil()\n        print(FileUtil.get_absolute_class_path(file_util))\nct = ConfigTest()",
-        "detail": "config.test_config",
-        "documentation": {}
-    },
-    {
-        "label": "config_manager",
-        "kind": 5,
-        "importPath": "config.test_config",
-        "description": "config.test_config",
-        "peekOfCode": "config_manager = ConfigManager(__file__)\n# 값 읽기\nprint(config_manager.settings)\nsettings = config_manager.settings\nfor key, value in settings.items():\n    if isinstance(value, Munch):\n        print(f\"key: {key} \")\n        for skey, svalue in value.items():\n            print(f\"\\tkey: {skey} = value: {svalue}\")\n    else:",
-        "detail": "config.test_config",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "kind": 5,
-        "importPath": "config.test_config",
-        "description": "config.test_config",
-        "peekOfCode": "settings = config_manager.settings\nfor key, value in settings.items():\n    if isinstance(value, Munch):\n        print(f\"key: {key} \")\n        for skey, svalue in value.items():\n            print(f\"\\tkey: {skey} = value: {svalue}\")\n    else:\n        print(f\"key: {key} = value: {value}\")\nprint(settings.default)\nprint(settings.default.volume)",
+        "peekOfCode": "class ConfigTest:\n    def __init__(self):\n        config_manager = ConfigManager(__file__)\n        # 값 읽기\n        print(config_manager.settings)\n        settings = config_manager.settings\n        for key, value in settings.items():\n            if isinstance(value, Munch):\n                print(f\"key: {key} \")\n                for skey, svalue in value.items():",
         "detail": "config.test_config",
         "documentation": {}
     },
@@ -8105,37 +8400,37 @@
     {
         "label": "JigsawPuzzleApp",
         "kind": 6,
-        "importPath": "game.pic.jigsaw.jigsaw copy",
-        "description": "game.pic.jigsaw.jigsaw copy",
-        "peekOfCode": "class JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")\n        # 기본 설정 (초기값 3x3)\n        self.rows = 3\n        self.cols = 3\n        self.image_path = \"./game/pic/images/puzzle.png\"\n        self.logger = LogUtil.get_logger(\"JigsawPussle\")\n        # 1. 상단 메뉴바 구성 (난이도 선택 및 이미지 선택)",
-        "detail": "game.pic.jigsaw.jigsaw copy",
-        "documentation": {}
-    },
-    {
-        "label": "effect_sound",
-        "kind": 5,
-        "importPath": "game.pic.jigsaw.jigsaw copy",
-        "description": "game.pic.jigsaw.jigsaw copy",
-        "peekOfCode": "effect_sound = pygame.mixer.Sound(\"./game/ddong/effect.wav\")\n# effect_sound = pygame.mixer.Sound(resource_path(\"./game/ddong/effect.wav\"))\n# 배경음악 파일 로드 및 무한 반복(-1) 재생\npygame.mixer.music.load(\"./game/ddong/background2.mp3\")\npygame.mixer.music.play(-1) \nDEFAULT_SIZE = 600\nclass JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")",
-        "detail": "game.pic.jigsaw.jigsaw copy",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_SIZE",
-        "kind": 5,
-        "importPath": "game.pic.jigsaw.jigsaw copy",
-        "description": "game.pic.jigsaw.jigsaw copy",
-        "peekOfCode": "DEFAULT_SIZE = 600\nclass JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")\n        # 기본 설정 (초기값 3x3)\n        self.rows = 3\n        self.cols = 3\n        self.image_path = \"./game/pic/images/puzzle.png\"\n        self.logger = LogUtil.get_logger(\"JigsawPussle\")",
-        "detail": "game.pic.jigsaw.jigsaw copy",
+        "importPath": "game.pic.jigsaw.jigsaw",
+        "description": "game.pic.jigsaw.jigsaw",
+        "peekOfCode": "class JigsawPuzzleApp(TkinterMain):\n    def __init__(self):\n        # curr_path = FileUtil.get_current_dir(__file__)\n        super().__init__(curr_path)\n        pygame.init()\n        pygame.mixer.init()\n        self.relative_path = \"game/pic/jigsaw\"\n        # icon_path = os.path.join(curr_path, \"icon.ico\")\n        icon_path = ResUtil.resource_path(self.relative_path, \"icon.ico\")\n        self.iconbitmap(icon_path)",
+        "detail": "game.pic.jigsaw.jigsaw",
         "documentation": {}
     },
     {
         "label": "JigsawPuzzleApp",
         "kind": 6,
-        "importPath": "game.pic.jigsaw.jigsaw",
-        "description": "game.pic.jigsaw.jigsaw",
-        "peekOfCode": "class JigsawPuzzleApp(TkinterFrame):\n    def __init__(self):\n        # curr_path = FileUtil.get_current_dir(__file__)\n        super().__init__(curr_path)\n        pygame.init()\n        pygame.mixer.init()\n        # 기본 설정 (초기값 3x3)\n        self.rows = 3\n        self.cols = 3\n        self.image_dir = os.path.join(curr_path, \"image\")",
-        "detail": "game.pic.jigsaw.jigsaw",
+        "importPath": "game.pic.jigsaw.jigsaw_20260924",
+        "description": "game.pic.jigsaw.jigsaw_20260924",
+        "peekOfCode": "class JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")\n        # 기본 설정 (초기값 3x3)\n        self.rows = 3\n        self.cols = 3\n        self.image_path = \"./game/pic/images/puzzle.png\"\n        self.logger = LogUtil.get_logger(\"JigsawPussle\")\n        # 1. 상단 메뉴바 구성 (난이도 선택 및 이미지 선택)",
+        "detail": "game.pic.jigsaw.jigsaw_20260924",
+        "documentation": {}
+    },
+    {
+        "label": "effect_sound",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.jigsaw_20260924",
+        "description": "game.pic.jigsaw.jigsaw_20260924",
+        "peekOfCode": "effect_sound = pygame.mixer.Sound(\"./game/ddong/effect.wav\")\n# effect_sound = pygame.mixer.Sound(resource_path(\"./game/ddong/effect.wav\"))\n# 배경음악 파일 로드 및 무한 반복(-1) 재생\npygame.mixer.music.load(\"./game/ddong/background2.mp3\")\npygame.mixer.music.play(-1) \nDEFAULT_SIZE = 600\nclass JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")",
+        "detail": "game.pic.jigsaw.jigsaw_20260924",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_SIZE",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.jigsaw_20260924",
+        "description": "game.pic.jigsaw.jigsaw_20260924",
+        "peekOfCode": "DEFAULT_SIZE = 600\nclass JigsawPuzzleApp:\n    def __init__(self, root):\n        self.root = root\n        # self.root.title(\"Object-Oriented Jigsaw Puzzle\")\n        # 기본 설정 (초기값 3x3)\n        self.rows = 3\n        self.cols = 3\n        self.image_path = \"./game/pic/images/puzzle.png\"\n        self.logger = LogUtil.get_logger(\"JigsawPussle\")",
+        "detail": "game.pic.jigsaw.jigsaw_20260924",
         "documentation": {}
     },
     {
@@ -8251,16 +8546,7 @@
         "kind": 6,
         "importPath": "game.pic.jigsaw.movie",
         "description": "game.pic.jigsaw.movie",
-        "peekOfCode": "class VideoPlayerWindow(tk.Toplevel):\n    def __init__(self, parent):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__(parent)\n        self.title(\"🎬 동영상 플레이어\")\n        self.geometry(\"800x640\")\n        self.create_menu()\n        # 동영상이 출력될 검은색 캔버스 프레임 생성\n        self.video_frame = tk.Frame(self, bg=\"black\")\n        self.video_frame.pack(expand=True, fill=\"both\", padx=10, pady=10)",
-        "detail": "game.pic.jigsaw.movie",
-        "documentation": {}
-    },
-    {
-        "label": "get_resource_path",
-        "kind": 2,
-        "importPath": "game.pic.jigsaw.movie",
-        "description": "game.pic.jigsaw.movie",
-        "peekOfCode": "def get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)\n# 🚀 [핵심] 독립된 새 창(Toplevel)으로 구동되는 동영상 플레이어 클래스\nclass VideoPlayerWindow(tk.Toplevel):\n    def __init__(self, parent):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__(parent)\n        self.title(\"🎬 동영상 플레이어\")",
+        "peekOfCode": "class VideoPlayerWindow(tk.Toplevel):\n    def __init__(self, parent):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__(parent)\n        self.owner = parent\n        self.config_manager = self.owner.config_manager\n        self.logger = LogUtil.get_logger(__file__)\n        self.relative_path = parent.relative_path\n        icon_path = ResUtil.resource_path(self.relative_path, \"icon.ico\")\n        self.iconbitmap(icon_path)",
         "detail": "game.pic.jigsaw.movie",
         "documentation": {}
     },
@@ -8269,7 +8555,7 @@
         "kind": 5,
         "importPath": "game.pic.jigsaw.movie",
         "description": "game.pic.jigsaw.movie",
-        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\nfrom util.file_util import FileUtil  # 엔진 등록 후 정상 로드\n# ⚡ [2단계] 단일 파일(.exe) 빌드 시 내부 임시 폴더 경로를 추적하는 함수\ndef get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\nimport tkinter as tk\nfrom tkinter import ttk, filedialog, messagebox\nimport time\nimport logging\n# PIL(Pillow) 라이브러리의 로그 레벨을 WARNING 이상으로 올려서 \n# DEBUG, INFO 로그가 콘솔에 찍히지 않도록 차단합니다.",
         "detail": "game.pic.jigsaw.movie",
         "documentation": {}
     },
@@ -8289,6 +8575,15 @@
         "description": "game.pic.jigsaw.piece01",
         "peekOfCode": "class PuzzlePiece:\n    def __init__(self, canvas_id, image, correct_idx, initial_grid_pos):\n        self.id = canvas_id\n        self.image = image\n        self.correct_idx = correct_idx\n        self.current_grid_pos = initial_grid_pos\n    @property\n    def is_correct(self) -> bool:\n        \"\"\"이 조각이 정답 자리에 위치해 있는지 확인합니다.\"\"\"\n        return self.current_grid_pos == self.correct_idx",
         "detail": "game.pic.jigsaw.piece01",
+        "documentation": {}
+    },
+    {
+        "label": "PlaylistPopup",
+        "kind": 6,
+        "importPath": "game.pic.jigsaw.playlist_popup",
+        "description": "game.pic.jigsaw.playlist_popup",
+        "peekOfCode": "class PlaylistPopup:\n    def __init__(self, parent_window, main_player):\n        \"\"\"\n        parent_window: 메인 Tk 또는 Toplevel 창\n        main_player: 메인 플레이어 객체 (데이터 연동용)\n        \"\"\"\n        self.parent = parent_window\n        self.player = main_player  # 메인 플레이어의 변수나 함수에 접근하기 위함\n        self.logger = LogUtil.get_logger(__file__)\n        self.config_manager = parent_window.config_manager",
+        "detail": "game.pic.jigsaw.playlist_popup",
         "documentation": {}
     },
     {
@@ -8325,6 +8620,69 @@
         "description": "game.pic.jigsaw.sound_manager",
         "peekOfCode": "sound_effect = None\ndef init_sounds():\n    \"\"\"메인 루프 시작 전 사운드를 단 한 번 초기화하는 함수\"\"\"\n    global sound_effect\n    # 믹서가 초기화되지 않았다면 초기화\n    if not pygame.mixer.get_init():\n        pygame.mixer.init()\n    try:\n        sound_effect = pygame.mixer.Sound(resource_path(\"./game/ddong/effect.wav\"))\n    except Exception:",
         "detail": "game.pic.jigsaw.sound_manager",
+        "documentation": {}
+    },
+    {
+        "label": "VideoPlayerWindow",
+        "kind": 6,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "class VideoPlayerWindow(tk.Toplevel):\n    def __init__(self, parent, video_path):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__(parent)\n        self.title(\"VLC 동영상 재생 스크린\")\n        self.geometry(\"700x530\")\n        # 모달(Modal) 창 설정: 메인 창 중앙 정렬 및 포커스 고정\n        self.transient(parent)\n        self.grab_set()\n        # 1. 영상 프레임이 출력될 라벨 위젯 (배경 검은색)",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "start_video",
+        "kind": 2,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "def start_video():\n    # 설계한 VLC Toplevel 클래스 인스턴스 오픈\n    VideoPlayerWindow(root, VIDEO_FILE)\n# --- 메인 GUI 테스트 실행부 ---\nroot = tk.Tk()\nroot.title(\"메인 윈도우\")\nroot.geometry(\"400x200\")\n# ⚠️ 실제 컴퓨터에 존재하는 mp4 파일명으로 바꾸어 테스트하세요.\nVIDEO_FILE = ResUtil.resource_path(\"game/pic/jigsaw/movie\", \"test.mkv\")\nplay_btn = tk.Button(root, text=\"클래스 기반 Toplevel 플레이어 열기\", ",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "vlc_path",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nelse:\n    print(\"경고: VLC 미디어 플레이어가 지정된 경로에 설치되어 있지 않습니다.\")\nimport vlc\nfrom util.resource import ResUtil\n# 🚀 [핵심] 독립된 새 창(Toplevel)으로 구동되는 VLC 동영상 플레이어 클래스\nclass VideoPlayerWindow(tk.Toplevel):\n    def __init__(self, parent, video_path):",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"메인 윈도우\")\nroot.geometry(\"400x200\")\n# ⚠️ 실제 컴퓨터에 존재하는 mp4 파일명으로 바꾸어 테스트하세요.\nVIDEO_FILE = ResUtil.resource_path(\"game/pic/jigsaw/movie\", \"test.mkv\")\nplay_btn = tk.Button(root, text=\"클래스 기반 Toplevel 플레이어 열기\", \n                     command=start_video, padx=10, pady=5)\nplay_btn.pack(pady=30)\nstatus_label = tk.Label(root, text=\"상태: 대기 중\", font=(\"맑은 고딕\", 11, \"bold\"))\nstatus_label.pack()",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "VIDEO_FILE",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "VIDEO_FILE = ResUtil.resource_path(\"game/pic/jigsaw/movie\", \"test.mkv\")\nplay_btn = tk.Button(root, text=\"클래스 기반 Toplevel 플레이어 열기\", \n                     command=start_video, padx=10, pady=5)\nplay_btn.pack(pady=30)\nstatus_label = tk.Label(root, text=\"상태: 대기 중\", font=(\"맑은 고딕\", 11, \"bold\"))\nstatus_label.pack()\nroot.mainloop()",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "play_btn",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "play_btn = tk.Button(root, text=\"클래스 기반 Toplevel 플레이어 열기\", \n                     command=start_video, padx=10, pady=5)\nplay_btn.pack(pady=30)\nstatus_label = tk.Label(root, text=\"상태: 대기 중\", font=(\"맑은 고딕\", 11, \"bold\"))\nstatus_label.pack()\nroot.mainloop()",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
+        "documentation": {}
+    },
+    {
+        "label": "status_label",
+        "kind": 5,
+        "importPath": "game.pic.jigsaw.tk_videoplayer",
+        "description": "game.pic.jigsaw.tk_videoplayer",
+        "peekOfCode": "status_label = tk.Label(root, text=\"상태: 대기 중\", font=(\"맑은 고딕\", 11, \"bold\"))\nstatus_label.pack()\nroot.mainloop()",
+        "detail": "game.pic.jigsaw.tk_videoplayer",
         "documentation": {}
     },
     {
@@ -8791,7 +9149,7 @@
         "kind": 6,
         "importPath": "game.pygame_frame",
         "description": "game.pygame_frame",
-        "peekOfCode": "class GameFrame:\n    def __init__(self, log_filename: str=None, title: str=None):\n        if log_filename == None:\n            log_filename = __file__\n        if title == None:\n            title = \"GameMain\"\n        self.title = title\n        self.logger = LogUtil.get_logger(log_filename)\n        self.config_manager = ConfigManager(abs_path=log_filename)\n        pygame.init()  # 2. 파이게임 초기화",
+        "peekOfCode": "class GameFrame:\n    def __init__(self, log_filename: str=None, title: str=None):\n        if log_filename == None:\n            log_filename = __file__\n        if title == None:\n            title = \"GameMain\"\n        self.title = title\n        self.logger = LogUtil.get_logger(log_filename)\n        self.config_manager = ConfigManager(config_path=log_filename)\n        pygame.init()  # 2. 파이게임 초기화",
         "detail": "game.pygame_frame",
         "documentation": {}
     },
@@ -8807,37 +9165,37 @@
     {
         "label": "HeaderFrame",
         "kind": 6,
-        "importPath": "game.tkinter_frame",
-        "description": "game.tkinter_frame",
+        "importPath": "game.tkinter_main",
+        "description": "game.tkinter_main",
         "peekOfCode": "class HeaderFrame(tk.Frame):\n    def __init__(self, master, **kwargs):\n        \"\"\"_summary_\n        1. 상단 프레임 영역 (독립된 UI 컴포넌트로 구성)\n        \"\"\"\n        super().__init__(master, **kwargs)\n        self.configure(bg=\"#2c3e50\", height=60)\n        # 중요: 자식 요소 때문에 크기가 줄어들지 않도록 설정\n        self.pack_propagate(False)\n        # 타이틀 라벨 라벨",
-        "detail": "game.tkinter_frame",
+        "detail": "game.tkinter_main",
         "documentation": {}
     },
     {
         "label": "ContentFrame",
         "kind": 6,
-        "importPath": "game.tkinter_frame",
-        "description": "game.tkinter_frame",
+        "importPath": "game.tkinter_main",
+        "description": "game.tkinter_main",
         "peekOfCode": "class ContentFrame(tk.Frame):\n    def __init__(self, master, **kwargs):\n        \"\"\"_summary_\n        2. 메인 콘텐츠 프레임 영역\n        \"\"\"\n        super().__init__(master, **kwargs)\n        self.configure(padx=20, pady=20)\n        # 텍스트 입력창\n        self.entry_label = tk.Label(\n            self, text=\"텍스트를 입력하세요:\", font=(\"Malgun Gothic\", 10)",
-        "detail": "game.tkinter_frame",
+        "detail": "game.tkinter_main",
         "documentation": {}
     },
     {
         "label": "MenuFrame",
         "kind": 6,
-        "importPath": "game.tkinter_frame",
-        "description": "game.tkinter_frame",
+        "importPath": "game.tkinter_main",
+        "description": "game.tkinter_main",
         "peekOfCode": "class MenuFrame(tk.Frame):\n    def __init__(self, master, **kwargs):\n        \"\"\"_summary_\n        메뉴 프레임 영역\n        \"\"\"\n        super().__init__(master, **kwargs)\n        self.root = master\n        self.configure(padx=20, pady=20)\n    def create_menu(self):\n        \"\"\" 종료 기능이 탑재된 메뉴바 구성\"\"\"",
-        "detail": "game.tkinter_frame",
+        "detail": "game.tkinter_main",
         "documentation": {}
     },
     {
-        "label": "TkinterFrame",
+        "label": "TkinterMain",
         "kind": 6,
-        "importPath": "game.tkinter_frame",
-        "description": "game.tkinter_frame",
-        "peekOfCode": "class TkinterFrame(tk.Tk):\n    def __init__(self, file_path):\n        \"\"\"_summary_\n        3. 메인 애플리케이션 윈도우 관리자\n        \"\"\"\n        super().__init__()\n        from util.log_util import LogUtil\n        self.logger = LogUtil.get_logger(file_path)\n        self.config_manager = ConfigManager(file_path, False)\n        if self.config_manager.settings.get(\"\") is None:",
-        "detail": "game.tkinter_frame",
+        "importPath": "game.tkinter_main",
+        "description": "game.tkinter_main",
+        "peekOfCode": "class TkinterMain(tk.Tk):\n    def __init__(self, file_path):\n        \"\"\"_summary_\n        3. 메인 애플리케이션 윈도우 관리자\n        \"\"\"\n        super().__init__()\n        from util.log_util import LogUtil\n        self.logger = LogUtil.get_logger(file_path)\n        self.config_manager = ConfigManager(file_path, False)\n        if self.config_manager.settings.get(\"\") is None:",
+        "detail": "game.tkinter_main",
         "documentation": {}
     },
     {
@@ -9597,6 +9955,33 @@
         "documentation": {}
     },
     {
+        "label": "PlaylistPopup",
+        "kind": 6,
+        "importPath": "movie.playlist_popup",
+        "description": "movie.playlist_popup",
+        "peekOfCode": "class PlaylistPopup:\n    def __init__(self, parent_window, width=450, height=450, playlist_dir=None):\n        \"\"\"\n        parent_window: 메인 Tk 또는 Toplevel 창, 메인 플레이어 객체 (데이터 연동용)\n        \"\"\"\n        self.parent = parent_window # 메인 플레이어의 변수나 함수에 접근하기 위함\n        self.logger = LogUtil.get_logger(__file__)\n        self.width, self.height = width, height\n        self.playlist_dir = playlist_dir\n        self.relative_path = self.parent.relative_path",
+        "detail": "movie.playlist_popup",
+        "documentation": {}
+    },
+    {
+        "label": "VideoPlayer",
+        "kind": 6,
+        "importPath": "movie.video_player",
+        "description": "movie.video_player",
+        "peekOfCode": "class VideoPlayer(tk.Tk):\n    def __init__(self, config_file_path=None):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__()\n        # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기\n        if hasattr(sys, \"_MEIPASS\"):\n            self.base_path = os.path.dirname(sys.executable)\n        else:\n            self.base_path = os.path.dirname(os.path.abspath(__file__))\n        # logger for debugging",
+        "detail": "movie.video_player",
+        "documentation": {}
+    },
+    {
+        "label": "vlc_path",
+        "kind": 5,
+        "importPath": "movie.video_player",
+        "description": "movie.video_player",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\n# # 1. 현재 파일(video_player.py)의 상위 폴더인 'lotto' 경로를 계산합니다.\n# curr_dir = os.path.dirname(os.path.abspath(__file__))  # movie 폴더\n# parent_dir = os.path.dirname(curr_dir)                 # lotto 폴더\n# # 2. 파이썬 탐색 경로(sys.path)에 'lotto' 폴더를 등록합니다.\n# #    이렇게 하면 movie.playlist_popup을 'lotto/movie/...' 구조로 올바르게 찾아갑니다.\n# if parent_dir not in sys.path:",
+        "detail": "movie.video_player",
+        "documentation": {}
+    },
+    {
         "label": "SCREEN_WIDTH",
         "kind": 5,
         "importPath": "test.pygame.pygame01_draw",
@@ -10038,227 +10423,20 @@
         "documentation": {}
     },
     {
-        "label": "config_manager",
-        "kind": 5,
+        "label": "Pygame07Dino",
+        "kind": 6,
         "importPath": "test.pygame.pygame07_dino",
         "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "config_manager = ConfigManager(__file__)\njson = config_manager.settings\n# json.clear()\n# 1. 초기 설정\npygame.init()\ndino = json['dino']\n# dino[\"SCREEN_WIDTH\"] = 1200\n# dino[\"SCREEN_HEIGHT\"] = 800\n# dino['background'] = \"./game/images/ddong/background.jpg\"\n# dino['mans'] = [\"./game/images/ddong/man_img1.png\",\"./game/images/ddong/man_img2.png\",\"./game/images/ddong/man_img3.png\"]",
+        "peekOfCode": "class Pygame07Dino:\n    def __init__(self):\n        config_manager = ConfigManager(__file__)\n        json = config_manager.settings\n        # json.clear()\n        # 1. 초기 설정\n        pygame.init()\n        dino = json['dino']\n        # dino[\"SCREEN_WIDTH\"] = 1200\n        # dino[\"SCREEN_HEIGHT\"] = 800",
         "detail": "test.pygame.pygame07_dino",
         "documentation": {}
     },
     {
-        "label": "json",
+        "label": "game",
         "kind": 5,
         "importPath": "test.pygame.pygame07_dino",
         "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "json = config_manager.settings\n# json.clear()\n# 1. 초기 설정\npygame.init()\ndino = json['dino']\n# dino[\"SCREEN_WIDTH\"] = 1200\n# dino[\"SCREEN_HEIGHT\"] = 800\n# dino['background'] = \"./game/images/ddong/background.jpg\"\n# dino['mans'] = [\"./game/images/ddong/man_img1.png\",\"./game/images/ddong/man_img2.png\",\"./game/images/ddong/man_img3.png\"]\n# dino['mans'].append('./game/images/ddong/man_img4.png')",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino = json['dino']\n# dino[\"SCREEN_WIDTH\"] = 1200\n# dino[\"SCREEN_HEIGHT\"] = 800\n# dino['background'] = \"./game/images/ddong/background.jpg\"\n# dino['mans'] = [\"./game/images/ddong/man_img1.png\",\"./game/images/ddong/man_img2.png\",\"./game/images/ddong/man_img3.png\"]\n# dino['mans'].append('./game/images/ddong/man_img4.png')\n# dino['mans'].append('./game/images/ddong/man_img5.png')\n# dino['mans'].append('./game/images/ddong/man_img6.png')\n# json[\"dino\"] = dino\n# SCREEN_WIDTH = 1200",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "screen",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "screen = pygame.display.set_mode((dino[\"SCREEN_WIDTH\"], dino[\"SCREEN_HEIGHT\"]))\npygame.display.set_caption(\"떨어지는 운석 피하기 게임\")\nclock = pygame.time.Clock()\nbg_img = pygame.image.load(dino['background']) #\"./game/images/ddong/background.jpg\")\nbg_img = pygame.transform.scale(bg_img, (dino[\"SCREEN_WIDTH\"], dino[\"SCREEN_HEIGHT\"]))\n# 캐릭터 애니메이션 리스트 생성\ndino_right = []\nfor i in range(1,6):\n    # img = pygame.image.load(f\"./game/images/ddong/man_img{i}.png\").convert_alpha()\n    img = pygame.image.load(dino['mans'][i]).convert_alpha()",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "clock",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "clock = pygame.time.Clock()\nbg_img = pygame.image.load(dino['background']) #\"./game/images/ddong/background.jpg\")\nbg_img = pygame.transform.scale(bg_img, (dino[\"SCREEN_WIDTH\"], dino[\"SCREEN_HEIGHT\"]))\n# 캐릭터 애니메이션 리스트 생성\ndino_right = []\nfor i in range(1,6):\n    # img = pygame.image.load(f\"./game/images/ddong/man_img{i}.png\").convert_alpha()\n    img = pygame.image.load(dino['mans'][i]).convert_alpha()\n    # 이미지 크기를 절반(0.5)으로 부드럽게 줄입니다.\n    img = pygame.transform.rotozoom(img, 0, 0.5)",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "bg_img",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "bg_img = pygame.image.load(dino['background']) #\"./game/images/ddong/background.jpg\")\nbg_img = pygame.transform.scale(bg_img, (dino[\"SCREEN_WIDTH\"], dino[\"SCREEN_HEIGHT\"]))\n# 캐릭터 애니메이션 리스트 생성\ndino_right = []\nfor i in range(1,6):\n    # img = pygame.image.load(f\"./game/images/ddong/man_img{i}.png\").convert_alpha()\n    img = pygame.image.load(dino['mans'][i]).convert_alpha()\n    # 이미지 크기를 절반(0.5)으로 부드럽게 줄입니다.\n    img = pygame.transform.rotozoom(img, 0, 0.5)\n    dino_right.append(img)",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "bg_img",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "bg_img = pygame.transform.scale(bg_img, (dino[\"SCREEN_WIDTH\"], dino[\"SCREEN_HEIGHT\"]))\n# 캐릭터 애니메이션 리스트 생성\ndino_right = []\nfor i in range(1,6):\n    # img = pygame.image.load(f\"./game/images/ddong/man_img{i}.png\").convert_alpha()\n    img = pygame.image.load(dino['mans'][i]).convert_alpha()\n    # 이미지 크기를 절반(0.5)으로 부드럽게 줄입니다.\n    img = pygame.transform.rotozoom(img, 0, 0.5)\n    dino_right.append(img)\n# 왼쪽 바향 애니메이션 이미지 생성(오른쪽 이미지를 좌우 반전)",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_right",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_right = []\nfor i in range(1,6):\n    # img = pygame.image.load(f\"./game/images/ddong/man_img{i}.png\").convert_alpha()\n    img = pygame.image.load(dino['mans'][i]).convert_alpha()\n    # 이미지 크기를 절반(0.5)으로 부드럽게 줄입니다.\n    img = pygame.transform.rotozoom(img, 0, 0.5)\n    dino_right.append(img)\n# 왼쪽 바향 애니메이션 이미지 생성(오른쪽 이미지를 좌우 반전)\ndino_left = [pygame.transform.flip(img, True, False) for img in dino_right]\n# 애니메이션 제어 변수",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_left",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_left = [pygame.transform.flip(img, True, False) for img in dino_right]\n# 애니메이션 제어 변수\ndino_image = dino_right\n# 공룡 이미지 위치 설정\ndino_rect = dino_right[0].get_rect()\ndino_rect.x = (dino[\"SCREEN_WIDTH\"] - dino_rect.width) // 2\ndino_rect.y = dino[\"SCREEN_HEIGHT\"] - dino_rect.height\ndino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_image",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_image = dino_right\n# 공룡 이미지 위치 설정\ndino_rect = dino_right[0].get_rect()\ndino_rect.x = (dino[\"SCREEN_WIDTH\"] - dino_rect.width) // 2\ndino_rect.y = dino[\"SCREEN_HEIGHT\"] - dino_rect.height\ndino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]\n# dino['rock'].append(\"./game/images/ddong/watermelon2.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon3.png\")",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_rect",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_rect = dino_right[0].get_rect()\ndino_rect.x = (dino[\"SCREEN_WIDTH\"] - dino_rect.width) // 2\ndino_rect.y = dino[\"SCREEN_HEIGHT\"] - dino_rect.height\ndino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]\n# dino['rock'].append(\"./game/images/ddong/watermelon2.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon3.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon4.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon5.png\")",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_rect.x",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_rect.x = (dino[\"SCREEN_WIDTH\"] - dino_rect.width) // 2\ndino_rect.y = dino[\"SCREEN_HEIGHT\"] - dino_rect.height\ndino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]\n# dino['rock'].append(\"./game/images/ddong/watermelon2.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon3.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon4.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon5.png\")\n# rock = pygame.image.load(\"./game/images/ddong/watermelon1.png\").convert_alpha()",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_rect.y",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_rect.y = dino[\"SCREEN_HEIGHT\"] - dino_rect.height\ndino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]\n# dino['rock'].append(\"./game/images/ddong/watermelon2.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon3.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon4.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon5.png\")\n# rock = pygame.image.load(\"./game/images/ddong/watermelon1.png\").convert_alpha()\nrock = pygame.image.load(dino['rock'][0]).convert_alpha()",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "dino_speed",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "dino_speed = 0\n# 운석 이미지 로드\n# dino['rock'] = [\"./game/images/ddong/watermelon1.png\"]\n# dino['rock'].append(\"./game/images/ddong/watermelon2.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon3.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon4.png\")\n# dino['rock'].append(\"./game/images/ddong/watermelon5.png\")\n# rock = pygame.image.load(\"./game/images/ddong/watermelon1.png\").convert_alpha()\nrock = pygame.image.load(dino['rock'][0]).convert_alpha()\n# 운석 초기 위치 설정",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "rock",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "rock = pygame.image.load(dino['rock'][0]).convert_alpha()\n# 운석 초기 위치 설정\nrock_rect = rock.get_rect()\nrock_rect.x = random.randint(0, dino[\"SCREEN_WIDTH\"] - rock_rect.width)\nrock_rect.y = 0\nrock_speed = 10\nframe_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "rock_rect",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "rock_rect = rock.get_rect()\nrock_rect.x = random.randint(0, dino[\"SCREEN_WIDTH\"] - rock_rect.width)\nrock_rect.y = 0\nrock_speed = 10\nframe_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "rock_rect.x",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "rock_rect.x = random.randint(0, dino[\"SCREEN_WIDTH\"] - rock_rect.width)\nrock_rect.y = 0\nrock_speed = 10\nframe_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "rock_rect.y",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "rock_rect.y = 0\nrock_speed = 10\nframe_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "rock_speed",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "rock_speed = 10\nframe_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "frame_index",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "frame_index = 0  # 실수형 인텍스 (속도 조절용)\nanimation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:\n    for event in pygame.event.get():",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "animation_speed",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "animation_speed = 0.4 # 숫자가 작을수록 천천히 움직입니다.\nstop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "stop",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "stop = True  # 캐릭터가 멈춰있는 상태를 나타내는 변수 (초기값은 True로 설정)\n# config_manager.save()\nscore = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "score",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "score = 0\nfont = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_q or event.key == pygame.K_ESCAPE:",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "font",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "font = pygame.font.SysFont('Sans', 30)\n# 4. 게임 루프\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_q or event.key == pygame.K_ESCAPE:\n                running = False",
-        "detail": "test.pygame.pygame07_dino",
-        "documentation": {}
-    },
-    {
-        "label": "running",
-        "kind": 5,
-        "importPath": "test.pygame.pygame07_dino",
-        "description": "test.pygame.pygame07_dino",
-        "peekOfCode": "running = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_q or event.key == pygame.K_ESCAPE:\n                running = False\n            if event.key == pygame.K_LEFT:\n                stop = False",
+        "peekOfCode": "game = Pygame07Dino()",
         "detail": "test.pygame.pygame07_dino",
         "documentation": {}
     },
@@ -10411,7 +10589,7 @@
         "kind": 6,
         "importPath": "test.lotto_ai_test",
         "description": "test.lotto_ai_test",
-        "peekOfCode": "class LottoAITest(LottoMain):\n    def __init__(self, debug: bool = False):\n        super().__init__(debug=debug)\n        self.numberVos: List[NumberVO] = self.numberVos\n        self.tickets = []  # 로또 추천 번호를 담을 리스트\n        self.last15_numbers = self.get_numbers_from_last(15)  # 최근 15회차 번호만 추출\n        if debug:\n            self.mydic = Dic()\n        self.logger = LogUtil.get_logger(Str.get_class_name(self))\n    # --- [파이프라인 단계 1: 필터 결과 수치화 함수 정의] ---",
+        "peekOfCode": "class LottoAITest(LottoMain):\n    def __init__(self, debug: bool = False):\n        super().__init__(is_debug=debug)\n        self.numberVos: List[NumberVO] = self.numberVos\n        self.tickets = []  # 로또 추천 번호를 담을 리스트\n        self.last15_numbers = self.get_numbers_from_last(15)  # 최근 15회차 번호만 추출\n        if debug:\n            self.mydic = Dic()\n        self.logger = LogUtil.get_logger(Str.get_class_name(self))\n    # --- [파이프라인 단계 1: 필터 결과 수치화 함수 정의] ---",
         "detail": "test.lotto_ai_test",
         "documentation": {}
     },
@@ -10488,83 +10666,11 @@
         "documentation": {}
     },
     {
-        "label": "lists",
+        "label": "total",
         "kind": 5,
         "importPath": "test.test",
         "description": "test.test",
-        "peekOfCode": "lists = []\nlists.append([0, 1])\nlists.append([1, 1])\nlists.append([2, 1])\nlists.append([3, 1])\nif [0, 1] in lists:\n    print(\"exist\")\nelse:\n    print(\"not exist\")\nif (0, 1) in lists:",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "copys",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "copys = lists.copy()\ndeeps = copy.deepcopy(lists)\ncopys.reverse()\nprint(lists)\nprint(copys)\nprint(deeps)\nprint(__file__)\n# 예시 파일 경로\nfile_path_str = r\"D:\\Workspace\\vscode\\lotto\\game\\sokoban\\sokoban.py\"\n# Path 객체 생성",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "deeps",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "deeps = copy.deepcopy(lists)\ncopys.reverse()\nprint(lists)\nprint(copys)\nprint(deeps)\nprint(__file__)\n# 예시 파일 경로\nfile_path_str = r\"D:\\Workspace\\vscode\\lotto\\game\\sokoban\\sokoban.py\"\n# Path 객체 생성\npath = Path(file_path_str)",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "file_path_str",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "file_path_str = r\"D:\\Workspace\\vscode\\lotto\\game\\sokoban\\sokoban.py\"\n# Path 객체 생성\npath = Path(file_path_str)\n# 각각의 요소 추출\nfolder_path = path.parent  # 폴더 경로\nfile_name = path.stem  # 확장자를 제외한 파일 이름\nfile_ext = path.suffix  # 확장자 (점 '.' 포함)\nfull_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "path = Path(file_path_str)\n# 각각의 요소 추출\nfolder_path = path.parent  # 폴더 경로\nfile_name = path.stem  # 확장자를 제외한 파일 이름\nfile_ext = path.suffix  # 확장자 (점 '.' 포함)\nfull_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban\nprint(f\"파일 이름: {file_name}\")  # sokoban\nprint(f\"확 장 자 : {file_ext}\")  # .py",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "folder_path",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "folder_path = path.parent  # 폴더 경로\nfile_name = path.stem  # 확장자를 제외한 파일 이름\nfile_ext = path.suffix  # 확장자 (점 '.' 포함)\nfull_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban\nprint(f\"파일 이름: {file_name}\")  # sokoban\nprint(f\"확 장 자 : {file_ext}\")  # .py\nprint(f\"전체 파일명: {full_name}\")  # sokoban.py\nx, a1, b1 = 0, 1, 1",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "file_name",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "file_name = path.stem  # 확장자를 제외한 파일 이름\nfile_ext = path.suffix  # 확장자 (점 '.' 포함)\nfull_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban\nprint(f\"파일 이름: {file_name}\")  # sokoban\nprint(f\"확 장 자 : {file_ext}\")  # .py\nprint(f\"전체 파일명: {full_name}\")  # sokoban.py\nx, a1, b1 = 0, 1, 1\nwhile x < 30:",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "file_ext",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "file_ext = path.suffix  # 확장자 (점 '.' 포함)\nfull_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban\nprint(f\"파일 이름: {file_name}\")  # sokoban\nprint(f\"확 장 자 : {file_ext}\")  # .py\nprint(f\"전체 파일명: {full_name}\")  # sokoban.py\nx, a1, b1 = 0, 1, 1\nwhile x < 30:\n    a, b = x**9, 3**x",
-        "detail": "test.test",
-        "documentation": {}
-    },
-    {
-        "label": "full_name",
-        "kind": 5,
-        "importPath": "test.test",
-        "description": "test.test",
-        "peekOfCode": "full_name = path.name  # 확장자를 포함한 전체 파일명\n# 출력 결과\nprint(f\"폴더 경로: {folder_path}\")  # D:\\Workspace\\vscode\\lotto\\game\\sokoban\nprint(f\"파일 이름: {file_name}\")  # sokoban\nprint(f\"확 장 자 : {file_ext}\")  # .py\nprint(f\"전체 파일명: {full_name}\")  # sokoban.py\nx, a1, b1 = 0, 1, 1\nwhile x < 30:\n    a, b = x**9, 3**x\n    print(\"x=\", x, a, b, (b - b1) / (a - a1))",
+        "peekOfCode": "total = 5\nprint(-1 % total)",
         "detail": "test.test",
         "documentation": {}
     },
@@ -10575,6 +10681,24 @@
         "description": "test.test_singleton",
         "peekOfCode": "class Singleton:\n    # 유일한 인스턴스를 저장할 클래스 변수\n    _instance = None\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            # 인스턴스가 생성된 적이 없다면 새로 생성\n            cls._instance = super().__new__(cls)\n            print(\"create instance=======\")\n        print(\"__new__\", args, kwargs)\n        return cls._instance",
         "detail": "test.test_singleton",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalColorPickerApp",
+        "kind": 6,
+        "importPath": "util.color_picker copy",
+        "description": "util.color_picker copy",
+        "peekOfCode": "class GlobalColorPickerApp:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"전역 모니터 스크린 컬러 피커\")\n        self.root.geometry(\"400x250\")\n        # 1. 상단 안내 및 결과 레이블\n        self.info_label = tk.Label(root, text=\"아래 버튼을 누르면 색상 추출 모드가 시작됩니다.\", font=(\"맑은 고딕\", 10))\n        self.info_label.pack(pady=15)\n        # 색상 결과창 (미리보기 박스)\n        self.color_preview = tk.Label(root, bg=\"#f0f0f0\", width=25, height=3, relief=\"ridge\", bd=2)",
+        "detail": "util.color_picker copy",
+        "documentation": {}
+    },
+    {
+        "label": "ColorPickerWindow",
+        "kind": 6,
+        "importPath": "util.color_picker",
+        "description": "util.color_picker",
+        "peekOfCode": "class ColorPickerWindow(tk.Toplevel):\n    def __init__(self, parent):\n        # 부모 창 위에 독립된 서브 창을 생성합니다.\n        super().__init__(parent)\n        self.title(\"단독 컬러 스포이드\")\n        self.geometry(\"360x220\")\n        self.resizable(False, False)\n        # 윈도우 스타일 고정 (메인 창 위에 항상 배치 및 포커스 고정)\n        self.transient(parent)\n        self.grab_set()",
+        "detail": "util.color_picker",
         "documentation": {}
     },
     {
@@ -10591,7 +10715,7 @@
         "kind": 6,
         "importPath": "util.file_util",
         "description": "util.file_util",
-        "peekOfCode": "class FileUtil:\n    # 💡 [정적 필드 (Static Field) 선언]\n    # 클래스명 자체로 바로 접근할 수 있으며, 모든 인스턴스가 이 값을 공유합니다.\n    \"\"\"default path D:\\\\Workspace\\\\vscode\\\\lotto \"\"\"\n    DEFAULT_PATH = r\"D:\\\\Workspace\\\\vscode\\\\lotto\"\n    \"\"\" conf folder\"\"\"\n    CONF_PATH = os.path.join(DEFAULT_PATH, \"conf\")\n    \"\"\"default encoding utr-8 \"\"\"\n    DEFAULT_ENCODING = \"utf-8\"\n    @staticmethod",
+        "peekOfCode": "class FileUtil:\n    \"\"\"\n    💡 [정적 필드 (Static Field) 선언]\n    클래스명 자체로 바로 접근할 수 있으며, 모든 인스턴스가 이 값을 공유합니다.\n    \"\"\"\n    \"\"\"default path D:\\\\Workspace\\\\vscode\\\\lotto \"\"\"\n    DEFAULT_PATH = r\"D:\\\\Workspace\\\\vscode\\\\lotto\"\n    \"\"\" conf folder\"\"\"\n    CONF_PATH = os.path.join(DEFAULT_PATH, \"conf\")\n    \"\"\"default encoding utr-8 \"\"\"",
         "detail": "util.file_util",
         "documentation": {}
     },
@@ -10749,6 +10873,24 @@
         "documentation": {}
     },
     {
+        "label": "img",
+        "kind": 5,
+        "importPath": "util.make_img_to_icon",
+        "description": "util.make_img_to_icon",
+        "peekOfCode": "img = Image.open(\"./movie/player256.png\")\n# 2. .ico 파일에 포함할 표준 크기들 지정\nicon_sizes = [(16, 16), (32, 32), (48, 48), (256, 256)]\n# 3. ico 포맷으로 저장 (sizes 옵션에 크기 배열 전달)\nimg.save(\"./movie/player.ico\", format=\"ICO\", sizes=icon_sizes)\nprint(\"멀티 사이즈 .ico 아이콘 변환 완료!\")",
+        "detail": "util.make_img_to_icon",
+        "documentation": {}
+    },
+    {
+        "label": "icon_sizes",
+        "kind": 5,
+        "importPath": "util.make_img_to_icon",
+        "description": "util.make_img_to_icon",
+        "peekOfCode": "icon_sizes = [(16, 16), (32, 32), (48, 48), (256, 256)]\n# 3. ico 포맷으로 저장 (sizes 옵션에 크기 배열 전달)\nimg.save(\"./movie/player.ico\", format=\"ICO\", sizes=icon_sizes)\nprint(\"멀티 사이즈 .ico 아이콘 변환 완료!\")",
+        "detail": "util.make_img_to_icon",
+        "documentation": {}
+    },
+    {
         "label": "Dic",
         "kind": 6,
         "importPath": "util.mydic_util",
@@ -10758,11 +10900,20 @@
         "documentation": {}
     },
     {
+        "label": "ResUtil",
+        "kind": 6,
+        "importPath": "util.resource",
+        "description": "util.resource",
+        "peekOfCode": "class ResUtil:\n    @staticmethod\n    def resource_path(relative_path, file_path):\n        try:\n            base_path = sys._MEIPASS\n            return os.path.join(base_path, file_path)\n        except Exception:\n            # 개발 환경(VS Code)에서 실제 파일이 들어있는 하위 경로 지정\n            # 만약 이미지를 루트에 두셨다면 os.path.abspath(relative_path)로 쓰셔도 됩니다.\n            return os.path.abspath(os.path.join(relative_path, file_path))",
+        "detail": "util.resource",
+        "documentation": {}
+    },
+    {
         "label": "Str",
         "kind": 6,
         "importPath": "util.str_util",
         "description": "util.str_util",
-        "peekOfCode": "class Str:\n    @staticmethod\n    def is_han(ch) -> bool:\n        return (\n            (0xAC00 <= ch <= 0xD7A3)\n            or (0x3131 <= ch <= 0x318F)\n            or (0x1100 <= ch <= 0x11FF)\n            or (0xD7B0 <= ch <= 0xD7FF)\n        )\n    @staticmethod",
+        "peekOfCode": "class Str:\n    @staticmethod\n    def is_blank(s: str=None) -> bool:\n        if s and not s.strip() == \"\":\n            return False\n        return True\n    @staticmethod\n    def is_blank_list(lst: list=None) -> bool:\n        if lst and 0 < len(lst):\n            return False",
         "detail": "util.str_util",
         "documentation": {}
     },
@@ -10773,6 +10924,24 @@
         "description": "util.sys_util",
         "peekOfCode": "class Sys:\n    @staticmethod\n    @DeprecationWarning\n    def check_ime_status(event=None):\n        \"\"\" 정상 작동 안함 \"\"\"\n        try:\n            # [수정] 메인창 핸들이 아니라, 현재 OS 상에서 전역 포커스를 가진 윈도우 핸들을 가져옵니다.\n            user32 = ctypes.WinDLL(\"user32\")\n            hwnd = user32.GetFocus() \n            if not hwnd:",
         "detail": "util.sys_util",
+        "documentation": {}
+    },
+    {
+        "label": "TkUtil",
+        "kind": 6,
+        "importPath": "util.tk_util",
+        "description": "util.tk_util",
+        "peekOfCode": "class TkUtil:\n    logger = LogUtil.get_logger(__file__)\n    @staticmethod\n    def show_toast(target_widget, message, duration=1500, fg=\"white\", bg=\"#333333\"):\n        \"\"\"_summary_\n        메시지 보여주기\n        Args:\n            target_widget: Tk(), Toplevel(), Frame() 등 현재 화면에 있는 어떤 위젯이든 가능\n            msg (str): 성공적으로 저장되었습니다.\n            millis (int, 1500): 노출 시간 밀리초. Defaults to 1500.",
+        "detail": "util.tk_util",
+        "documentation": {}
+    },
+    {
+        "label": "MainApp",
+        "kind": 6,
+        "importPath": "util.toast",
+        "description": "util.toast",
+        "peekOfCode": "class MainApp:\n    def __init__(self, root):\n        self.root = root\n        self.root.geometry(\"300x200\")\n        # 테스트용 버튼\n        btn = tk.Button(self.root, text=\"저장하기\", command=self.on_save)\n        btn.pack(pady=50)\n    def on_save(self):\n        # 작업 완료 후 토스트 알림 띄우기\n        self.show_toast(self.root, \"성공적으로 저장되었습니다!\")",
+        "detail": "util.toast",
         "documentation": {}
     },
     {
