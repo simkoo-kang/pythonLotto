@@ -41,7 +41,7 @@ class PlaylistPopup:
         self.popup.protocol("WM_DELETE_WINDOW", self.close_popup)
         
         # 💡 탐색기 아이콘 버그를 피하는 깔끔한 주입 방법
-        self.popup.iconbitmap(ResUtil.resource_path(self.relative_path, "icon.ico"))
+        self.popup.iconbitmap(ResUtil.resource_path(self.relative_path, "player.ico"))
 
         # ⚠️ 중요: 이미지 객체는 가비지 컬렉터(메모리 삭제) 방지를 위해 self 변수로 들고 있어야 합니다.
         self.load_button_images()
@@ -51,7 +51,7 @@ class PlaylistPopup:
 
     def load_button_images(self):
         """버튼에 사용할 PNG 이미지들을 메모리에 로드"""
-        img_dir = f"{self.relative_path}/image"
+        img_dir = f"{self.relative_path}/images"
         self.logger.debug(f"load_button_images: img_dir = {img_dir}")
         wh = 18
         try:

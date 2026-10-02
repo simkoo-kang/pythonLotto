@@ -191,9 +191,9 @@ class ParseLottoNumber(LottoFrame):
         cleaned_texts = [text.strip() for text in nodes if text.strip()][1:]
         infosb.append_all([Str.strip_not_digit(text) for text in cleaned_texts])
 
-        self.debug(infosb.to_string_tab())
+        self.debug(infosb.to_string())
 
-        self.apppend_number(infosb.to_string_tab())
+        self.apppend_number(infosb.to_string())
 
 
 # ==================== 실행 및 검증 ====================

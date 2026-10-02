@@ -6,6 +6,38 @@ import sys
 class Str:
 
     @staticmethod
+    def to_string_time(tm, type, is_millis=False) -> str:
+        """_summary_
+        time to 00:00:00.000
+        Args:
+            tm (time millis)
+            type (str [hour, minute, second]): hour부터, minute부터, second만 출력
+            is_millis (bool, False): 밀리초 포함 여부
+        Returns:
+            str: 00:00:00.000, 00:00.000, 00.000, 00:00:00, 00:00, 00
+        """
+        sb = []
+        millis = tm % 1000
+        seconds = tm // 1000
+        if is_millis:
+            sb.append(f".{millis:03d}")
+        
+        second = seconds % 60
+        if type == "second":
+            sb.append(f"{second:02d}")
+            return "".join(sb.reverse())
+        
+        minutes = seconds // 60
+        minute = minutes % 60
+        if type=="minute":
+            sb.append(f"{minute:02d}")
+            return "".join(reversed(sb))
+        
+        hours = minutes // 60
+        sb.append(f"{hours:02d}")
+        return "".join(sb[::-1])
+
+    @staticmethod
     def is_blank(s: str=None) -> bool:
         if s and not s.strip() == "":
             return False

@@ -32,7 +32,7 @@ from util.log_util import LogUtil
 from util.str_util import Str
 
 from util.file_util import FileUtil  # 엔진 등록 후 정상 로드
-from movie.playlist_popup import PlaylistPopup
+from videos.playlist_popup import PlaylistPopup
 # # 기존 Line 35 전후의 코드를 아래와 같이 변경합니다.
 # try:
 #     # 1. 메인 프로그램(lotto 폴더 기준)에서 호출되거나 방법 1로 실행될 때 작동
@@ -44,6 +44,7 @@ from movie.playlist_popup import PlaylistPopup
 from util.resource import ResUtil
 from util.tk_util import TkUtil
 from config.config_manager import ConfigManager
+from util.text_file_manager import TextManager
 
 
 # # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기
@@ -69,12 +70,12 @@ class VideoPlayer(tk.Tk):
             self.base_path = os.path.dirname(sys.executable)
         else:
             self.base_path = os.path.dirname(os.path.abspath(__file__))
+        self.logger.debug(f"현재 위치: {self.base_path} ===================")
 
         # logger for debugging
         self.logger = LogUtil.get_logger(__file__)
-        self.logger.debug(f"현재 위치: {self.base_path} ===================")
         
-        self.relative_path = "movie"
+        self.relative_path = FileUtil.filename(FileUtil.parent(__file__))
         
         # config_manager and default value
         self._init_config(config_file_path)
@@ -99,18 +100,28 @@ class VideoPlayer(tk.Tk):
         # ⚡ [3단계] 동영상이 패킹되거나 놓여있을 실제 전체 절대 경로 획득
         self.video_file_path = os.path.join(self.base_path, self.default_movie)
 
-        self.playlist = [] # 재생 목록 파일명만 저장
-        self.file_list = [] # 파일 전체 경로 저장
+        root_items, item_name, key_name = "items", "item", "title"
+        playlist_path = os.path.join(self.playlist_dir, "playlist.tms")
+        self.playlist = TextManager(file_path=playlist_path, root_name=root_items, item_name=item_name, key_name=key_name)
+        """_summary_
+        <items>
+            <item>
+                <title> 재생 목록 파일명 </title>
+                <path> 파일 전체 경로 </path>
+                <loop> False </loop>
+            </item>
+        </items>
+        """
+        self.current_play = None # <item> ... </item>
         self.current_index = -1 # prev, next에서 사용하는 인덱스
         
-        self.loop_file = False # 파일 반복 여부 설정
         self.playlist_name = None # 재생 목록 파일명
         self.popup = None # 재생 목록 편집용 팝업
         
         # 비디오 파일 연동 검증 및 자동 로딩
         if os.path.exists(self.video_file_path):
             self.file_list.append(self.video_file_path)
-            self.playlist.append(FileUtil.filename(self.video_file_path))
+            self.play_list.append(FileUtil.filename(self.video_file_path))
             self.current_index = 0
             self.start_video()
         else:
@@ -301,7 +312,7 @@ class VideoPlayer(tk.Tk):
     def append_file(self, filepath):
         """ 목록에 파일 추가 """
         self.file_list.append(filepath)
-        self.playlist.append(os.path.basename(filepath))
+        self.play_list.append(os.path.basename(filepath))
     
     def remove_file(self, filepath=None, index=None):
         """ 목록에 파일 삭제 """
@@ -310,10 +321,10 @@ class VideoPlayer(tk.Tk):
             return
         if filepath == None:
             self.file_list.pop(index)
-            self.playlist.pop(index)
+            self.play_list.pop(index)
         else:
             self.file_list.remove(filepath)
-            self.playlist.remove(os.path.basename(filepath))
+            self.play_list.remove(os.path.basename(filepath))
     
     def save_playlist_as(self, event):
         """💾 [다른 이름으로 저장] 내 재생목록 데이터(.txt)로 독립 추출하기"""
@@ -365,11 +376,11 @@ class VideoPlayer(tk.Tk):
             
             if not Str.is_blank_list(flst):
                 self.file_list = []
-                self.playlist = []
+                self.play_list = []
                 self.playlist_name = file_path
                 for name in flst:
                     self.file_list.append(name)
-                    self.playlist.append(FileUtil.filename(name))
+                    self.play_list.append(FileUtil.filename(name))
                 
                 self.current_index = 0
                 self.first_video()
@@ -404,7 +415,7 @@ class VideoPlayer(tk.Tk):
     
             # 이미지 파일만 필터링하여 리스트에 저장
             self.file_list = FileUtil.files(self.movie_dir, movie_extensions)
-            self.playlist = [FileUtil.filename(path) for path in self.file_list]
+            self.play_list = [FileUtil.filename(path) for path in self.file_list]
             
             self.current_index = self.file_list.index(file_path) # 무조건 하나는 있다. 선택했어니...
             
@@ -433,7 +444,7 @@ class VideoPlayer(tk.Tk):
     
             # 이미지 파일만 필터링하여 리스트에 저장
             self.file_list = FileUtil.files(self.movie_dir, movie_extensions)
-            self.playlist = [FileUtil.filename(path) for path in self.file_list]
+            self.play_list = [FileUtil.filename(path) for path in self.file_list]
             self.current_index = 0 # 처음부터
             self.first_video()
     
@@ -511,8 +522,10 @@ class VideoPlayer(tk.Tk):
             if length > 0 and time_ms >= 0:
                 cur_sec = time_ms // 1000
                 tot_sec = length // 1000
+                cur_str = Str.to_string_time(cur_sec, type="hour")
+                tot_str = Str.to_string_time(tot_sec, type="hour")
                 self.time_label.config(
-                    text=f"{cur_sec//60:02d}:{cur_sec%60:02d} / {tot_sec//60:02d}:{tot_sec%60:02d}"
+                    text=f"{cur_str} / {tot_str}"
                 )
 
                 position = self.player.get_position()

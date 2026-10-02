@@ -127,6 +127,17 @@ class FileUtil:
         return Path(file_path).stem  # json
 
     @staticmethod
+    def mkdirs(file_path):
+        """_summary_
+        저장할 폴더가 없으면 상위 폴더까지 자동으로 생성
+        Args:
+            file_path (str): abs filename
+        """
+        dir_name = os.path.dirname(file_path)
+        if dir_name and not os.path.exists(dir_name):
+            os.makedirs(dir_name)
+
+    @staticmethod
     def writeln(file_path: str, string: str, mode: str = "a") -> bool:
         """
         [파일 쓰기 기능]
@@ -135,10 +146,7 @@ class FileUtil:
         - mode='w': 기존 내용 지우고 새로 쓰기
         """
         try:
-            # 저장할 폴더가 없으면 상위 폴더까지 자동으로 생성
-            dir_name = os.path.dirname(file_path)
-            if dir_name and not os.path.exists(dir_name):
-                os.makedirs(dir_name)
+            FileUtil.mkdirs(file_path=file_path)
 
             with open(file_path, mode, encoding=FileUtil.DEFAULT_ENCODING) as file:
                 file.write(string + "\n")
@@ -156,10 +164,7 @@ class FileUtil:
         - mode='w': 기존 내용 지우고 새로 쓰기
         """
         try:
-            # 저장할 폴더가 없으면 상위 폴더까지 자동으로 생성
-            dir_name = os.path.dirname(file_path)
-            if dir_name and not os.path.exists(dir_name):
-                os.makedirs(dir_name)
+            FileUtil.mkdirs(file_path=file_path)
 
             with open(file_path, mode, encoding=FileUtil.DEFAULT_ENCODING) as file:
                 for line in string_array:
@@ -184,11 +189,31 @@ class FileUtil:
             with open(file_path, "r", encoding="utf-8") as file:
                 for line in file:
                     # 줄바꿈 문자(\n, \r)를 제거하고 배열에 담기
-                    string_array.append(line.strip())
+                    string_array.append(line)
             return string_array
         except Exception as e:
             print(f"❌ 파일 읽기 실패: {e}")
             return []
+    
+    @staticmethod
+    def read_all(file_path: str) -> str:
+        """_summary_
+        모든 내용을 읽어 문자열로 반환
+        Args:
+            file_path (str): abs filename
+        Returns:
+            str: content
+        """
+        if not os.path.exists(file_path):
+            print(f"⚠️ 파일을 찾을 수 없습니다: {file_path}")
+            return None
+
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                return file.read()
+        except Exception as e:
+            print(f"❌ 파일 읽기 실패: {e}")
+        return None
 
 
 # ==================== 실행 및 검증 ====================

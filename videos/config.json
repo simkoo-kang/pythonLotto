@@ -1,0 +1,11 @@
+{
+    "width": 800,
+    "height": 640,
+    "popup_width": 450,
+    "popup_height": 450,
+    "default_movie": "movies/test.mkv",
+    "default_movie_dir": "D:/Workspace/vscode/lotto/movie/movies",
+    "movies_dir": "D:\\Workspace\\vscode\\lotto\\videos/movies",
+    "capture_dir": "D:\\Workspace\\vscode\\lotto\\videos/capture",
+    "playlist_dir": "D:\\Workspace\\vscode\\lotto\\videos/playlist"
+}

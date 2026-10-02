@@ -14,7 +14,6 @@ class ListUtil:
             return self
 
         def append_all(self, pvar) -> ListUtil.StrBuilder:
-            """공백(스페이스 한 칸)을 추가합니다."""
             if (
                 isinstance(pvar, list)
                 or isinstance(pvar, tuple)
@@ -41,13 +40,15 @@ class ListUtil:
             self.sb.append("\n")
             return self
 
-        def to_string(self, separator: str = "") -> str:
+        def to_string(self, separator: str = "\t") -> str:
             """쌓인 모든 문자열을 하나로 합쳐서 반환합니다."""
             return separator.join(self.sb)
-
-        def to_string_tab(self) -> str:
-            """쌓인 모든 문자열을 하나로 합쳐서 반환합니다."""
-            return "\t".join(self.sb)
+        
+        def to_string_reverse(self, separator: str="\t") -> str:
+            """쌓인 모든 문자열을 역순으로 합쳐서 반환합니다."""
+            # return separator.join(reversed(self.sb))
+            # return separator.join(self.sb.reverse())
+            return separator.join(self.sb[::-1])
 
     @staticmethod
     def contains(list1: list, list2: list) -> int:

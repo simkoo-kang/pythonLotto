@@ -251,6 +251,14 @@
         "documentation": {}
     },
     {
+        "label": "FileUtil",
+        "importPath": "util.file_util",
+        "description": "util.file_util",
+        "isExtraImport": true,
+        "detail": "util.file_util",
+        "documentation": {}
+    },
+    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
@@ -460,78 +468,6 @@
         "documentation": {}
     },
     {
-        "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "messagebox",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "messagebox",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
         "label": "ttk",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -541,6 +477,78 @@
     },
     {
         "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
         "importPath": "tkinter",
         "description": "tkinter",
         "isExtraImport": true,
@@ -1814,6 +1822,30 @@
         "documentation": {}
     },
     {
+        "label": "Str",
+        "importPath": "util.str_util",
+        "description": "util.str_util",
+        "isExtraImport": true,
+        "detail": "util.str_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
+        "label": "LogUtil",
+        "importPath": "util.log_util",
+        "description": "util.log_util",
+        "isExtraImport": true,
+        "detail": "util.log_util",
+        "documentation": {}
+    },
+    {
         "label": "LogUtil",
         "importPath": "util.log_util",
         "description": "util.log_util",
@@ -2312,6 +2344,54 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -3818,6 +3898,22 @@
         "documentation": {}
     },
     {
+        "label": "ListUtil",
+        "importPath": "util.list_util",
+        "description": "util.list_util",
+        "isExtraImport": true,
+        "detail": "util.list_util",
+        "documentation": {}
+    },
+    {
+        "label": "ListUtil",
+        "importPath": "util.list_util",
+        "description": "util.list_util",
+        "isExtraImport": true,
+        "detail": "util.list_util",
+        "documentation": {}
+    },
+    {
         "label": "CDate",
         "importPath": "util.date_util",
         "description": "util.date_util",
@@ -3855,14 +3951,6 @@
         "description": "lotto_filter_manager",
         "isExtraImport": true,
         "detail": "lotto_filter_manager",
-        "documentation": {}
-    },
-    {
-        "label": "PlaylistPopup",
-        "importPath": "movie.playlist_popup",
-        "description": "movie.playlist_popup",
-        "isExtraImport": true,
-        "detail": "movie.playlist_popup",
         "documentation": {}
     },
     {
@@ -4147,6 +4235,39 @@
         "importPath": "itertools",
         "description": "itertools",
         "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "xml.etree.ElementTree",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xml.etree.ElementTree",
+        "description": "xml.etree.ElementTree",
+        "detail": "xml.etree.ElementTree",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "isExtraImport": true,
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "TextManager",
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "isExtraImport": true,
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "PlaylistPopup",
+        "importPath": "videos.playlist_popup",
+        "description": "videos.playlist_popup",
+        "isExtraImport": true,
+        "detail": "videos.playlist_popup",
         "documentation": {}
     },
     {
@@ -9865,123 +9986,6 @@
         "documentation": {}
     },
     {
-        "label": "MultiApp",
-        "kind": 6,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "class MultiApp(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"종합 게임 & 미디어 플레이어\")\n        self.geometry(\"800x650\")\n        # 메인 컨테이너 생성\n        self.container = tk.Frame(self)\n        self.container.pack(side=\"top\", fill=\"both\", expand=True)\n        # 메뉴 바 생성\n        self.create_menu()",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "MenuScreen",
-        "kind": 6,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "class MenuScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#f0f0f0\")\n        self.controller = controller\n        label = tk.Label(\n            self, text=\"원하시는 메뉴를 선택하세요\", font=(\"맑은 고딕\", 18, \"bold\"), bg=\"#f0f0f0\"\n        )\n        label.pack(pady=50)\n        btn1 = tk.Button(\n            self,",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "JigsawScreen",
-        "kind": 6,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "class JigsawScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#e0f7fa\")\n        label = tk.Label(\n            self, text=\"🧩 직소 퍼즐 프로그램 영역\", font=(\"맑은 고딕\", 16), bg=\"#e0f7fa\"\n        )\n        label.pack(pady=30)\n        info = tk.Label(\n            self,\n            text=\"(이곳에 퍼즐 캔버스 및 게임 코드가 구현됩니다)\",",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "VideoScreen",
-        "kind": 6,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "class VideoScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#222222\")\n        self.controller = controller\n        self.video_file_path = get_resource_path(mkv)\n        # 동영상이 화면에 직접 그려질 검은색 캔버스 프레임\n        self.video_frame = tk.Frame(self, bg=\"black\")\n        self.video_frame.pack(expand=True, fill=\"both\", padx=10, pady=10)\n        # VLC 옵션 설정 및 플레이어 생성\n        vlc_options = [\"--no-video-title-show\"]",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "get_resource_path",
-        "kind": 2,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "def get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)\nclass MultiApp(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"종합 게임 & 미디어 플레이어\")\n        self.geometry(\"800x650\")\n        # 메인 컨테이너 생성",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "vlc_path",
-        "kind": 5,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    # Windows 환경에서 외부 C 라이브러리(DLL) 검색 경로에 추가하는 표준 방식\n    os.add_dll_directory(vlc_path)\nimport tkinter as tk\nfrom tkinter import ttk\nimport vlc\n# PyInstaller 단일 파일 내부(.exe 리소스) 절대 경로를 찾는 함수\ndef get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "mkv",
-        "kind": 5,
-        "importPath": "movie.movie copy",
-        "description": "movie.movie copy",
-        "peekOfCode": "mkv = \"test.mkv\"\nclass VideoScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#222222\")\n        self.controller = controller\n        self.video_file_path = get_resource_path(mkv)\n        # 동영상이 화면에 직접 그려질 검은색 캔버스 프레임\n        self.video_frame = tk.Frame(self, bg=\"black\")\n        self.video_frame.pack(expand=True, fill=\"both\", padx=10, pady=10)\n        # VLC 옵션 설정 및 플레이어 생성",
-        "detail": "movie.movie copy",
-        "documentation": {}
-    },
-    {
-        "label": "SingleVideoPlayer",
-        "kind": 6,
-        "importPath": "movie.movie",
-        "description": "movie.movie",
-        "peekOfCode": "class SingleVideoPlayer(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"단독 비디오 플레이어\")\n        self.geometry(\"800x600\")\n        self.create_menu()\n        # ⚡ [3단계] 동영상이 패킹되거나 놓여있을 실제 전체 절대 경로 획득\n        self.video_file_path = get_resource_path(\"test.mkv\")\n        # 동영상이 출력될 검은색 캔버스 프레임 생성\n        self.video_frame = tk.Frame(self, bg=\"black\")",
-        "detail": "movie.movie",
-        "documentation": {}
-    },
-    {
-        "label": "get_resource_path",
-        "kind": 2,
-        "importPath": "movie.movie",
-        "description": "movie.movie",
-        "peekOfCode": "def get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)\nclass SingleVideoPlayer(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"단독 비디오 플레이어\")\n        self.geometry(\"800x600\")\n        self.create_menu()",
-        "detail": "movie.movie",
-        "documentation": {}
-    },
-    {
-        "label": "vlc_path",
-        "kind": 5,
-        "importPath": "movie.movie",
-        "description": "movie.movie",
-        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\nfrom util.file_util import FileUtil  # 엔진 등록 후 정상 로드\n# ⚡ [2단계] 단일 파일(.exe) 빌드 시 내부 임시 폴더 경로를 추적하는 함수\ndef get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)",
-        "detail": "movie.movie",
-        "documentation": {}
-    },
-    {
-        "label": "PlaylistPopup",
-        "kind": 6,
-        "importPath": "movie.playlist_popup",
-        "description": "movie.playlist_popup",
-        "peekOfCode": "class PlaylistPopup:\n    def __init__(self, parent_window, width=450, height=450, playlist_dir=None):\n        \"\"\"\n        parent_window: 메인 Tk 또는 Toplevel 창, 메인 플레이어 객체 (데이터 연동용)\n        \"\"\"\n        self.parent = parent_window # 메인 플레이어의 변수나 함수에 접근하기 위함\n        self.logger = LogUtil.get_logger(__file__)\n        self.width, self.height = width, height\n        self.playlist_dir = playlist_dir\n        self.relative_path = self.parent.relative_path",
-        "detail": "movie.playlist_popup",
-        "documentation": {}
-    },
-    {
-        "label": "VideoPlayer",
-        "kind": 6,
-        "importPath": "movie.video_player",
-        "description": "movie.video_player",
-        "peekOfCode": "class VideoPlayer(tk.Tk):\n    def __init__(self, config_file_path=None):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__()\n        # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기\n        if hasattr(sys, \"_MEIPASS\"):\n            self.base_path = os.path.dirname(sys.executable)\n        else:\n            self.base_path = os.path.dirname(os.path.abspath(__file__))\n        # logger for debugging",
-        "detail": "movie.video_player",
-        "documentation": {}
-    },
-    {
-        "label": "vlc_path",
-        "kind": 5,
-        "importPath": "movie.video_player",
-        "description": "movie.video_player",
-        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\n# # 1. 현재 파일(video_player.py)의 상위 폴더인 'lotto' 경로를 계산합니다.\n# curr_dir = os.path.dirname(os.path.abspath(__file__))  # movie 폴더\n# parent_dir = os.path.dirname(curr_dir)                 # lotto 폴더\n# # 2. 파이썬 탐색 경로(sys.path)에 'lotto' 폴더를 등록합니다.\n# #    이렇게 하면 movie.playlist_popup을 'lotto/movie/...' 구조로 올바르게 찾아갑니다.\n# if parent_dir not in sys.path:",
-        "detail": "movie.video_player",
-        "documentation": {}
-    },
-    {
         "label": "SCREEN_WIDTH",
         "kind": 5,
         "importPath": "test.pygame.pygame01_draw",
@@ -10913,7 +10917,7 @@
         "kind": 6,
         "importPath": "util.str_util",
         "description": "util.str_util",
-        "peekOfCode": "class Str:\n    @staticmethod\n    def is_blank(s: str=None) -> bool:\n        if s and not s.strip() == \"\":\n            return False\n        return True\n    @staticmethod\n    def is_blank_list(lst: list=None) -> bool:\n        if lst and 0 < len(lst):\n            return False",
+        "peekOfCode": "class Str:\n    @staticmethod\n    def to_string_time(tm, type, is_millis=False) -> str:\n        \"\"\"_summary_\n        time to 00:00:00.000\n        Args:\n            tm (time millis)\n            type (str [hour, minute, second]): hour부터, minute부터, second만 출력\n            is_millis (bool, False): 밀리초 포함 여부\n        Returns:",
         "detail": "util.str_util",
         "documentation": {}
     },
@@ -10924,6 +10928,69 @@
         "description": "util.sys_util",
         "peekOfCode": "class Sys:\n    @staticmethod\n    @DeprecationWarning\n    def check_ime_status(event=None):\n        \"\"\" 정상 작동 안함 \"\"\"\n        try:\n            # [수정] 메인창 핸들이 아니라, 현재 OS 상에서 전역 포커스를 가진 윈도우 핸들을 가져옵니다.\n            user32 = ctypes.WinDLL(\"user32\")\n            hwnd = user32.GetFocus() \n            if not hwnd:",
         "detail": "util.sys_util",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Node:\n    def __init__(self, name: str):\n        self._name: str = name\n    def get_name(self):\n        return self._name\n    def get_start_tag(self):\n        return f\"<{self._name}>\"\n    def get_end_tag(self):\n        return f\"</{self._name}>\"\n    def count(self):",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Field(Node):\n    def __init__(self, name: str=\"field\", attrs: Dict[str, str]=None, content: str=None):\n        \"\"\"<field> 엘리먼트를 담는 클래스\"\"\"\n        super().__init__(name=name)\n        # 생성자에서 처음에 None 또는 빈 딕셔너리로 타입을 확실히 명시해 둡니다.\n        self._attrs: Optional[Dict[str, str]] = attrs\n        self._content = content\n    def get_attr_value(self, attr_name: str=None):\n        if not self._attrs or len(self._attrs) < 1 or not attr_name:\n            return None",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Fields",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Fields(Node):\n    def __init__(self, name: str, attrs: Dict[str, str]=None, fields: List[Field]=[]):\n        super().__init__(name)\n        self._attrs: Optional[Dict[str, str]] = attrs\n        self._fields: List[Field] = fields\n    def get_field_by_tag(self, tag: str) -> Field:\n        if not self._fields or len(self._fields) < 1:\n            return None\n        return next((f for f in self._fields if f.get_name() == tag), None)\n    def get_field_by_value(self, value: str) -> Field:",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Head",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Head(Fields):\n    def __init__(self, name: str=\"head\", attrs: Dict[str, str] = None, fields: List[Field] = []):\n        super().__init__(name, attrs, fields)\nclass Item(Fields):\n    def __init__(self, name: str=\"item\", attrs: Dict[str, str] = None, fields: List[Field] = []):\n        super().__init__(name, attrs, fields)\nclass Items(Node):\n    def __init__(self, name: str=\"items\"):\n        super().__init__(name)\n        self._attrs: Optional[Dict[str, str]] = None",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Item(Fields):\n    def __init__(self, name: str=\"item\", attrs: Dict[str, str] = None, fields: List[Field] = []):\n        super().__init__(name, attrs, fields)\nclass Items(Node):\n    def __init__(self, name: str=\"items\"):\n        super().__init__(name)\n        self._attrs: Optional[Dict[str, str]] = None\n        self._head: Optional[Head] = None\n        self._items: list[Item] = []\n    def get_titles(self) -> list[str]:",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Items",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class Items(Node):\n    def __init__(self, name: str=\"items\"):\n        super().__init__(name)\n        self._attrs: Optional[Dict[str, str]] = None\n        self._head: Optional[Head] = None\n        self._items: list[Item] = []\n    def get_titles(self) -> list[str]:\n        titles = []\n        for item in self._items:\n            titles.append(item.get_field_by_tag(\"title\").get_content().strip())",
+        "detail": "util.text_file_manager",
+        "documentation": {}
+    },
+    {
+        "label": "TextManager",
+        "kind": 6,
+        "importPath": "util.text_file_manager",
+        "description": "util.text_file_manager",
+        "peekOfCode": "class TextManager:\n    def __init__(self, file_path, root_name=\"root\", item_name=\"item\", key_name=\"title\"):\n        \"\"\"_summary_\n        특정 포멧으로 텍스트 파일 관리\n        Args:\n            file_path (str): full filename\n            root_name (str, \"root\"): root name\n            item_name (str, \"entry\"): record name\n            key_name (str, \"title\"): 비교하거나 삭제 등에 필요\n        \"\"\"",
+        "detail": "util.text_file_manager",
         "documentation": {}
     },
     {
@@ -10942,6 +11009,186 @@
         "description": "util.toast",
         "peekOfCode": "class MainApp:\n    def __init__(self, root):\n        self.root = root\n        self.root.geometry(\"300x200\")\n        # 테스트용 버튼\n        btn = tk.Button(self.root, text=\"저장하기\", command=self.on_save)\n        btn.pack(pady=50)\n    def on_save(self):\n        # 작업 완료 후 토스트 알림 띄우기\n        self.show_toast(self.root, \"성공적으로 저장되었습니다!\")",
         "detail": "util.toast",
+        "documentation": {}
+    },
+    {
+        "label": "AttrNode",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class AttrNode:\n    def __init__(self, tag_name: str, attrs: Optional[Dict[str, str]]=None):\n        \"\"\"_summary_\n        tag name without content\n        Args:\n            name (str): _description_\n            attrs (Optional[Dict[str, str]], None): attrs\n        \"\"\"\n        self._tag_name: str = tag_name\n        self._attrs: Optional[Dict[str, str]] = attrs",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class Field(AttrNode):\n    def __init__(self, tag_name: str=\"field\", attrs: Optional[Dict[str, str]]=None, text: str=None):\n        \"\"\"_summary_\n        field element class\n        Args:\n            tag_name (str): tag name\n            attrs (Optional[Dict[str, str]], None): attrs\n            text (str, None): content\n        \"\"\"\n        super().__init__(tag_name, attrs)",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "ItemNode",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class ItemNode(AttrNode):\n    def __init__(self, tag_name: str, attrs: Optional[Dict[str, str]]=None, nodes: List=[]):\n        \"\"\"_summary_\n        tag_name, attrs and field list\n        Args:\n            tag_name (str): tag name\n            attrs (Optional[Dict[str, str]], None): attrs\n            fields (List[Field], None): child fields\n        \"\"\"\n        super().__init__(tag_name, attrs)",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "Head",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class Head(ItemNode):\n    def __init__(self, tag_name: str=\"head\", attrs: Optional[Dict[str, str]] = None, fields: List = []):\n        super().__init__(tag_name, attrs, fields)\nclass Item(ItemNode):\n    def __init__(self, tag_name: str=\"item\", attrs: Optional[Dict[str, str]] = None, fields: List = []):\n        super().__init__(tag_name, attrs, fields)\nclass Items(AttrNode):\n    def __init__(self, tag_name: str=\"items\", attrs: Optional[Dict[str, str]] = None):\n        super().__init__(tag_name, attrs)\n        self._head: Optional[Head] = None",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class Item(ItemNode):\n    def __init__(self, tag_name: str=\"item\", attrs: Optional[Dict[str, str]] = None, fields: List = []):\n        super().__init__(tag_name, attrs, fields)\nclass Items(AttrNode):\n    def __init__(self, tag_name: str=\"items\", attrs: Optional[Dict[str, str]] = None):\n        super().__init__(tag_name, attrs)\n        self._head: Optional[Head] = None\n        self._items: list[Item] = []\n    def to_string(self, tab: str=\"\\t\") -> str:\n        \"\"\"_summary_",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "Items",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class Items(AttrNode):\n    def __init__(self, tag_name: str=\"items\", attrs: Optional[Dict[str, str]] = None):\n        super().__init__(tag_name, attrs)\n        self._head: Optional[Head] = None\n        self._items: list[Item] = []\n    def to_string(self, tab: str=\"\\t\") -> str:\n        \"\"\"_summary_\n        전체 데이터 구조화\n        Args:\n            tab (str, '\\t'): 들여 쓰기",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "Data",
+        "kind": 6,
+        "importPath": "util.xml_util",
+        "description": "util.xml_util",
+        "peekOfCode": "class Data(Field):\n    def __init__(self, name = \"data\", attrs: Optional[Dict[str, str]] = None, file_path: str=None, xml_data: str=None):\n        super().__init__(name, attrs)\n        self._head: Optional[Head] = None\n        self._items: list[Item] = []\n        self.xml_root: Optional[ET.Element] = None\n        self.logger = LogUtil.get_logger(__file__)\n        self.file_path = file_path\n        self.xml_data = xml_data\n        if self.file_path:",
+        "detail": "util.xml_util",
+        "documentation": {}
+    },
+    {
+        "label": "MultiApp",
+        "kind": 6,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "class MultiApp(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"종합 게임 & 미디어 플레이어\")\n        self.geometry(\"800x650\")\n        # 메인 컨테이너 생성\n        self.container = tk.Frame(self)\n        self.container.pack(side=\"top\", fill=\"both\", expand=True)\n        # 메뉴 바 생성\n        self.create_menu()",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "MenuScreen",
+        "kind": 6,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "class MenuScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#f0f0f0\")\n        self.controller = controller\n        label = tk.Label(\n            self, text=\"원하시는 메뉴를 선택하세요\", font=(\"맑은 고딕\", 18, \"bold\"), bg=\"#f0f0f0\"\n        )\n        label.pack(pady=50)\n        btn1 = tk.Button(\n            self,",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "JigsawScreen",
+        "kind": 6,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "class JigsawScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#e0f7fa\")\n        label = tk.Label(\n            self, text=\"🧩 직소 퍼즐 프로그램 영역\", font=(\"맑은 고딕\", 16), bg=\"#e0f7fa\"\n        )\n        label.pack(pady=30)\n        info = tk.Label(\n            self,\n            text=\"(이곳에 퍼즐 캔버스 및 게임 코드가 구현됩니다)\",",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "VideoScreen",
+        "kind": 6,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "class VideoScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#222222\")\n        self.controller = controller\n        self.video_file_path = get_resource_path(mkv)\n        # 동영상이 화면에 직접 그려질 검은색 캔버스 프레임\n        self.video_frame = tk.Frame(self, bg=\"black\")\n        self.video_frame.pack(expand=True, fill=\"both\", padx=10, pady=10)\n        # VLC 옵션 설정 및 플레이어 생성\n        vlc_options = [\"--no-video-title-show\"]",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_resource_path",
+        "kind": 2,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "def get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)\nclass MultiApp(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"종합 게임 & 미디어 플레이어\")\n        self.geometry(\"800x650\")\n        # 메인 컨테이너 생성",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "vlc_path",
+        "kind": 5,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    # Windows 환경에서 외부 C 라이브러리(DLL) 검색 경로에 추가하는 표준 방식\n    os.add_dll_directory(vlc_path)\nimport tkinter as tk\nfrom tkinter import ttk\nimport vlc\n# PyInstaller 단일 파일 내부(.exe 리소스) 절대 경로를 찾는 함수\ndef get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "mkv",
+        "kind": 5,
+        "importPath": "videos.movie copy",
+        "description": "videos.movie copy",
+        "peekOfCode": "mkv = \"test.mkv\"\nclass VideoScreen(tk.Frame):\n    def __init__(self, parent, controller):\n        super().__init__(parent, bg=\"#222222\")\n        self.controller = controller\n        self.video_file_path = get_resource_path(mkv)\n        # 동영상이 화면에 직접 그려질 검은색 캔버스 프레임\n        self.video_frame = tk.Frame(self, bg=\"black\")\n        self.video_frame.pack(expand=True, fill=\"both\", padx=10, pady=10)\n        # VLC 옵션 설정 및 플레이어 생성",
+        "detail": "videos.movie copy",
+        "documentation": {}
+    },
+    {
+        "label": "SingleVideoPlayer",
+        "kind": 6,
+        "importPath": "videos.movie",
+        "description": "videos.movie",
+        "peekOfCode": "class SingleVideoPlayer(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"단독 비디오 플레이어\")\n        self.geometry(\"800x600\")\n        self.create_menu()\n        # ⚡ [3단계] 동영상이 패킹되거나 놓여있을 실제 전체 절대 경로 획득\n        self.video_file_path = get_resource_path(\"test.mkv\")\n        # 동영상이 출력될 검은색 캔버스 프레임 생성\n        self.video_frame = tk.Frame(self, bg=\"black\")",
+        "detail": "videos.movie",
+        "documentation": {}
+    },
+    {
+        "label": "get_resource_path",
+        "kind": 2,
+        "importPath": "videos.movie",
+        "description": "videos.movie",
+        "peekOfCode": "def get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)\nclass SingleVideoPlayer(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"단독 비디오 플레이어\")\n        self.geometry(\"800x600\")\n        self.create_menu()",
+        "detail": "videos.movie",
+        "documentation": {}
+    },
+    {
+        "label": "vlc_path",
+        "kind": 5,
+        "importPath": "videos.movie",
+        "description": "videos.movie",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\nfrom util.file_util import FileUtil  # 엔진 등록 후 정상 로드\n# ⚡ [2단계] 단일 파일(.exe) 빌드 시 내부 임시 폴더 경로를 추적하는 함수\ndef get_resource_path(relative_path):\n    if hasattr(sys, \"_MEIPASS\"):\n        return os.path.join(sys._MEIPASS, relative_path)\n    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)",
+        "detail": "videos.movie",
+        "documentation": {}
+    },
+    {
+        "label": "PlaylistPopup",
+        "kind": 6,
+        "importPath": "videos.playlist_popup",
+        "description": "videos.playlist_popup",
+        "peekOfCode": "class PlaylistPopup:\n    def __init__(self, parent_window, width=450, height=450, playlist_dir=None):\n        \"\"\"\n        parent_window: 메인 Tk 또는 Toplevel 창, 메인 플레이어 객체 (데이터 연동용)\n        \"\"\"\n        self.parent = parent_window # 메인 플레이어의 변수나 함수에 접근하기 위함\n        self.logger = LogUtil.get_logger(__file__)\n        self.width, self.height = width, height\n        self.playlist_dir = playlist_dir\n        self.relative_path = self.parent.relative_path",
+        "detail": "videos.playlist_popup",
+        "documentation": {}
+    },
+    {
+        "label": "VideoPlayer",
+        "kind": 6,
+        "importPath": "videos.video_player",
+        "description": "videos.video_player",
+        "peekOfCode": "class VideoPlayer(tk.Tk):\n    def __init__(self, config_file_path=None):\n        # tk.Toplevel을 상속받아 독립된 서브 창을 생성합니다.\n        super().__init__()\n        # 1. 실행 파일(.exe) 또는 스크립트(.py)가 위치한 진짜 물리적 폴더 경로 찾기\n        if hasattr(sys, \"_MEIPASS\"):\n            self.base_path = os.path.dirname(sys.executable)\n        else:\n            self.base_path = os.path.dirname(os.path.abspath(__file__))\n        self.logger.debug(f\"현재 위치: {self.base_path} ===================\")",
+        "detail": "videos.video_player",
+        "documentation": {}
+    },
+    {
+        "label": "vlc_path",
+        "kind": 5,
+        "importPath": "videos.video_player",
+        "description": "videos.video_player",
+        "peekOfCode": "vlc_path = r\"C:\\Program Files\\VideoLAN\\VLC\"\nif os.path.exists(vlc_path):\n    os.add_dll_directory(vlc_path)\nimport vlc\n# # 1. 현재 파일(video_player.py)의 상위 폴더인 'lotto' 경로를 계산합니다.\n# curr_dir = os.path.dirname(os.path.abspath(__file__))  # movie 폴더\n# parent_dir = os.path.dirname(curr_dir)                 # lotto 폴더\n# # 2. 파이썬 탐색 경로(sys.path)에 'lotto' 폴더를 등록합니다.\n# #    이렇게 하면 movie.playlist_popup을 'lotto/movie/...' 구조로 올바르게 찾아갑니다.\n# if parent_dir not in sys.path:",
+        "detail": "videos.video_player",
         "documentation": {}
     },
     {

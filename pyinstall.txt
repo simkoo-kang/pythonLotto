@@ -18,6 +18,24 @@ pyinstaller --onefile --noconsole --add-data "D:\Workspace\vscode\lotto\my_video
 pyinstaller --onefile --noconsole --paths=. ./movie/movie.py
 
 
+python -m movie.video_player
+
+
+launch.json
+json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"  // 실행 위치를 항상 최상위 폴더로 고정합니다.
+        }
+    ]
+}
 
 git reset --soft HEAD~1
 git rm --cached test.mkv
