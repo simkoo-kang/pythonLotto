@@ -365,18 +365,26 @@ def main(games: int = 9, tried: int = 100000, debug: bool = False, isAll: bool =
 
     for i, vo in enumerate(selected_vos, 1):
         line = vo.toString(isSum=True)
-        volines.append(line)
+        volines.append(f"{line}\t1")
 
         # range(3, 10, 3)은 정확히 [3, 6, 9] 리스트를 의미합니다.
         # if i == 3 or i == 6 or i == 9:
         if i in range(3, 10, 3):
             volines.append("")
 
+    volines.append("")
+    volines.append("03-04-17-24-26-41	115	1")
+    volines.append("06-10-13-32-38-45")
+    volines.append("09-12-25-27-30-32")
+    volines.append("")
+    volines.append("04-08-13-22-31-44	122	1")
+    volines.append("09-15-19-23-33-42")
+    volines.append("08-12-17-27-36-38")
     lni = 0
     for i, line in enumerate(volines, 1):
         if 0 < len(line):
             lni += 1
-            logger.debug(f"{lni}게임:\t{line}")
+            logger.debug(f"{lni}게임:\t{line}\t1")
         else:
             logger.debug("")
 
